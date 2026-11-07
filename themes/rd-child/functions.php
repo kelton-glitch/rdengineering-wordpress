@@ -7,6 +7,8 @@ if (!defined('ABSPATH')) {
 	exit;
 }
 
+require_once get_stylesheet_directory() . '/inc/seo-footer.php';
+
 /** Child stylesheet loads after the parent, versioned by file time for cache busting. */
 add_action('wp_enqueue_scripts', function () {
 	$path = get_stylesheet_directory() . '/style.css';
@@ -20,7 +22,7 @@ add_action('wp_enqueue_scripts', function () {
 
 /** Skip link: first focusable element on every page. */
 add_action('wp_body_open', function () {
-	echo '<a class="rd-skip-link" href="#main">' . esc_html__('Skip to content', 'rd-child') . '</a>';
+	echo '<a class="rd-skip-link" href="#main">' . esc_html(rd_is_fr() ? 'Aller au contenu' : 'Skip to content') . '</a>';
 });
 
 /** Remove WordPress emoji scripts and styles (an extra request and inline script per page). */
@@ -42,12 +44,12 @@ add_filter('wp_lazy_loading_enabled', '__return_true');
 add_action('wp_footer', function () {
 	$phone    = apply_filters('rd_phone', '+237695981047');
 	$whatsapp = apply_filters('rd_whatsapp', '237695981047');
-	$quote    = apply_filters('rd_quote_url', home_url('/contact/'));
+	$quote    = apply_filters('rd_quote_url', home_url(rd_is_fr() ? '/fr/nous-contacter/' : '/contact/'));
 	?>
-	<nav class="rd-mobile-bar" aria-label="<?php echo esc_attr__('Quick contact', 'rd-child'); ?>">
-		<a href="tel:<?php echo esc_attr($phone); ?>"><?php echo esc_html__('Call', 'rd-child'); ?></a>
+	<nav class="rd-mobile-bar" aria-label="<?php echo esc_attr(rd_is_fr() ? 'Contact rapide' : 'Quick contact'); ?>">
+		<a href="tel:<?php echo esc_attr($phone); ?>"><?php echo esc_html(rd_is_fr() ? 'Appeler' : 'Call'); ?></a>
 		<a href="https://wa.me/<?php echo esc_attr($whatsapp); ?>" rel="noopener"><?php echo esc_html__('WhatsApp', 'rd-child'); ?></a>
-		<a href="<?php echo esc_url($quote); ?>"><?php echo esc_html__('Get a quote', 'rd-child'); ?></a>
+		<a href="<?php echo esc_url($quote); ?>"><?php echo esc_html(rd_is_fr() ? 'Demander un devis' : 'Request a quote'); ?></a>
 	</nav>
 	<?php
 });
