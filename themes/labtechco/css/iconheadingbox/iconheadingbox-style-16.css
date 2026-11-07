@@ -1,0 +1,42 @@
+.ts-ihbox.ts-ihbox-style-16{
+	width: 150px;
+	position: relative;
+	border-radius: 50%;
+}
+.ts-ihbox.ts-ihbox-style-16 .ts-ihbox-icon{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+}
+.ts-ihbox.ts-ihbox-style-16 .ts-ihbox-inner svg text{
+	fill: var(--tste-labtechco-skincolor-dark);
+	transform-origin: 50% 50% 0;
+	transform: rotate(0deg);
+	-webkit-animation: spin 15s linear infinite;
+	-moz-animation: spin 15s linear infinite;
+	animation: spin 15s linear infinite;
+	font-size: 18px;
+	text-transform: uppercase;
+	letter-spacing: 3.3px;
+}
+.rtl .ts-ihbox.ts-ihbox-style-16 .ts-ihbox-inner svg text{
+	direction: ltr;
+}
+.ts-bgcolor-darkgrey .ts-ihbox.ts-ihbox-style-16 .ts-ihbox-inner svg text{
+	fill: var(--tste-labtechco-skincolor-light);
+}
+.ts-ihbox.ts-ihbox-style-16 .ts-ihbox-icon-wrapper i{
+	font-size: 50px;
+	color: var(--tste-labtechco-skincolor-dark);
+}
+.ts-bgcolor-darkgrey .ts-ihbox.ts-ihbox-style-16 .ts-ihbox-icon-wrapper i{
+	color: var(--tste-labtechco-skincolor-light);
+}
+.ts-ihbox.ts-ihbox-style-16 .ts-ihbox-headingicon-inner{
+	position: absolute;
+	right: -90px;
+	top: 0;
+	color: var(--tste-labtechco-skincolor-dark);
+}

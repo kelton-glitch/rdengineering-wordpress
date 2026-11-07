@@ -1,0 +1,9 @@
+wp-config.php
+uploads/
+cache/
+*.tar.gz
+*.log
+.env
+node_modules/
+.DS_Store
+Thumbs.db

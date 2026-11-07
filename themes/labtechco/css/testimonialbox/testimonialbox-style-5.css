@@ -1,0 +1,96 @@
+.ts-bgcolor-skincolor .ts-testimonialbox-style-5 .themestek-box-content,
+.ts-bgcolor-darkgrey .ts-testimonialbox-style-5 .themestek-box-content,
+.ts-col-bgcolor-skincolor .ts-testimonialbox-style-5 .themestek-box-content{
+	color: #fff;
+ }
+ .ts-testimonialbox-style-5 .themestek-box-content{
+	position: relative;
+	padding: 80px 20px 0px 25px;
+ }
+.ts-testimonialbox-style-5 .themestek-box-author{
+	display: flex;
+	align-items: center;
+}
+.ts-testimonialbox-style-5 .themestek-box-img img{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	margin-right: 20px;
+}
+.rtl .ts-testimonialbox-style-5 .themestek-box-img img{
+	margin-left: 20px;
+	margin-right: 0;
+}
+.ts-testimonialbox-style-5 blockquote.themestek-testimonial-text,
+.ts-testimonialbox-style-5 blockquote.themestek-testimonial-text{
+	font-style: normal;
+	font-weight: 300;
+	font-size: 24px;
+	line-height: 38px;
+	font-family: "Roboto Condensed", sans-serif;
+}
+.ts-bgcolor-skincolor .ts-testimonialbox-style-5 blockquote.themestek-testimonial-text,
+.ts-bgcolor-darkgrey .ts-testimonialbox-style-5 blockquote.themestek-testimonial-text,
+.ts-col-bgcolor-skincolor .ts-testimonialbox-style-5 blockquote.themestek-testimonial-text{
+	color: white;
+}
+.ts-testimonialbox-style-5 .ts-labtechco-icon-star::before{
+	margin: 0;
+}
+.ts-bgcolor-skincolor .ts-testimonialbox-style-5 .themestek-box-star i,
+.ts-bgcolor-darkgrey .ts-testimonialbox-style-5 .themestek-box-star i,
+.ts-col-bgcolor-skincolor .ts-testimonialbox-style-5 .themestek-box-star i{
+	color: #fff;
+	font-size: 1.2em;
+}
+.ts-testimonialbox-style-5.themestek-box-testimonial .themestek-box-content::after{
+	position: absolute;
+	font-family: "ts-labtechco-icons";
+	content: "\e84a";
+	font-size: 100px;
+	line-height: 100px;
+	top: 30px;
+	right: 23px;
+	opacity: 0.2;
+	-webkit-transform: scaleX(-1);
+	-moz-transform: scaleX(-1);
+	-ms-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	transform: scaleX(-1);
+	color: rgb(159 168 199);
+}
+.rtl .ts-testimonialbox-style-5.themestek-box-testimonial .themestek-box-content::after{
+	left: 23px;
+	right: inherit;
+	transform: none;
+}
+.ts-bgcolor-skincolor .ts-testimonialbox-style-5.themestek-box-testimonial .themestek-box-content::after,
+.ts-bgcolor-darkgrey .ts-testimonialbox-style-5.themestek-box-testimonial .themestek-box-content::after,
+.ts-col-bgcolor-skincolor .ts-testimonialbox-style-5.themestek-box-testimonial .themestek-box-content::after{
+	color: rgba(255,255,255,0.5);
+}
+.ts-testimonialbox-style-5 .themestek-box-desc{
+	margin-top: 20px;
+	margin-bottom: 35px;
+}
+.ts-bgcolor-skincolor .ts-testimonialbox-style-5 .themestek-box-author h3.themestek-author-name a,
+.ts-bgcolor-darkgrey.ts-testimonialbox-style-5 .themestek-box-author h3.themestek-author-name a,
+.ts-bgcolor-skincolor .ts-testimonialbox-style-5 .themestek-box-author h3.themestek-author-name,
+.ts-bgcolor-darkgrey .ts-testimonialbox-style-5 .themestek-box-author h3.themestek-author-name,
+.ts-col-bgcolor-skincolor .ts-testimonialbox-style-5 .themestek-box-author h3.themestek-author-name a,
+.ts-col-bgcolor-skincolor .ts-testimonialbox-style-5 .themestek-box-author h3.themestek-author-name{
+	font-size: 15px;
+	color: white;
+	line-height: 18px;
+	font-weight: 700;
+}
+.ts-testimonialbox-style-5 .themestek-box-star i.ts-active{
+	color: var(--tste-labtechco-skincolor-dark);
+}
+.ts-bgcolor-darkgrey .ts-testimonialbox-style-5 .themestek-box-star i.ts-active{
+	color: white;
+}
+.themestek-boxes-element-testimonial-style-5.themestek-boxes-view-carousel .slick-slider{
+	margin-left: 0;
+	margin-right: 0;
+}

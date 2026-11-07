@@ -1,0 +1,29 @@
+.ts-fidbox-style-12 .ts-circle-w{
+	position: relative;
+	text-align: center;
+	margin-bottom: 7px;
+}
+.ts-fidbox-style-12 .ts-circle-overlay h4{
+	margin: 0;
+}
+.ts-fidbox-style-12 .ts-fid-title{
+	text-align: center;
+	font-size: 18px;
+	line-height: 26px;
+	font-weight: 600;
+}
+.ts-fidbox-style-12 .ts-circle-overlay .ts-circle-number{
+	font-size: 38px;
+	line-height: 38px;
+}
+.ts-textcolor-white .ts-fidbox-style-12 .ts-circle-number,
+.ts-textcolor-white .ts-fidbox-style-12 .ts-fid-title{
+	color: #fff;
+}
+.ts-fidbox-style-12 .ts-circle-number sup,
+.ts-fidbox-style-12 .ts-circle-number sub{
+	font-size: 56%;
+}
+.ts-fidbox-style-12 .ts-fid-title-w{
+	padding: 0 15px;
+}

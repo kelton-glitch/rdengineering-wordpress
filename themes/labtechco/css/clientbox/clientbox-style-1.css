@@ -1,0 +1,30 @@
+.ts-clientbox-style-1{
+	padding: 0 15px;
+	text-align: center;
+}
+.ts-clientbox-style-1.themestek-clientbox-hover-exists{
+	position: relative;
+}
+.ts-clientbox-style-1.themestek-clientbox-hover-exists .themestek-item-thumbnail{
+	padding: 10px;
+}
+.ts-clientbox-style-1.themestek-clientbox-hover-exists .ts-client-box-hover-img{
+	position: absolute;
+	opacity: 0;
+	left: 0;
+	top: 0;
+	-webkit-transition: all 0.3s ease 0s;
+	-moz-transition: all 0.3s ease 0s;
+	-ms-transition: all 0.3s ease 0s;
+	-o-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+}
+.ts-clientbox-style-1.themestek-clientbox-hover-exists:hover .ts-client-box-hover-img{
+	opacity: 1;
+}
+.ts-clientbox-style-1.themestek-clientbox-hover-exists:hover .themestek-item-thumbnail{
+	opacity: 0;
+}
+.ts-clientbox-style-1 .themestek-item-thumbnail img{
+	display: inline-block;
+}

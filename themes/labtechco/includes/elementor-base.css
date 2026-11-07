@@ -1,0 +1,62 @@
+/* --------------------------------------
+* Elementor - ts_imgselect
+* ---------------------------------------*/
+.ts-imgselect-thumbs input {
+	display: none;
+}
+.ts-imgselect-thumbs label {
+	display: block;
+	margin: 5px;
+	position: relative;
+	float: left;
+}
+.ts-imgselect-thumb{
+	cursor: pointer;
+}
+.elementor-panel .ts-imgselect-thumb img {
+	padding: 3px;
+	border: 3px solid #eee;
+}
+.elementor-panel .ts-imgselect-thumb i {
+	background-color: #d30c5c;
+	position: absolute;
+	right: 3px;
+	bottom: 3px;
+	padding: 5px;
+	color: white;
+	display: none;
+}
+.elementor-panel .ts-imgselect-thumb input:checked ~ img {
+	border-color: #d30c5c;
+}
+.elementor-panel .ts-imgselect-thumb input:checked ~ i {
+	display: block;
+}
+.elementor-panel .ts-imgselect-thumb input:checked ~ img:before {
+	content: "";
+	position: absolute;
+	top: 100px;
+	left:100px;
+	height: 100px;
+	width: 100px;
+	background-color: red;
+}
+.elementor-panel .elementor-control-field-description sup{
+	vertical-align: super;
+}
+.elementor-panel .elementor-control-field-description sub{
+	vertical-align: sub;
+}
+.elementor-panel .elementor-control-input-wrapper .elementor-control-unit-2[type="number"]{
+	width: 90px;
+}
+
+/* Elementor editor branding with Global Color */
+#elementor-panel-category-labtechco_category .elementor-panel .elementor-element:hover .icon,
+#elementor-panel-category-labtechco_category .elementor-panel .elementor-element:hover .title {
+	color: green;
+}
+/* Elementor icon picker icon size */
+.elementor-icons-manager__tab__item__icon.ts-labtechco-business-icon:before{
+	font-size: 35px;
+}

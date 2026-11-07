@@ -1,0 +1,147 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 06/07/2018 14:20
+  	*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="ts-labtechco-business-icon-"]:before, [class*=" ts-labtechco-business-icon-"]:before,
+[class^="ts-labtechco-business-icon-"]:after, [class*=" ts-labtechco-business-icon-"]:after {   
+  font-family: Flaticon;
+        font-size: 20px;
+font-style: normal;
+}
+
+.ts-labtechco-business-icon-ethanol:before { content: "\f100"; }
+.ts-labtechco-business-icon-bottleneck:before { content: "\f101"; }
+.ts-labtechco-business-icon-solar-panel:before { content: "\f102"; }
+.ts-labtechco-business-icon-welder:before { content: "\f103"; }
+.ts-labtechco-business-icon-engineering:before { content: "\f104"; }
+.ts-labtechco-business-icon-worker-2:before { content: "\f105"; }
+.ts-labtechco-business-icon-diagram:before { content: "\f106"; }
+.ts-labtechco-business-icon-blueprint:before { content: "\f107"; }
+.ts-labtechco-business-icon-monitor-2:before { content: "\f108"; }
+.ts-labtechco-business-icon-idea:before { content: "\f109"; }
+.ts-labtechco-business-icon-monitor-1:before { content: "\f10a"; }
+.ts-labtechco-business-icon-factory-3:before { content: "\f10b"; }
+.ts-labtechco-business-icon-nuclear-plant:before { content: "\f10c"; }
+.ts-labtechco-business-icon-windmill:before { content: "\f10d"; }
+.ts-labtechco-business-icon-garbage:before { content: "\f10e"; }
+.ts-labtechco-business-icon-delivery-truck:before { content: "\f10f"; }
+.ts-labtechco-business-icon-geothermal-energy:before { content: "\f110"; }
+.ts-labtechco-business-icon-trash:before { content: "\f111"; }
+.ts-labtechco-business-icon-conveyor-3:before { content: "\f112"; }
+.ts-labtechco-business-icon-production:before { content: "\f113"; }
+.ts-labtechco-business-icon-engineer:before { content: "\f114"; }
+.ts-labtechco-business-icon-maintenance-1:before { content: "\f115"; }
+.ts-labtechco-business-icon-conveyor-2:before { content: "\f116"; }
+.ts-labtechco-business-icon-wrench-1:before { content: "\f117"; }
+.ts-labtechco-business-icon-contract:before { content: "\f118"; }
+.ts-labtechco-business-icon-manufacturing-1:before { content: "\f119"; }
+.ts-labtechco-business-icon-maintenance:before { content: "\f11a"; }
+.ts-labtechco-business-icon-drawers:before { content: "\f11b"; }
+.ts-labtechco-business-icon-industrial-robot-3:before { content: "\f11c"; }
+.ts-labtechco-business-icon-nail-gun:before { content: "\f11d"; }
+.ts-labtechco-business-icon-package:before { content: "\f11e"; }
+.ts-labtechco-business-icon-doc-1:before { content: "\f11f"; }
+.ts-labtechco-business-icon-saw-2:before { content: "\f120"; }
+.ts-labtechco-business-icon-clamp:before { content: "\f121"; }
+.ts-labtechco-business-icon-thermal-lance:before { content: "\f122"; }
+.ts-labtechco-business-icon-pliers:before { content: "\f123"; }
+.ts-labtechco-business-icon-trolley-1:before { content: "\f124"; }
+.ts-labtechco-business-icon-guillotine:before { content: "\f125"; }
+.ts-labtechco-business-icon-jerrycan:before { content: "\f126"; }
+.ts-labtechco-business-icon-vise:before { content: "\f127"; }
+.ts-labtechco-business-icon-saw-1:before { content: "\f128"; }
+.ts-labtechco-business-icon-micrometer:before { content: "\f129"; }
+.ts-labtechco-business-icon-voltmeter:before { content: "\f12a"; }
+.ts-labtechco-business-icon-entry:before { content: "\f12b"; }
+.ts-labtechco-business-icon-hook:before { content: "\f12c"; }
+.ts-labtechco-business-icon-drilling-machine:before { content: "\f12d"; }
+.ts-labtechco-business-icon-screw:before { content: "\f12e"; }
+.ts-labtechco-business-icon-caliper:before { content: "\f12f"; }
+.ts-labtechco-business-icon-box:before { content: "\f130"; }
+.ts-labtechco-business-icon-conveyor-1:before { content: "\f131"; }
+.ts-labtechco-business-icon-doc:before { content: "\f132"; }
+.ts-labtechco-business-icon-machine-press:before { content: "\f133"; }
+.ts-labtechco-business-icon-trolley:before { content: "\f134"; }
+.ts-labtechco-business-icon-cog:before { content: "\f135"; }
+.ts-labtechco-business-icon-molding-machine:before { content: "\f136"; }
+.ts-labtechco-business-icon-oiler:before { content: "\f137"; }
+.ts-labtechco-business-icon-wrench:before { content: "\f138"; }
+.ts-labtechco-business-icon-forklift-1:before { content: "\f139"; }
+.ts-labtechco-business-icon-engine:before { content: "\f13a"; }
+.ts-labtechco-business-icon-saw:before { content: "\f13b"; }
+.ts-labtechco-business-icon-spray-gun:before { content: "\f13c"; }
+.ts-labtechco-business-icon-industrial-robot-2:before { content: "\f13d"; }
+.ts-labtechco-business-icon-lathe-machine:before { content: "\f13e"; }
+.ts-labtechco-business-icon-industrial-robot-1:before { content: "\f13f"; }
+.ts-labtechco-business-icon-pallet:before { content: "\f140"; }
+.ts-labtechco-business-icon-factory-2:before { content: "\f141"; }
+.ts-labtechco-business-icon-toolbox:before { content: "\f142"; }
+.ts-labtechco-business-icon-controller:before { content: "\f143"; }
+.ts-labtechco-business-icon-factory-1:before { content: "\f144"; }
+.ts-labtechco-business-icon-material:before { content: "\f145"; }
+.ts-labtechco-business-icon-walkie-talkie:before { content: "\f146"; }
+.ts-labtechco-business-icon-statistics:before { content: "\f147"; }
+.ts-labtechco-business-icon-food:before { content: "\f148"; }
+.ts-labtechco-business-icon-chemical:before { content: "\f149"; }
+.ts-labtechco-business-icon-wheel:before { content: "\f14a"; }
+.ts-labtechco-business-icon-container:before { content: "\f14b"; }
+.ts-labtechco-business-icon-siren:before { content: "\f14c"; }
+.ts-labtechco-business-icon-power-tower:before { content: "\f14d"; }
+.ts-labtechco-business-icon-valve:before { content: "\f14e"; }
+.ts-labtechco-business-icon-machine-1:before { content: "\f14f"; }
+.ts-labtechco-business-icon-robot-arm:before { content: "\f150"; }
+.ts-labtechco-business-icon-forklift:before { content: "\f151"; }
+.ts-labtechco-business-icon-worker-1:before { content: "\f152"; }
+.ts-labtechco-business-icon-control-lever:before { content: "\f153"; }
+.ts-labtechco-business-icon-meter:before { content: "\f154"; }
+.ts-labtechco-business-icon-gears-1:before { content: "\f155"; }
+.ts-labtechco-business-icon-manufacturing:before { content: "\f156"; }
+.ts-labtechco-business-icon-scheme:before { content: "\f157"; }
+.ts-labtechco-business-icon-eco:before { content: "\f158"; }
+.ts-labtechco-business-icon-management:before { content: "\f159"; }
+.ts-labtechco-business-icon-truck:before { content: "\f15a"; }
+.ts-labtechco-business-icon-mechanism:before { content: "\f15b"; }
+.ts-labtechco-business-icon-parcel:before { content: "\f15c"; }
+.ts-labtechco-business-icon-power-press:before { content: "\f15d"; }
+.ts-labtechco-business-icon-cart:before { content: "\f15e"; }
+.ts-labtechco-business-icon-tank-1:before { content: "\f15f"; }
+.ts-labtechco-business-icon-microprocessor:before { content: "\f160"; }
+.ts-labtechco-business-icon-storage:before { content: "\f161"; }
+.ts-labtechco-business-icon-waste:before { content: "\f162"; }
+.ts-labtechco-business-icon-factory:before { content: "\f163"; }
+.ts-labtechco-business-icon-welding:before { content: "\f164"; }
+.ts-labtechco-business-icon-control-system:before { content: "\f165"; }
+.ts-labtechco-business-icon-tools:before { content: "\f166"; }
+.ts-labtechco-business-icon-monitor:before { content: "\f167"; }
+.ts-labtechco-business-icon-machine:before { content: "\f168"; }
+.ts-labtechco-business-icon-industrial-robot:before { content: "\f169"; }
+.ts-labtechco-business-icon-manufacturing-plant:before { content: "\f16a"; }
+.ts-labtechco-business-icon-tank:before { content: "\f16b"; }
+.ts-labtechco-business-icon-boxes:before { content: "\f16c"; }
+.ts-labtechco-business-icon-pump:before { content: "\f16d"; }
+.ts-labtechco-business-icon-laser:before { content: "\f16e"; }
+.ts-labtechco-business-icon-planning:before { content: "\f16f"; }
+.ts-labtechco-business-icon-conveyor:before { content: "\f170"; }
+.ts-labtechco-business-icon-danger:before { content: "\f171"; }
+.ts-labtechco-business-icon-worker:before { content: "\f172"; }
+.ts-labtechco-business-icon-gear:before { content: "\f173"; }
+.ts-labtechco-business-icon-gears:before { content: "\f174"; }

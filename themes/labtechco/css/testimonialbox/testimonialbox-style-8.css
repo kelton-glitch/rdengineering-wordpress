@@ -1,0 +1,189 @@
+.ts-testimonialbox-style-8 .themestek-box-img img{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	margin-right: 25px;
+}
+.rtl .ts-testimonialbox-style-8 .themestek-box-img img{
+	margin-left: 25px;
+	margin-right: 0;
+}
+.ts-testimonialbox-style-8 .themestek-box-author{
+	display: flex;
+	align-items: center!important;
+	padding-top: 40px;
+	margin-top: 60px;
+	border-top:1px solid rgb(3 27 78 / 22%);
+	position: relative;
+}
+.ts-bgcolor-darkgrey .ts-testimonialbox-style-8 .themestek-box-author,
+.ts-bgcolor-skincolor .ts-testimonialbox-style-8 .themestek-box-author,
+.ts-col-bgcolor-skincolor .ts-testimonialbox-style-8 .themestek-box-author{
+	border-top: 1px solid rgb(255 255 255 / 16%);
+}
+.ts-testimonialbox-style-8 .themestek-box-author::after{
+	position: absolute;
+	content: '';
+	left: 61px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: calc(15px - 1px);
+	top: -1px;
+	right: -1px;
+	border-color: #ffffff #ffffff transparent transparent;
+}
+.rtl .ts-testimonialbox-style-8 .themestek-box-author::after{
+	right: 61px;
+	left: inherit;
+	border-color: #ffffff transparent transparent #ffffff;
+}
+.ts-bgcolor-skincolor .ts-testimonialbox-style-8 .themestek-box-author::after,
+.ts-col-bgcolor-skincolor .ts-testimonialbox-style-8 .themestek-box-author::after{
+	border-color: var(--tste-labtechco-skincolor) var(--tste-labtechco-skincolor) transparent transparent;
+}
+.rtl .ts-bgcolor-skincolor .ts-testimonialbox-style-8 .themestek-box-author::after,
+.rtl .ts-col-bgcolor-skincolor .ts-testimonialbox-style-8 .themestek-box-author::after{
+	border-color: var(--tste-labtechco-skincolor) transparent transparent var(--tste-labtechco-skincolor);
+}
+.ts-bgcolor-darkgrey .ts-testimonialbox-style-8 .themestek-box-author::after{
+	border-color: var(--tste-labtechco-skincolor-dark) var(--tste-labtechco-skincolor-dark) transparent transparent;
+}
+.rtl .ts-bgcolor-darkgrey .ts-testimonialbox-style-8 .themestek-box-author::after{
+	border-color: var(--tste-labtechco-skincolor-dark) transparent transparent var(--tste-labtechco-skincolor-dark);
+}
+.ts-testimonialbox-style-8 .themestek-box-author::before{
+	border-color: rgb(3 27 78 / 22%) rgb(3 27 78 / 22%) transparent transparent;
+	top: 0;
+	border-width: 15px;
+	display: block;
+	position: absolute;
+	content: '';
+	left: 60px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	background: transparent;
+}
+.rtl .ts-testimonialbox-style-8 .themestek-box-author::before{
+	right: 60px;
+	left: inherit;
+	border-color: rgb(3 27 78 / 22%) transparent transparent rgb(3 27 78 / 22%);
+}
+.ts-bgcolor-darkgrey .ts-testimonialbox-style-8 .themestek-box-author::before,
+.ts-bgcolor-skincolor .ts-testimonialbox-style-8 .themestek-box-author::before,
+.ts-col-bgcolor-skincolor .ts-testimonialbox-style-8 .themestek-box-author::before{
+	border-color: hsl(0deg 0% 100% / 16%) rgb(255 255 255 / 16%) transparent transparent;
+}
+.rtl .ts-bgcolor-darkgrey .ts-testimonialbox-style-8 .themestek-box-author::before,
+.rtl .ts-bgcolor-skincolor .ts-testimonialbox-style-8 .themestek-box-author::before,
+.rtl .ts-col-bgcolor-skincolor .ts-testimonialbox-style-8 .themestek-box-author::before{
+	border-color: hsl(0deg 0% 100% / 16%) transparent transparent rgb(255 255 255 / 16%);
+}
+.ts-bgcolor-skincolor .ts-testimonialbox-style-8.themestek-box-testimonial h3.themestek-author-name a,
+.ts-col-bgcolor-skincolor .ts-testimonialbox-style-8.themestek-box-testimonial h3.themestek-author-name a{
+	color: #fff;
+}
+.themestek-boxes-element-testimonial-style-8 .ts-testimonialbox-style-8.themestek-box-testimonial h3.themestek-author-name,
+.themestek-boxes-element-testimonial-style-8 .ts-testimonialbox-style-8.themestek-box-testimonial h3.themestek-author-name a,
+.themestek-boxes-element-testimonial-style-8 .ts-testimonialbox-style-8.themestek-box-testimonial h3.themestek-author-name,
+.themestek-boxes-element-testimonial-style-8 .ts-testimonialbox-style-8.themestek-box-testimonial h3.themestek-author-name a{
+	font-size: 28px;
+	font-weight: 400;
+	margin: 0 0 5px 0;
+	text-transform: inherit;
+}
+.ts-bgcolor-skincolor .themestek-boxes-element-testimonial-style-8 .ts-testimonialbox-style-8.themestek-box-testimonial h3.themestek-author-name,
+.ts-bgcolor-skincolor .themestek-boxes-element-testimonial-style-8 .ts-testimonialbox-style-8.themestek-box-testimonial h3.themestek-author-name a,
+.ts-col-bgcolor-skincolor .themestek-boxes-element-testimonial-style-8 .ts-testimonialbox-style-8.themestek-box-testimonial h3.themestek-author-name,
+.ts-col-bgcolor-skincolor .themestek-boxes-element-testimonial-style-8 .ts-testimonialbox-style-8.themestek-box-testimonial h3.themestek-author-name a{
+	color: #fff;
+}
+.themestek-box-testimonial.ts-testimonialbox-style-8 .themestek-box-footer{
+	font-size: 14px;
+}
+.ts-bgcolor-skincolor .themestek-box-testimonial.ts-testimonialbox-style-8 .themestek-box-footer,
+.ts-col-bgcolor-skincolor .themestek-box-testimonial.ts-testimonialbox-style-8 .themestek-box-footer{
+	color: #fff;
+}
+.ts-testimonialbox-style-8 .ts-labtechco-icon-star.ts-active{
+	color: #fec107;
+}
+.ts-testimonialbox-style-8 blockquote.themestek-testimonial-text{
+	background-color: transparent;
+	padding: 20px 40px 0 0px;
+	font-style: normal;
+	font-weight: 100 !important;
+	color: var(--tste-labtechco-skincolor-dark);
+	font-size: 26px;
+	line-height: 42px;
+}
+.rtl .ts-testimonialbox-style-8 blockquote.themestek-testimonial-text{
+	padding-left: 40px;
+	padding-right: 0;
+}
+.ts-bgcolor-darkgrey .ts-testimonialbox-style-8 blockquote.themestek-testimonial-text,
+.ts-bgcolor-skincolor .ts-testimonialbox-style-8 blockquote.themestek-testimonial-text,
+.ts-col-bgcolor-skincolor .ts-testimonialbox-style-8 blockquote.themestek-testimonial-text{
+	color: #fff;
+}
+.ts-testimonialbox-style-8 .ts-labtechco-icon-star::before{
+	margin: 0;
+	font-size: 24px;
+}
+.ts-testimonialbox-style-8.themestek-box-testimonial .themestek-box-desc{
+	position: relative;
+}
+.ts-testimonialbox-style-8.themestek-box-testimonial .themestek-box-desc::after{
+	position: absolute;
+	content: url(../../images/qoute-icon.png);
+	top: 0;
+	right: 0;
+	-webkit-filter: grayscale(1) invert(1);
+	filter: grayscale(1) invert(1);
+}
+.rtl .ts-testimonialbox-style-8.themestek-box-testimonial .themestek-box-desc::after{
+	left: 0;
+	right: inherit;
+	-webkit-transform: scaleX(-1);
+	-moz-transform: scaleX(-1);
+	-ms-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	transform: scaleX(-1);
+}
+.ts-bgcolor-skincolor .ts-testimonialbox-style-8.themestek-box-testimonial .themestek-box-desc::after,
+.ts-col-bgcolor-skincolor .ts-testimonialbox-style-8.themestek-box-testimonial .themestek-box-desc::after{
+	-webkit-filter:none;
+	filter: none;
+}
+.themestek-boxes-element-testimonial-style-8.themestek-boxes-testimonial.themestek-boxes-view-carousel .themestek-boxes-row-wrapper .slick-next,
+.themestek-boxes-element-testimonial-style-8.themestek-boxes-testimonial.themestek-boxes-view-carousel .themestek-boxes-row-wrapper .slick-prev{
+	bottom: 20px;
+	top: auto;
+	right: 55px;
+	left: inherit;
+}
+.rtl .themestek-boxes-element-testimonial-style-8.themestek-boxes-testimonial.themestek-boxes-view-carousel .themestek-boxes-row-wrapper .slick-next,
+.rtl .themestek-boxes-element-testimonial-style-8.themestek-boxes-testimonial.themestek-boxes-view-carousel .themestek-boxes-row-wrapper .slick-prev{
+	left: 55px;
+	right: inherit;
+}
+.themestek-boxes-element-testimonial-style-8 .themestek-boxes-row-wrapper .slick-prev::before{
+	content: '\e808';
+	color: #fff;
+}
+.themestek-boxes-element-testimonial-style-8 .themestek-boxes-row-wrapper .slick-next::before{
+	font-family: "ts-labtechco-icons";
+	content: '\e809';
+	color: #fff;
+}
+.themestek-boxes-element-testimonial-style-8 .themestek-boxes-row-wrapper .slick-arrow:hover::before{
+	color: #fff;
+}
+
+@media (max-width:767px){
+	.rtl .ts-testimonialbox-style-8 blockquote.themestek-testimonial-text,
+	.ts-testimonialbox-style-8 blockquote.themestek-testimonial-text{
+		padding: 20px 0px 0 0;
+	}
+}

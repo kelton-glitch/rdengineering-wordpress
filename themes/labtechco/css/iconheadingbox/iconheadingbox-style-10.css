@@ -1,0 +1,38 @@
+.ts-ihbox.ts-ihbox-style-10.ts-ihbox-itype-icon{
+	margin-bottom: 40px;
+}
+.ts-ihbox.ts-ihbox-style-10 .ts-ihbox-heading-with-icon{
+	display: table;
+}
+.ts-ihbox.ts-ihbox-style-10  .ts-ihbox-icon,
+.ts-ihbox.ts-ihbox-style-10  .ts-ihbox-contents{
+	display: table-cell;
+	vertical-align: top;
+}
+.ts-ihbox.ts-ihbox-style-10 .ts-ihbox-icon{
+	vertical-align: middle;
+}
+.ts-bgcolor-skincolor .ts-ihbox-style-10 .ts-icon-skincolor i{
+	color: #fff;
+}
+.ts-ihbox.ts-ihbox-style-10 .ts-vc_cta3-headers,
+.ts-ihbox.ts-ihbox-style-10 .ts-cta3-content-wrapper,
+.ts-ihbox.ts-ihbox-style-10 .ts-ihbox-contents{
+	text-align: right;
+}
+.rtl .ts-ihbox.ts-ihbox-style-10 .ts-vc_cta3-headers,
+.rtl .ts-ihbox.ts-ihbox-style-10 .ts-cta3-content-wrapper,
+.rtl .ts-ihbox.ts-ihbox-style-10 .ts-ihbox-contents{
+	text-align: left;
+}
+.ts-ihbox-style-10 .ts-ihbox-contents{
+	padding-right: 30px;
+}
+.rtl .ts-ihbox-style-10 .ts-ihbox-contents{
+	padding-left: 30px;
+	padding-right: 0;
+}
+.ts-ihbox-style-10 .ts-ihbox-inner{
+	display: table;
+	width: 100%;
+}

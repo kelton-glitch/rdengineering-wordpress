@@ -1,0 +1,34 @@
+.ts-ihbox-style-14.ts-ihbox{
+	padding: 65px 0 0 0;
+}
+.ts-ihbox-style-14.ts-ihbox .ts-ihbox-content,
+.ts-ihbox-style-14.ts-ihbox .ts-cta3-content-wrapper{
+	margin-bottom: 20px;
+	font-size: 15px;
+	line-height: 26px;
+}
+.ts-ihbox-style-14.ts-ihbox .ts-ihbox-icon-wrapper{
+	position: absolute;
+	right: 10px;
+	font-size: 180px;
+	line-height: 160px;
+	top: 0;
+	font-weight: 700 !important;
+	-webkit-text-fill-color: transparent;
+	-webkit-text-stroke: 1px #bcbcd0;
+}
+.rtl .ts-ihbox-style-14.ts-ihbox .ts-ihbox-icon-wrapper{
+	left: 10px;
+	right: inherit;
+}
+.ts-ihbox-style-14.ts-ihbox:hover .ts-ihbox-icon-wrapper{
+	-webkit-text-stroke: 1px var(--tste-labtechco-skincolor-dark);
+}
+.ts-ihbox-style-14.ts-ihbox .ts-ihbox-contents h2.ts-custom-heading,
+.ts-ihbox-style-14.ts-ihbox .ts-ihbox-contents .ts-ihbox-heading {
+	font-size: 28px;
+	line-height: 34px;
+	font-weight: 500;
+	text-transform: capitalize;
+	margin: 0 0 30px;
+}

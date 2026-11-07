@@ -1,0 +1,215 @@
+.themestek-boxes-element-service-style-14 .themestek-main-hover{
+	display: flex;
+	justify-content: space-between;
+}
+.themestek-boxes-element-service-style-14 .themestek-main-hover .themestek-hover-slide-images{
+	width: 49%;
+	padding-right: 135px;
+	padding-left: 15px;
+}
+.rtl .themestek-boxes-element-service-style-14 .themestek-main-hover .themestek-hover-slide-images{
+	padding-left: 135px;
+	padding-right: 15px;
+}
+.themestek-boxes-element-service-style-14 .themestek-main-hover .themestek-content-box{
+	width: 51%;
+	padding-top: 25px;
+}
+.themestek-boxes-element-service-style-14 .themestek-hover-inner{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.themestek-boxes-element-service-style-14 .themestek-hover-inner li::before{
+	content: counter(tsbox5, decimal-leading-zero) " ";
+	counter-increment: tsbox5;
+	display: inline-block;
+	font-size: 18px;
+	line-height: 48px;
+	color: var(--tste-labtechco-skincolor);
+	margin-right: 28px;
+}
+.rtl .themestek-boxes-element-service-style-14 .themestek-hover-inner li::before{
+	margin-left: 28px;
+	margin-right: 0;
+}
+.themestek-boxes-element-service-style-14 .themestek-hover-inner li h3{
+	font-size: 40px;
+	line-height: 50px;
+	font-weight: 600;
+	margin: 0;
+	flex: 1;
+}
+.themestek-boxes-element-service-style-14 .themestek-hover-inner li{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	padding: 28px 0;
+	border-bottom: 1px solid rgba(var(--tste-labtechco-skincolor-dark-rgb), 0.1);
+}
+.ts-bgcolor-darkgrey .themestek-boxes-element-service-style-14 .themestek-hover-inner li,
+.ts-textcolor-white .themestek-boxes-element-service-style-14 .themestek-hover-inner li{
+	border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+.themestek-boxes-element-service-style-14 .themestek-hover-inner li:first-child{
+	border-top: 1px solid rgba(var(--tste-labtechco-skincolor-dark-rgb), 0.1);
+}
+.ts-bgcolor-darkgrey .themestek-boxes-element-service-style-14 .themestek-hover-inner li:first-child,
+.ts-textcolor-white .themestek-boxes-element-service-style-14 .themestek-hover-inner li:first-child{
+	border-top-color: rgba(255, 255, 255, 0.1);
+}
+.themestek-boxes-element-service-style-14 .themestek-hover-inner li h3 a{
+	color: var(--tste-labtechco-skincolor-dark);
+}
+.ts-bgcolor-darkgrey .themestek-boxes-element-service-style-14 .themestek-hover-inner li h3 a,
+.ts-textcolor-white .themestek-boxes-element-service-style-14 .themestek-hover-inner li h3 a{
+	color: #fff;
+}
+.themestek-boxes-element-service-style-14 .themestek-hover-inner li:hover h3 a{
+	color: var(--tste-labtechco-skincolor);
+}
+.themestek-boxes-element-service-style-14 .themestek-main-hover .ts-featured-wrapper img{
+	-webkit-clip-path: polygon(20% 0%, 100% 12%, 80% 100%, 0% 88%);
+	clip-path: polygon(20% 0%, 100% 12%, 80% 100%, 0% 88%);
+}
+.rtl .themestek-boxes-element-service-style-14 .themestek-main-hover .ts-featured-wrapper img{
+	-webkit-clip-path: polygon(20% 0%, 100% 12%, 80% 100%, 0% 88%);
+	clip-path: polygon(20% 100%, 0% 12%, 80% 0%, 100% 88%);
+}
+.themestek-boxes-element-service-style-14 .themestek-main-hover .ts-featured-wrapper{
+	position: relative;
+	z-index: 1;
+	padding-bottom: 40px;
+}
+.themestek-boxes-element-service-style-14 .themestek-main-hover .ts-featured-wrapper::before{
+	position: absolute;
+	content: '';
+	right: 59px;
+	bottom: 20px;
+	width: 118px;
+	height: 147px;
+	z-index: 2;
+	-webkit-clip-path: polygon(12% 45%, 100% 0%, 86% 55%, 0% 100%);
+	clip-path: polygon(12% 45%, 100% 0%, 86% 55%, 0% 100%);
+	background-color: var(--tste-labtechco-skincolor);
+}
+.rtl .themestek-boxes-element-service-style-14 .themestek-main-hover .ts-featured-wrapper::before{
+	left: 55px;
+	right: inherit;
+	-webkit-transform: scaleX(-1);
+	-moz-transform: scaleX(-1);
+	-ms-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	transform: scaleX(-1);
+}
+.themestek-boxes-element-service-style-14 .themestek-main-hover .ts-featured-wrapper::after{
+	position: absolute;
+	content: '';
+	right: 185px;
+	bottom: 0;
+	width: 51px;
+	height: 84px;
+	z-index: 2;
+	-webkit-clip-path: polygon(0% 38%, 68% 100%, 100% 0%);
+	clip-path: polygon(0% 38%, 68% 100%, 100% 0%);
+	background-color: var(--tste-labtechco-skincolor-dark);
+}
+.rtl .themestek-boxes-element-service-style-14 .themestek-main-hover .ts-featured-wrapper::after{
+	left: 180px;
+	right: inherit;
+	-webkit-transform: scaleX(-1);
+	-moz-transform: scaleX(-1);
+	-ms-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	transform: scaleX(-1);
+}
+.ts-bgcolor-darkgrey .themestek-boxes-element-service-style-14 .themestek-main-hover .ts-featured-wrapper::after{
+	background-color: #fff;
+}
+.themestek-boxes-element-service-style-14 .themestek-hover-inner li i{
+	display: inline-block;
+	font-size: 20px;
+	line-height: 20px;
+	cursor: pointer;
+	color: rgba(var(--tste-labtechco-skincolor-dark-rgb), 0.5);
+	-webkit-transition: all 0.3s ease 0s;
+	-moz-transition: all 0.3s ease 0s;
+	-ms-transition: all 0.3s ease 0s;
+	-o-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+}
+.rtl .themestek-boxes-element-service-style-14 .themestek-hover-inner li i{
+	-webkit-transform: scaleX(-1);
+	-moz-transform: scaleX(-1);
+	-ms-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	transform: scaleX(-1);
+}
+.ts-bgcolor-darkgrey .themestek-boxes-element-service-style-14 .themestek-hover-inner li i,
+.ts-textcolor-white .themestek-boxes-element-service-style-14 .themestek-hover-inner li i{
+	color: rgba(255,255,255, 0.5);
+}
+.themestek-boxes-element-service-style-14 .themestek-hover-inner li:hover i{
+	color: var(--tste-labtechco-skincolor);
+}
+.ts-bgcolor-skincolor .themestek-boxes-element-service-style-14 .themestek-main-hover .ts-featured-wrapper::before{
+	background-color: #fff;
+}
+.ts-bgcolor-skincolor .themestek-boxes-element-service-style-14 .themestek-hover-inner li::before{
+	color: var(--tste-labtechco-skincolor-dark);
+}
+.ts-bgcolor-skincolor .themestek-boxes-element-service-style-14 .themestek-hover-inner li:hover i,
+.ts-bgcolor-skincolor .themestek-boxes-element-service-style-14 .themestek-hover-inner li:hover h3 a {
+	color: #fff;
+}
+.ts-textcolor-white.ts-bgcolor-skincolor .themestek-boxes-element-service-style-14 .themestek-hover-inner li:hover i,
+.ts-textcolor-white.ts-bgcolor-skincolor .themestek-boxes-element-service-style-14 .themestek-hover-inner li:hover h3 a {
+	color: var(--tste-labtechco-skincolor-dark);
+}
+
+.elementor-element-edit-mode .themestek-boxes-element-service-style-14 .themestek-hover-image .ts-featured-wrapper:not(:first-child) {
+	display: none;
+}
+
+/*=== Responsive ===*/
+@media(max-width: 1200px){
+	.themestek-boxes-element-service-style-14 .themestek-main-hover{
+		flex-direction: column;
+	}
+	.themestek-boxes-element-service-style-14 .themestek-main-hover .themestek-hover-slide-images{
+		width: 100%;
+		padding-right: 15px;
+	}
+	.themestek-boxes-element-service-style-14 .themestek-main-hover .themestek-content-box{
+		width: 100%;
+		padding-top: 50px;
+	}
+	.themestek-boxes-element-service-style-14 .themestek-main-hover .ts-featured-wrapper::before,
+	.themestek-boxes-element-service-style-14 .themestek-main-hover .ts-featured-wrapper::after{
+		display: none;
+	}
+	.themestek-boxes-element-service-style-14 .themestek-main-hover .ts-featured-wrapper{
+		padding-bottom: 0;
+	}
+}
+
+@media(max-width: 767px){
+	.themestek-boxes-element-service-style-14 .themestek-hover-inner li h3{
+		font-size: 36px;
+		line-height: 46px;
+	}
+}
+
+@media(max-width: 575px){
+	.themestek-boxes-element-service-style-14 .themestek-hover-inner li h3{
+		font-size: 30px;
+		line-height: 40px;
+	}
+	.themestek-boxes-element-service-style-14 .themestek-hover-inner li{
+		flex-direction: column;
+		align-items: start;
+	}
+	.themestek-boxes-element-service-style-14 .themestek-hover-inner li i{
+		margin-top: 20px;
+	}
+}

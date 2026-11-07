@@ -1,0 +1,72 @@
+.ts-fidbox-style-14 .ts-fid-title{
+	font-size: 26px;
+	line-height: 30px;
+	margin-bottom: 0;
+	font-weight: 600;
+}
+.ts-fidbox-style-14 .ts-fid-subtitle{
+	font-size: 15px;
+	line-height: 26px;
+	margin: 0;
+	font-weight: 500;
+	color: #034b5b;
+	text-transform: uppercase;
+}
+.ts-fidbox-style-14 .ts-fid-desc-w,
+.ts-fidbox-style-14 .ts-circle-w{
+	display: inline-block;
+}
+.ts-fidbox-style-14 .ts-fid-desc-w{
+	margin-left: 20px;
+	text-align: center;
+}
+.rtl .ts-fidbox-style-14 .ts-fid-desc-w{
+	margin-right: 20px;
+	margin-left: 0;
+}
+.ts-fidbox-style-14 .ts-circle-w{
+	position: relative;
+	vertical-align: top;
+}
+.ts-fidbox-style-14 .ts-circle-number{
+	font-size: 36px;
+	font-weight: 400;
+	color: var(--tste-labtechco-skincolor-dark);
+}
+.ts-fidbox-style-14 .ts-fid-desc-w{
+	position: absolute;
+	top: 50%;
+	-khtml-transform: translateX(0%) translateY(-50%);
+	-moz-transform: translateX(0%) translateY(-50%);
+	-ms-transform: translateX(0%) translateY(-50%);
+	-o-transform: translateX(0%) translateY(-50%);
+	transform: translateX(0%) translateY(-50%);
+}
+.ts-fidbox-style-14 .ts-circle canvas{
+	border: 1px solid #dedede;
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	border-radius: 100%;
+}
+.ts-fidbox-style-14 .ts-fid-desc{
+	margin-top: 10px;
+	font-size: 15px;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+.ts-textcolor-white .ts-fidbox-style-14 .ts-circle-number,
+.ts-bgcolor-darkgrey .ts-fidbox-style-14 .ts-circle-number{
+	color: #fff;
+}
+
+/*=== Responsive ===*/
+@media (max-width: 575px){
+	.ts-fidbox-style-14 .ts-fid-subtitle{
+		font-size: 13px;
+	}
+	.ts-fidbox-style-14 .ts-fid-title{
+		font-size: 22px;
+	}
+}

@@ -1,0 +1,8 @@
+.themestek-box.ts-portfoliobox-style-3{
+	text-align: center;
+	padding-bottom: 20px;
+	background: #fff;
+}
+.ts-portfoliobox-style-3.themestek-box h3 a:hover{
+	color: var(--tste-labtechco-skincolor);
+}

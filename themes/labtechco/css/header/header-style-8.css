@@ -1,0 +1,205 @@
+@media (max-width: 1200px){
+	.ts-header-style-8 .main-navigation:not(.toggled-on) .ts-labtechco-icon-bars,
+	.ts-header-style-8 .main-navigation .ts-labtechco-icon-bars::before,
+	.ts-header-style-8 .main-navigation .ts-labtechco-icon-bars::after{
+		background: #031b4e;
+	}
+	.ts-header-style-8 .ts-stickable-header-w{
+		height: auto !important;
+	}
+	.ts-header-style-8 .ts-phone{
+		display: none;
+	}
+	.ts-header-style-8 .ts-header-top-wrapper.container{
+		width: 100%;
+	}
+	.ts-header-style-8 .ts-phone,
+	.ts-header-style-8 .ts-infostack-right-content{
+		display: none;
+	}
+	.ts-header-style-8 .menu-toggle i{
+		color: #000;
+	}
+	.ts-header-style-8 .site-header-main.ts-table{
+		margin: 0;
+	}
+	.ts-header-style-8 .menu-toggle{
+		right: 0;
+	}
+	.ts-header-style-8 .site-header .container{
+		padding-right: 30px;
+	}
+}
+
+@media (max-width: 1320px){
+	.ts-header-style-8 .site-header .container{
+		padding: 0 30px;
+	}
+}
+
+@media (min-width: 1201px){
+	.ts-header-style-8 .ts-header-icons > *:nth-child(2)::after{
+		background-color: rgba(255, 255, 255, 20%)
+	}
+	.ts-header-style-8 .headerlogo{
+		height: var(--tste-labtechco-header-height);
+	}
+	.ts-header-style-8  .site-header-menu-middle .container{
+		position: relative;
+		padding: 0px;
+	}
+	.ts-header-style-8 .ts-phone{
+		position: absolute;
+		right: -1px;
+		top: 0;
+		font-size: 18px;
+		color: #fff;
+		padding: 0;
+		height: 60px;
+		line-height: 60px;
+	}
+	.rtl .ts-header-style-8 .ts-phone{
+		left: -1px;
+		right: inherit;
+	}
+	.ts-header-style-8 .ts-infostack-right-content{
+		float: right;
+		position: relative;
+		z-index: 3;
+		text-align: right;
+		height: var(--tste-labtechco-header-height);
+		display: table;
+	}
+	.rtl .ts-header-style-8 .ts-infostack-right-content{
+		float: left;
+	}
+	.ts-header-style-8 .ts-header-text-area,
+	.ts-header-style-8 .ts-infostack-right-content .info-widget{
+		vertical-align: middle;
+		display: table-cell;
+		text-align: left;
+	}
+	.ts-header-style-8 .ts-infostack-right-content .info-widget .info-widget-inner{
+		margin-right: 40px;
+	}
+	.rtl .ts-header-style-8 .ts-infostack-right-content .info-widget .info-widget-inner{
+		margin-left: 40px;
+		margin-right: 0;
+	}
+	.ts-header-style-8 #site-header-menu{
+		float: none;
+		padding: 0;
+		width: 100%;
+	}
+	.ts-header-style-8 #site-header-menu #site-navigation div.nav-menu > ul > li,
+	.ts-header-style-8 #site-header-menu #site-navigation div.nav-menu > ul > li > a,
+	.ts-header-style-8 .ts-phone .ts-header-icon,
+	.ts-header-style-8 .ts-phone .ts-header-icons,
+	.ts-header-style-8 .social-icons li > a,
+	.ts-header-style-8 #site-header-menu #site-navigation{
+		height: var(--tste-labtechco-header-menuarea-height);
+		line-height: var(--tste-labtechco-header-menuarea-height);
+	}
+	.ts-header-style-8 #site-header-menu #site-navigation .nav-menu ul,
+	.ts-header-style-8 #site-header-menu #site-navigation .nav-menu{
+		float: left;
+		height: auto;
+	}
+	.rtl .ts-header-style-8 #site-header-menu #site-navigation .nav-menu ul,
+	.rtl .ts-header-style-8 #site-header-menu #site-navigation .nav-menu{
+		float: right;
+	}
+	.ts-header-style-8 .ts-header-text-area{
+		float: none;
+		margin-left: 40px;
+	}
+	.ts-header-style-8 .ts-infostack-right-content .info-widget h6{
+		font-weight: 600;
+		letter-spacing: 0;
+	}
+	.ts-header-style-8 .ts-header-icons .ts-header-wc-cart-link span.number-cart{
+		background-color: rgb( var(--tste-labtechco-skincolor-dark-rgb) , 1);
+	}
+	.ts-header-style-8 .ts-header-icons .ts-header-icon a{
+		transition: all .3s ease-in-out;
+		-moz-transition: all .3s ease-in-out;
+		-webkit-transition: all .3s ease-in-out;
+		-o-transition: all .3s ease-in-out;
+	}
+	.ts-header-style-8 .ts-header-icons .ts-header-wc-cart-link a:hover,
+	.ts-header-style-8 .site-header .social-icons li > a:hover,
+	.ts-header-style-8 .ts-header-icons .ts-header-search-link a:hover{
+		color: rgb( var(--tste-labtechco-skincolor-dark-rgb) , 1);
+	}
+	.ts-header-style-8 .is_stuck .ts-header-icons .ts-header-search-link a{
+		color: #fff;
+	}
+	.ts-header-style-8 .ts-vc_general.ts-vc_btn3.ts-vc_btn3-color-skincolor:not(.ts-vc_btn3-style-text):not(.ts-vc_btn3-style-outline),
+	.ts-header-style-8 .ts-header-text-area.ts-header-button-w a{
+		background: transparent;
+		border: 2px solid #000014;
+		color: #000014;
+		padding: 17px 50px;
+		font-size: 13px;
+		font-weight: 700 !important;
+	}
+	.ts-header-style-8 .ts-vc_general.ts-vc_btn3.ts-vc_btn3-color-skincolor:not(.ts-vc_btn3-style-text):not(.ts-vc_btn3-style-outline):hover,
+	.ts-header-style-8 .ts-header-text-area.ts-header-button-w a:hover{
+		background: #000014;
+		color: #fff;
+	}
+	.ts-header-style-8 .site-header .themestek-social-links-wrapper{
+		margin-right: 40px;
+	}
+	.rtl .ts-header-style-8 .site-header .themestek-social-links-wrapper{
+		margin-left: 40px;
+		margin-right: 0;
+	}
+	.ts-header-style-8 .ts-header-icons .ts-header-icon.ts-header-search-link{
+		padding-right: 0;
+	}
+
+	/* new sticky header */
+	.ts-header-style-8 .themestek-sticky-header .site-header-menu-inner > div,
+	.ts-header-style-8 .site-header-menu-inner{
+		background-color: transparent;
+		background-image: none;
+	}
+	.ts-header-style-8 .themestek-sticky-header .ts-phone,
+	.ts-header-style-8 .themestek-sticky-header .ts-header-icons,
+	.ts-header-style-8 .themestek-sticky-header .site-header-menu-middle > .container{
+		display: flex;
+		align-items: center;
+	}
+	.ts-header-style-8 .themestek-sticky-header .ts-phone{
+		position: static;
+		right: -1px;
+		top: 0;
+		font-size: 18px;
+		color: #fff;
+		padding: 0;
+		height: 60px;
+		line-height: 60px;
+	}
+	.ts-header-style-8 .themestek-sticky-header .ts-header-icons{
+		float: none;
+	}
+	.ts-header-style-8 .themestek-sticky-header .themestek-social-links-wrapper{
+		display: none;
+	}
+	header.ts-header-style-8 .ts-header-block div.themestek-sticky-header .ts-header-icons > *:nth-child(2)::after{
+		right: inherit;
+		left: 0;
+	}
+	.rtl header.ts-header-style-8 .ts-header-block div.themestek-sticky-header .ts-header-icons > *:nth-child(2)::after{
+		left: inherit;
+		right: 0;
+	}
+	.ts-header-style-8 .ts-header-icons .ts-header-icon.ts-header-search-link{
+		padding-right: 20px;
+	}
+	.ts-mmmenu-override-yes #page .ts-header-style-8 .themestek-sticky-header #site-navigation .mega-menu-wrap>ul>li.mega-menu-item.mega-current-menu-ancestor>a,
+	.ts-mmmenu-override-yes #page .ts-header-style-8 .themestek-sticky-header #site-navigation .mega-menu-wrap>ul>li.mega-menu-item.mega-current-menu-parent>a{
+		color: rgb( var(--tste-labtechco-skincolor-rgb) , 1) !important;
+	}
+}

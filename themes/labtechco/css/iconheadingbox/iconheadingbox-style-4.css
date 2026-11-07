@@ -1,0 +1,56 @@
+.ts-ihbox-style-4 .ts-ihbox-icon-type-text::after,
+.ts-ihbox-style-4 .ts-ihbox-big-number-text::after{
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+.ts-ihbox-style-4 .ts-ihbox-icon-type-text,
+.ts-ihbox-style-4 .ts-ihbox-big-number-text{
+	color: #c5c5c5;
+	font-size: 18px;
+	font-weight: 600;
+	padding-bottom: 28px;
+	position: relative;
+}
+.ts-ihbox-style-4 .ts-ihbox-icon-type-text::after,
+.ts-ihbox-style-4 .ts-ihbox-big-number-text::after{
+	content: '';
+	height: 2px;
+	width: 15%; 
+	z-index: 1;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.ts-ihbox-style-4:hover .ts-ihbox-icon-type-text::after,
+.ts-ihbox-style-4:hover .ts-ihbox-big-number-text::after{
+	width: 30%; 
+}
+.ts-ihbox-style-4.ts-ihbox .ts-vc_general.ts-vc_cta3 .ts-custom-heading{
+	margin-bottom: 5px
+}
+.ts-ihbox-style-4.ts-ihbox .ts-ihbox-content,
+.ts-ihbox-style-4.ts-ihbox .ts-cta3-content-wrapper{
+	padding-right: 20px;
+}
+.ts-ihbox-style-4 .ts-ihbox-icon-type-text::after,
+.ts-ihbox-style-4 .ts-vc_cta3-headers::after,
+.ts-ihbox-style-4 .ts-ihbox-big-number-text::after{
+	background-color: var(--tste-labtechco-skincolor);
+}
+.ts-bgcolor-skincolor .ts-ihbox-style-4 .ts-icon-skincolor i{
+	color: #fff;
+}
+
+/* RTL CSS */
+.rtl .ts-ihbox-style-4.ts-ihbox .ts-ihbox-content,
+.rtl .ts-ihbox-style-4.ts-ihbox .ts-cta3-content-wrapper{
+	padding-left: 20px;
+	padding-right: 0;
+}
+.rtl .ts-ihbox-style-4 .ts-ihbox-icon-type-text::after,
+.rtl .ts-ihbox-style-4 .ts-ihbox-big-number-text::after{
+	left: inherit;
+	right: 0;
+}

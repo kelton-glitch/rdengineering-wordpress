@@ -1,0 +1,201 @@
+.ts-header-style-3 .ts-titlebar-wrapper .ts-titlebar-inner-wrapper{
+	padding-top: var(--tste-labtechco-header-height);
+}
+.ts-header-style-3 .ts-stickable-header-w{
+	position: absolute;
+	z-index: 21;
+	width: 100%;
+	box-shadow: none;
+	-khtml-box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	-ms-box-shadow: none;
+	-o-box-shadow: none;
+}
+.ts-header-style-3 .themestek-pre-header-wrapper{
+	background-color: transparent;
+}
+.ts-header-style-3 .ts-stickable-header-w{
+	background-color: transparent;
+}
+.ts-header-style-3 .site-header-menu.ts-bgcolor-darkgrey,
+.ts-header-style-3 .site-header.ts-bgcolor-darkgrey{
+	background-color: rgba(0, 0, 0, 0.40);
+}
+.ts-header-style-3 .site-header-menu.ts-bgcolor-grey,
+.ts-header-style-3 .site-header.ts-bgcolor-grey{
+	background-color: rgba(235, 235, 235, 0.38);
+}
+.ts-header-style-3 .site-header-menu.ts-bgcolor-white,
+.ts-header-style-3 .site-header.ts-bgcolor-white{
+	background-color: rgba(255, 255, 255, 0.38);
+}
+.ts-header-style-3 .site-header-menu.ts-bgcolor-skincolor,
+.ts-header-style-3 .site-header.ts-bgcolor-skincolor{
+	background-color: rgb( var(--tste-labtechco-skincolor) , 0.30);
+}
+.ts-header-style-3 .themestek-pre-header-wrapper.ts-bgcolor-darkgrey{
+	border-bottom-color: rgba(0, 0, 0, 0.13);
+}
+.ts-header-style-3.ts-header-overlay .ts-vc_general.ts-vc_btn3,
+.ts-header-style-3 .ts-header-text-area.ts-header-button-w a{
+	background-color: transparent !important;
+	color: #fff !important;
+	border: 2px solid #fff;
+}
+.ts-header-style-3.ts-header-overlay .ts-vc_general.ts-vc_btn3:hover,
+.ts-header-style-3 .ts-header-text-area.ts-header-button-w a:hover{
+	background-color: #fff !important;
+	color: rgb( var(--tste-labtechco-skincolor-rgb) , 1) !important;
+	border-color: transparent;
+}
+.ts-header-style-3 .ts-vc_general.ts-vc_btn3{
+	background-color: #fff !important;
+	color: #09162a !important;
+}
+.ts-header-style-3 .is_stuck .ts-vc_general.ts-vc_btn3:hover,
+.ts-header-style-3 .ts-vc_general.ts-vc_btn3:hover{
+	background-color: var(--tste-labtechco-skincolor) !important;
+	color: #fff !important;
+}
+.ts-header-style-3 .is_stuck .ts-vc_general.ts-vc_btn3{
+	background-color: #09162a !important;
+	color: #fff !important;
+}
+.ts-header-style-3 .site-header-main.container{
+	width: 100%;
+	border-bottom: 1px solid rgb( var(--tste-labtechco-mainmenufont-color-rgb) , 0.25);
+}
+.ts-header-style-3 .site-header .themestek-social-links-wrapper{
+	border-left: 1px solid rgb( var(--tste-labtechco-mainmenufont-color-rgb) , 0.25);
+	padding-left: 30px;
+	padding-right: 20px;
+	margin-left: 20px;
+}
+.rtl .ts-header-style-3 .site-header .themestek-social-links-wrapper {
+	border-left: 0;
+	border-right: 1px solid rgb( var(--tste-labtechco-mainmenufont-color-rgb) , 0.25);
+	padding-right: 30px;
+	padding-left: 20px;
+	margin-right: 15px;
+	margin-left: 0;
+}
+.ts-header-style-3 .site-header .headerlogo{
+	border-right: 1px solid rgb( var(--tste-labtechco-mainmenufont-color-rgb) , 0.25);
+	padding-right: 50px;
+	padding-left: 30px;
+}
+.rtl .ts-header-style-3 .site-header .headerlogo {
+	border-right: 0;
+	border-left: 1px solid rgb( var(--tste-labtechco-mainmenufont-color-rgb) , 0.25);
+	padding-left: 50px;
+	padding-right: 30px;
+}
+.ts-header-style-3 .site-header .themestek-social-links-wrapper{
+	height: var(--tste-labtechco-header-height);
+	line-height: var(--tste-labtechco-header-height);
+}
+.ts-header-style-3 .site-header.is_stuck .themestek-social-links-wrapper{
+	height: var(--tste-labtechco-header-height-sticky) ;
+	line-height: var(--tste-labtechco-header-height-sticky);
+}
+.ts-header-style-3 #site-header-menu #site-navigation div.nav-menu > ul > li:hover > a{
+	color: rgb( var(--tste-labtechco-skincolor-rgb) , 1);
+}
+
+@media (max-width: 1200px){
+	.ts-header-style-3 .ts-header-icons,
+	.ts-header-style-3 .site-header .themestek-social-links-wrapper{
+		display: none;
+	}
+	.ts-header-style-3 .site-header-main.ts-table{
+		margin: 0;
+	}
+	.ts-header-style-3 .site-header .headerlogo{
+		display: inline-block;
+		padding-left: 0;
+	}
+	.ts-header-style-3 #site-header-menu #site-navigation .menu-toggle{
+		right: 0px;
+	}
+	.ts-header-style-3 .site-header .headerlogo{
+		border-right: 0 !important;
+	}
+	.ts-header-style-3 .site-header .container{
+		padding-right: 30px;
+	}
+}
+
+@media (max-width: 1320px){
+	.ts-header-style-3 .site-header .container{
+		padding: 0 30px;
+	}
+}
+
+@media (min-width: 1201px){
+	.ts-header-style-3 .site-header .themestek-social-links-wrapper{
+		transition: all .3s ease-in-out;
+		-moz-transition: all .3s ease-in-out;
+		-webkit-transition: all .3s ease-in-out;
+		-o-transition: all .3s ease-in-out;
+	}
+	.ts-header-style-3.ts-header-overlay .ts-header-icons > *:nth-child(2)::after{
+		background-color: rgba(255, 255, 255, 20%)
+	}
+	.ts-header-style-3.ts-header-overlay .is_stuck .ts-header-icons > *:nth-child(2)::after{
+		background-color: rgba(0, 0, 0, 20%)
+	}
+	.ts-header-style-3 .site-header .themestek-social-links-wrapper{
+		transition: none;
+		-moz-transition: none;
+		-webkit-transition: none;
+		-o-transition: none;
+	}
+	.ts-header-style-3 .ts-header-icons .ts-header-search-link{
+		padding-right: 0;
+	}
+	.rtl .ts-header-style-3 .ts-header-icons .ts-header-search-link{
+		padding-left: 0;
+		padding-right: 20px;
+	}
+	.ts-header-style-3 #site-header-menu #site-navigation div.nav-menu > ul > li > a{
+		margin: 0px 15px 0px 15px;
+	}
+
+	/* New sticky header */
+	header.ts-header-style-3 .themestek-sticky-header > .container{
+		max-width: none;
+		width: 100%;
+		padding: 0;
+	}
+	.ts-header-style-3 .themestek-sticky-header .site-header .themestek-social-links-wrapper{
+		border-left-color: rgb( var(--tste-labtechco-stickymainmenufontcolor-rgb) , 0.10);
+	}
+	.rtl .ts-header-style-3 .themestek-sticky-header .site-header .themestek-social-links-wrapper{
+		border-right-color: rgba( var(--tste-labtechco-stickymainmenufontcolor-rgb) , 0.10);
+	}
+	.ts-header-style-3 .themestek-sticky-header .site-header .headerlogo{
+		border-right-color: rgb( var(--tste-labtechco-stickymainmenufontcolor-rgb) , 0.10);
+	}
+	.rtl .ts-header-style-3 .themestek-sticky-header .site-header .headerlogo{
+		border-left-color: rgba( var(--tste-labtechco-stickymainmenufontcolor-rgb) , 0.10);
+	}
+	.ts-mmmenu-override-yes #page .ts-header-style-3 .themestek-sticky-header #site-navigation .mega-menu-wrap>ul>li.mega-menu-item.mega-current-menu-ancestor>a,
+	.ts-mmmenu-override-yes #page .ts-header-style-3 .themestek-sticky-header #site-navigation .mega-menu-wrap>ul>li.mega-menu-item.mega-current-menu-parent>a{
+		color: rgb( var(--tste-labtechco-skincolor-rgb) , 1) !important;
+	}
+	.ts-header-style-3 .themestek-sticky-header #site-header-menu #site-navigation div.nav-menu > ul > li.current-menu-ancestor > a,
+	.ts-header-style-3 .themestek-sticky-header #site-header-menu #site-navigation div.nav-menu > ul > li:hover > a{
+		color: rgb( var(--tste-labtechco-skincolor-rgb) , 1);
+	}
+	.ts-header-style-3 .themestek-sticky-header .ts-header-wc-cart-link a,
+	.ts-header-style-3 .themestek-sticky-header .social-icons li > a,
+	.ts-header-style-3 .themestek-sticky-header .ts-header-search-link a{
+		color: rgb( var(--tste-labtechco-stickymainmenufontcolor-rgb) , 1);
+	}
+	.ts-header-style-3 .themestek-sticky-header .ts-header-wc-cart-link a:hover,
+	.ts-header-style-3 .themestek-sticky-header .social-icons li > a:hover,
+	.ts-header-style-3 .themestek-sticky-header .ts-header-search-link a:hover{
+		color: rgb( var(--tste-labtechco-skincolor-rgb) , 1) !important;
+	}
+}

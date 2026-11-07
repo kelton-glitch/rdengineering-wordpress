@@ -1,0 +1,89 @@
+.ts-fidbox-style-11 .ts-fld-contents .ts-fid-title{
+	font-size: 22px;
+	line-height: 26px;
+	font-weight: 600;
+	margin-bottom: 8px;
+}
+.ts-fidbox-style-11 .ts-fld-contents{
+	display: flex;
+	align-items: center;
+}
+.ts-fidbox-style-11 .ts-fid-inner{
+	display: flex;
+	align-items: center;
+	font-size: 90px;
+	line-height: 90px;
+	font-weight: 600;
+}
+.ts-fidbox-style-11 .ts-fld-contents sub,
+.ts-fidbox-style-11 .ts-fld-contents sup{
+	font-size: 60%;
+}
+.ts-fidbox-style-11 .ts-fld-contents h3.ts-fid-inner span,
+.ts-fidbox-style-11 .ts-fld-contents sub,
+.ts-fidbox-style-11 .ts-fld-contents sup{
+	color: var(--tste-labtechco-skincolor);
+}
+.ts-fidbox-style-11 .ts-fid-desc-w{
+	padding-left: 40px;
+}
+.rtl .ts-fidbox-style-11 .ts-fid-desc-w{
+	padding-right: 40px;
+	padding-left: 0;
+}
+.fid-text-white .ts-fidbox-style-11 .ts-fld-contents .ts-fid-inner,
+.fid-text-white .ts-fidbox-style-11 .ts-fld-contents span,
+.fid-text-white .ts-fidbox-style-11 .ts-fld-contents .ts-fid-inner span{
+	color: #fff;
+}
+.ts-fidbox-style-11 .ts-fld-contents h3.ts-fid-inner span[data-appear-animation]{
+	color: var(--tste-labtechco-skincolor-dark);
+}
+.ts-textcolor-white .ts-fidbox-style-11 .ts-fld-contents h3.ts-fid-inner span[data-appear-animation],
+.ts-bgcolor-darkgrey .ts-fidbox-style-11 .ts-fld-contents h3.ts-fid-inner span[data-appear-animation]{
+	color: #fff;
+}
+.ts-bgcolor-skincolor .ts-fidbox-style-11 .ts-fld-contents h3.ts-fid-inner span,
+.ts-bgcolor-skincolor .ts-fidbox-style-11 .ts-fld-contents sub,
+.ts-bgcolor-skincolor .ts-fidbox-style-11 .ts-fld-contents sup{
+	color: var(--tste-labtechco-skincolor-dark);
+}
+
+/*=== Responsive ===*/
+@media(min-width: 1200px) and (max-width: 1600px){
+	.ts-fidbox-style-11 .ts-fid-inner{
+		font-size: 70px;
+		line-height: 70px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+	.ts-fidbox-style-11 .ts-fid-inner{
+		font-size: 50px;
+		line-height: 50px;
+	}
+	.ts-fidbox-style-11 .ts-fid-desc-w{
+		padding-left: 25px;
+	}
+}
+
+@media (max-width: 767px){
+	.ts-fidbox-style-11 .ts-fid-inner{
+		font-size: 60px;
+		line-height: 60px;
+	}
+}
+
+@media (max-width: 540px){
+	.ts-fidbox-style-11 .ts-fid-inner{
+		font-size: 40px;
+		line-height: 40px;
+	}
+	.ts-fidbox-style-11 .ts-fid-desc-w{
+		padding-left: 20px;
+	}
+	.ts-fidbox-style-11 .ts-fld-contents .ts-fid-title{
+		font-size: 18px;
+		line-height: 24px;
+	}
+}

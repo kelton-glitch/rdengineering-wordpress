@@ -1,0 +1,47 @@
+.ts-fidbox-style-13 .ts-fid-inner{
+	display: flex;
+	align-items: center;
+	font-size: 54px;
+	line-height: 54px;
+	margin-bottom: 0;
+	font-weight: 700;
+}
+.ts-fidbox-style-13 sub,
+.ts-fidbox-style-13 sup{
+	font-size: 58%;
+}
+.ts-fidbox-style-13 sup{
+	top: -10px;
+}
+.ts-fidbox-style-13 .ts-fid-title{
+	font-size: 20px;
+	line-height: 28px;
+	font-weight: 600;
+	text-transform: none;
+	margin-bottom: 35px;
+	color: var(--tste-labtechco-skincolor-dark)!important;
+}
+.ts-fid.ts-fidbox-style-13{
+	display: inline-block;
+	padding: 30px;
+}
+.ts-fidbox-style-13 .ts-fld-contents h3.ts-fid-inner span,
+.ts-fidbox-style-13 .ts-fld-contents sub,
+.ts-fidbox-style-13 .ts-fld-contents sup{
+	color: var(--tste-labtechco-skincolor-dark);
+}
+.ts-fidbox-style-13 .ts-fld-contents h3.ts-fid-inner span[data-appear-animation]{
+	color: #3132ff;
+}
+.ts-fidbox-custom-style-13 .ts-fidbox-style-13 .ts-fid-title,
+.ts-fidbox-custom-style-13.ts-fidbox-style-13 .ts-fid-title{
+	color: #fff!important;
+}
+.ts-fidbox-custom-style-13 .ts-fidbox-style-13 .ts-fld-contents h3.ts-fid-inner span,
+.ts-fidbox-custom-style-13 .ts-fidbox-style-13 .ts-fld-contents sub,
+.ts-fidbox-custom-style-13 .ts-fidbox-style-13 .ts-fld-contents sup,
+.ts-fidbox-custom-style-13.ts-fidbox-style-13 .ts-fld-contents h3.ts-fid-inner span,
+.ts-fidbox-custom-style-13.ts-fidbox-style-13 .ts-fld-contents sub,
+.ts-fidbox-custom-style-13.ts-fidbox-style-13 .ts-fld-contents sup{
+	color: var(--tste-labtechco-skincolor)!important;
+}

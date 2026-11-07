@@ -1,0 +1,95 @@
+/*ts-blogbox-style-8*/
+.themestek-box-blog.ts-blogbox-style-8{
+	position: relative;
+}
+.ts-blogbox-style-8.themestek-box-blog .themestek-box-content{
+	padding: 30px 0 0!important;
+}
+.ts-blogbox-style-8 .ts-meta-line.cat-links a{
+	padding: 5px 10px 5px;
+	font-size: 12px;
+	line-height: 14px;
+	display: inline-block;
+	margin-bottom: 8px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	color: #8893b9;
+	background-color: var(--tste-labtechco-skincolor-light);
+}
+.ts-blogbox-style-8 .ts-meta-line.cat-links a:hover{
+	color: #fff;
+	background-color: var(--tste-labtechco-skincolor);
+}
+.ts-blogbox-style-8.themestek-box-blog .themestek-box-title h4{
+	font-size: 24px;
+	line-height: 32px;
+	margin-bottom: 15px;
+	font-weight: 500;
+}
+.ts-blogbox-style-8.themestek-box-blog .themestek-box-title h4 a{
+	color: var(--tste-labtechco-skincolor-dark);
+}
+.ts-bgcolor-darkgrey .ts-blogbox-style-8.themestek-box-blog .themestek-box-title h4 a{
+	color: #fff;
+}
+.ts-blogbox-style-8.themestek-box-blog .themestek-box-title h4 a:hover{
+	color: var(--tste-labtechco-skincolor);
+}
+.ts-textcolor-white.ts-bgcolor-skincolor .ts-blogbox-style-8.themestek-box-blog .themestek-box-title h4 a,
+.ts-bgcolor-skincolor .ts-blogbox-style-8.themestek-box-blog .themestek-box-title h4 a:hover{
+	color: #fff;
+}
+.ts-blogbox-style-8 .ts-entry-meta-wrapper .ts-meta-line{
+	margin-right: 30px;
+}
+.rtl .ts-blogbox-style-8 .ts-entry-meta-wrapper .ts-meta-line{
+	margin-left: 30px;
+	margin-right: 0;
+}
+.ts-blogbox-style-8 .ts-entry-meta-wrapper .ts-meta-line::after{
+	position: absolute;
+	content: "";
+	width: 7px;
+	height: 7px;
+	right: -20px;
+	top: 50%;
+	background-color: var(--tste-labtechco-skincolor);
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.rtl .ts-blogbox-style-8 .ts-entry-meta-wrapper .ts-meta-line::after{
+	left: -20px;
+	right: inherit;
+}
+.ts-blogbox-style-8 .ts-entry-meta-wrapper .ts-meta-line span,
+.ts-blogbox-style-8 .ts-entry-meta-wrapper .ts-meta-line a{
+	font-size: 16px;
+	line-height: 20px;
+	text-transform: none;
+	font-family: "Work Sans", Tahoma, Geneva, sans-serif;
+}
+.ts-blogbox-style-8 .ts-entry-meta-wrapper .ts-meta-line a:hover{
+	color: var(--tste-labtechco-skincolor);
+}
+.ts-blogbox-style-8 .ts-meta-line.cat-links a:not(:last-child){
+	margin-right: 2px;
+}
+.ts-textcolor-white.ts-bgcolor-skincolor .ts-blogbox-style-8.themestek-box-blog .themestek-box-title h4 a:hover,
+.ts-bgcolor-skincolor .ts-blogbox-style-8 .ts-entry-meta-wrapper .ts-meta-line a:hover{
+	color: var(--tste-labtechco-skincolor-dark);
+}
+.ts-bgcolor-skincolor .ts-blogbox-style-8 .ts-meta-line.cat-links a:hover {
+	color: #fff;
+	background-color: var(--tste-labtechco-skincolor-dark);
+}
+.ts-bgcolor-skincolor .ts-blogbox-style-8 .ts-entry-meta-wrapper .ts-meta-line::after{
+	background-color: var(--tste-labtechco-skincolor-dark);
+}

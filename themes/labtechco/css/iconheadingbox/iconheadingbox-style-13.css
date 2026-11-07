@@ -1,0 +1,39 @@
+.ts-custom-col-style .ts-col-bgcolor-darkgrey .ts-ihbox-style-13 i,
+.ts-bgcolor-skincolor .ts-ihbox-style-13 .ts-icon-skincolor i{
+	color: #fff;
+}
+.ts-custom-col-style .ts-col-bgcolor-darkgrey .ts-ihbox-style-13 .ts-ihbox-contents{
+	margin-bottom: 0;
+}
+.ts-ihbox-style-13{
+	padding-top: 20px;
+	position: relative;
+}
+.ts-ihbox-style-13 .ts-ihbox-icon-wrapper i::before{
+	font-size: 70px;
+	height: 70px;
+}
+.ts-ihbox-style-13 .ts-overlay.ts-ihbox-icon{
+	display: inline-block;
+	position: absolute;
+	right: 0;
+	top: -20px;
+	opacity: 0.1;
+}
+.rtl .ts-ihbox-style-13 .ts-overlay.ts-ihbox-icon{
+	left: 0;
+	right: inherit;
+}
+.ts-ihbox-style-13 .ts-overlay .ts-ihbox-icon-wrapper i::before{
+	font-size: 95px;
+	height: 95px;
+}
+.ts-ihbox-style-13 .ts-ihbox-contents{
+	margin-top: 30px;
+	margin-bottom: 25px;
+}
+.ts-ihbox-style-13 .ts-vc_general.ts-vc_cta3 .ts-custom-heading{
+	font-size: 23px;
+	line-height: 35px;
+	text-transform: none;
+}

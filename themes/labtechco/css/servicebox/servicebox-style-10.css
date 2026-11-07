@@ -1,0 +1,301 @@
+.themestek-boxes-element-service-style-10 .ts-box-col-wrapper::before{
+	counter-increment: tsbox1;
+	content: counter( tsbox1, decimal-leading-zero);
+	font-size: 16px;
+	position: absolute;
+	top: 80px;
+	right: 70px;
+	z-index: 2;
+}
+.rtl .themestek-boxes-element-service-style-10 .ts-box-col-wrapper::before{
+	left: 70px;
+	right: inherit;
+}
+.themestek-boxes-element-service-style-10 .themestek-boxes-inner.themestek-boxes-service-inner{
+	position: relative;
+}
+.themestek-boxes-element-service-style-10 .ts-box-col-wrapper.active::before{
+	color: #fff;
+}
+.themestek-boxes-element-service-style-10{
+	padding-top: 70px;
+	padding-bottom: 150px;
+}
+.themestek-boxes-element-service-style-10 .themestek-boxes-row-wrapper{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-transition-property: -webkit-transform;
+	transition-property: -webkit-transform;
+	-o-transition-property: transform;
+	transition-property: transform;
+	transition-property: transform, -webkit-transform;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	display: flex;
+	padding-left: 28vw;
+	flex-wrap: inherit;
+}
+.rtl .themestek-boxes-element-service-style-10 .themestek-boxes-row-wrapper{
+	padding-right: 28vw;
+	padding-left: 0;
+}
+.themestek-boxes-element-service-style-10 .ts-box-col-wrapper{
+	width: 623px !important;
+	margin-left: 30px;
+	cursor: pointer;
+	height: 425px;
+	box-sizing: border-box;
+	margin-bottom: 0;
+	flex-shrink: 0;
+}
+.rtl .themestek-boxes-element-service-style-10 .ts-box-col-wrapper{
+	margin-right: 30px;
+	margin-left: 0;
+}
+.themestek-boxes-element-service-style-10 .ts-element-inner{
+	position: relative;
+}
+.themestek-box.ts-servicebox-style-10 .themestek-box-content-inner{
+	padding-top: 0;
+}
+.themestek-boxes-element-service-style-10 .ts-cta3-content-wrapper,
+.themestek-boxes-element-service-style-10 .ts-heading-desc{
+	position: absolute;
+	bottom: 50px;
+	width: 360px;
+	transition: transform .4s, opacity .4s;
+	overflow: hidden;
+}
+.themestek-boxes-element-service-style-10 .ts-element-heading-wrapper,
+.themestek-boxes-element-service-style-10 .ts-heading-subheading{
+	margin-bottom: 100px;
+}
+.themestek-boxes-element-service-style-10 .ts-cta3-content-wrapper.ts-hide-info,
+.themestek-boxes-element-service-style-10 .ts-heading-desc.ts-hide-info{
+	transform: translateY(-50%);
+	opacity: 0;
+}
+.themestek-boxes-element-service-style-10 .ts-element-posts-wrapper{
+	display: flex;
+	padding-left: calc(35vw - 470px/2);
+	flex-wrap: inherit;
+}
+body .ts-servicebox-style-10{
+	background-color: var(--tste-labtechco-skincolor-light);
+	padding: 60px 230px 60px 50px;
+	margin-left: 30px;
+	cursor: pointer;
+	box-sizing: border-box;
+	margin-bottom: 0;
+	flex-shrink: 0;
+	position: relative;
+	border-top: 3px solid var(--tste-labtechco-skincolor);
+}
+body.rtl .ts-servicebox-style-10{
+	padding-left: 230px;
+	padding-right: 50px;
+	margin-right: 30px;
+	margin-left: 0;
+}
+body .ts-servicebox-style-10:first-of-type{
+	margin-left: 0;
+}
+body .ts-servicebox-style-10::after{
+	display: block;
+	width: 100%;
+	height: 100%;
+	content: "";
+	background-color: var(--tste-labtechco-skincolor);
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 5;
+	-webkit-transform-origin: 50% 100%;
+	transform-origin: 50% 100%;
+	-webkit-transform: scaleY(0);
+	transform: scaleY(0);
+	-webkit-transition: -webkit-transform .3s;
+	transition: -webkit-transform .3s;
+	transition: transform .3s;
+	transition: transform .3s, -webkit-transform .3s;
+	z-index: 1;
+}
+body.rtl .ts-servicebox-style-10::after{
+	right: 0;
+	left: inherit;
+}
+.ts-servicebox-style-10 .themestek-post-item{
+	z-index: 2;
+}
+.ts-servicebox-style-10 .themestek-box .themestek-box-content-inner{
+	padding-top: 0;
+}
+body .ts-servicebox-style-10 .themestek-pf-box-title h3{
+	font-size: 28px;
+	line-height: 36px;
+	display: inline-block;
+	width: 90%;
+	margin-top: 0px;
+	text-transform: capitalize;
+	margin-bottom: 25px;
+	font-weight: 400;
+	padding-right: 105px;
+}
+body.rtl .ts-servicebox-style-10 .themestek-pf-box-title h3{
+	padding-left: 105px;
+	padding-right: 0;
+}
+body .themestek-boxes-element-service-style-10 .ts-box-col-wrapper.active .ts-servicebox-style-10::after{
+	-webkit-transform: scaleY(1);
+	transform: scaleY(1);
+}
+body .ts-box-col-wrapper.active .ts-servicebox-style-10 .themestek-box-desc li,
+body .ts-box-col-wrapper.active .ts-servicebox-style-10,
+.ts-box-col-wrapper.active .ts-servicebox-style-10 .themestek-box-desc li i,
+body .ts-box-col-wrapper.active .ts-servicebox-style-10 h3 a{
+	color: #fff;
+}
+.ts-servicebox-style-10 .ts-ihbox-icon{
+	position: absolute;
+	bottom: 25px;
+	right: 25px;
+	z-index: 2;
+}
+.rtl .ts-servicebox-style-10 .ts-ihbox-icon{
+	left: 25px;
+	right: inherit;
+}
+.ts-servicebox-style-10 .ts-ihbox-icon i::before{
+	font-size: 100px;
+	line-height: 100px;
+	opacity: 0.3;
+}
+.ts-servicebox-style-10 .ts-ihbox-icon img{
+	width: 100px !important;
+	height: auto;
+}
+.themestek-boxes-element-service-style-10 .ts-fld-contents{
+	position: absolute;
+	right: 0;
+	top: 40px;
+}
+.ts-servicebox-style-10 .themestek-box-desc ul{
+	margin: 0;
+	padding: 0;
+	padding-top: 10px;
+}
+.ts-servicebox-style-10 .themestek-box-desc li{
+	list-style: none;
+	font-size: 17px;
+	line-height: 28px;
+	color: var(--tste-labtechco-skincolor-dark);
+}
+.ts-servicebox-style-10 .themestek-box-desc li i{
+	font-size: 10px;
+	background-color: var(--tste-labtechco-skincolor);
+	color: #fff;
+	line-height: 21px;
+	vertical-align: middle;
+	margin-right: 8px;
+	display: inline-block;
+	width: 21px;
+	height: 21px;
+	text-align: center;
+	border-radius: 50%;
+}
+.rtl .ts-servicebox-style-10 .themestek-box-desc li i{
+	margin-left: 8px;
+	margin-right: 0;
+}
+.ts-box-col-wrapper.active .ts-servicebox-style-10 .themestek-box-desc li i{
+	color: var(--tste-labtechco-skincolor);
+	background-color: #fff;
+}
+.ts-servicebox-style-10 .themestek-box-desc li i::before{
+	margin: 0;
+}
+.themestek-boxes-element-service-style-10.themestek-boxes-view-carousel .themestek-box-heading-wrapper{
+	position: unset!important;
+}
+
+@media(max-width:1200px){
+	.themestek-boxes-element-service-style-10 .ts-fld-contents{
+		top: 0;
+		display: none;
+	}
+	.themestek-boxes-element-service-style-10 .ts-cta3-content-wrapper,
+	.themestek-boxes-element-service-style-10 .ts-heading-desc{
+		margin: 0;
+		padding: 0;
+		position: inherit;
+		border: none;
+		width: 100%;
+	}
+	.themestek-boxes-element-service-style-10 .ts-element-posts-wrapper{
+		padding: inherit;
+	}
+	.themestek-boxes-element-service-style-10{
+		padding-top: 80px;
+		padding-bottom: 50px;
+	}
+	.themestek-boxes-element-service-style-10 .ts-element-heading-wrapper,
+	.themestek-boxes-element-service-style-10 .ts-heading-subheading{
+		margin-bottom: 60px;
+	}
+}
+
+@media(max-width:1024px){
+	.themestek-boxes-element-service-style-10 .ts-element-posts-wrapper .ts-box-col-wrapper{
+		display: block;
+	}
+	body .ts-servicebox-style-10{
+		width: 100%;
+		height: 100%;
+		margin-left: 0;
+		margin-bottom: 30px;
+	}
+	body.rtl .ts-servicebox-style-10{
+		margin-right: 0;
+	}
+}
+
+@media(max-width:767px){
+	.themestek-boxes-element-service-style-10{
+		padding-top: 60px;
+		padding-bottom: 20px;
+	}
+	.ts-servicebox-style-10 .pbminfotech-post-item .d-flex{
+		display: block !important;
+	}
+	.ts-servicebox-style-10 .pbminfotech-box-icon{
+		display: inline-block;
+		margin: 0;
+	}
+	body .ts-servicebox-style-10{
+		padding: 60px 30px;
+	}
+	.themestek-boxes-element-service-style-10 .themestek-boxes-row-wrapper{
+		display: block !important;
+		padding-left: 0 !important;
+		margin-left: 0 !important;
+	}
+	.rtl .themestek-boxes-element-service-style-10 .themestek-boxes-row-wrapper{
+		padding-right: 0;
+	}
+	.themestek-boxes-service.themestek-boxes-element-service-style-10 .ts-box-col-wrapper{
+		margin-bottom: 20px !important;
+		margin-left: 0 !important;
+		width: 100% !important;
+		height: auto !important;
+	}
+	.rtl .themestek-boxes-service.themestek-boxes-element-service-style-10 .ts-box-col-wrapper{
+		margin-right: 0;
+	}
+}

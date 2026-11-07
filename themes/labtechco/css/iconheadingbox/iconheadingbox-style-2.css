@@ -1,0 +1,52 @@
+.ts-left-ihbox .ts-ihbox.ts-ihbox-style-2 .ts-vc_general.ts-vc_cta3 h2.ts-custom-heading,
+.ts-left-ihbox .ts-ihbox.ts-ihbox-style-2 h2.ts-ihbox-heading{
+	margin: 8px 0 10px 0!important;
+}
+.ts-left-ihbox .ts-ihbox.ts-ihbox-style-2 .ts-ihbox-contents{
+	padding-left: 30px;
+}
+.rtl .ts-left-ihbox .ts-ihbox.ts-ihbox-style-2 .ts-ihbox-contents{
+	padding-right: 30px;
+	padding-left: 0;
+}
+.ts-left-ihbox .ts-ihbox.ts-ihbox-style-2.ts-ihbox-itype-icon{
+	margin-bottom: 40px;
+}
+.ts-left-ihbox .ts-ihbox.ts-ihbox-style-2 .ts-large-icon i::before{
+	font-size: 60px;
+	line-height: 60px;
+}
+.ts-ihbox.ts-ihbox-style-2 .ts-ihbox-contents .ts-ihbox-heading,
+.ts-ihbox.ts-ihbox-style-2 .ts-vc_general.ts-vc_cta3 .ts-custom-heading{
+	margin: 0 !important;
+}
+.ts-ihbox.ts-ihbox-style-2 .ts-ihbox-contents .ts-ihbox-heading{
+	font-weight: 600;
+}
+.ts-bgcolor-skincolor .ts-ihbox-style-2 .ts-icon-skincolor i{
+	color: #fff;
+}
+.ts-ihbox.ts-ihbox-style-2 .ts-large-icon i::before{
+	font-size: 44px;
+	line-height: 44px;
+}
+.ts-ihbox-style-2 .ts-ihbox-contents{
+	padding-left: 20px;
+}
+.ts-ihbox.ts-ihbox-style-2 .ts-ihbox-icon,
+.ts-ihbox.ts-ihbox-style-2 .ts-ihbox-contents{
+	display: table-cell;
+	vertical-align: top;
+}
+.ts-ihbox.ts-ihbox-style-2 .ts-ihbox-heading-with-icon{
+	display: table;
+}
+.ts-left-ihbox .ts-ihbox.ts-ihbox-style-2 .ts-ihbox-icon{
+	vertical-align: middle;
+}
+
+/* RTL CSS */
+.rtl .ts-ihbox-style-2 .ts-ihbox-contents{
+	padding-right: 20px;
+	padding-left: 0;
+}

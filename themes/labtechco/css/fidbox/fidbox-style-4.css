@@ -1,0 +1,26 @@
+.ts-fidbox-style-4 .ts-sbox-icon-wrapper{
+	margin-bottom: 20px;
+	color: var(--tste-labtechco-skincolor-dark);
+}
+.ts-fidbox-style-4 .ts-large-icon i:before{
+	font-size: 50px;
+	line-height: 50px;
+}
+.ts-fidbox-style-4 .themestek-fid-inner{
+	font-size: 60px;
+	font-weight: 600;
+	line-height: 60px;
+	color: var(--tste-labtechco-skincolor);
+	font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
+}
+.ts-bgcolor-skincolor .ts-fidbox-style-4 h3.ts-fid-inner span:first-child{
+	color: var(--tste-labtechco-white);
+}
+.ts-fidbox-style-4 h6.ts-fid-title{
+	font-size: 18px;
+	font-weight: 700;
+	text-transform: none;
+}
+.ts-fidbox-style-4 .ts-sbox-icon-wrapper{
+	color: var(--tste-labtechco-skincolor-dark);
+}

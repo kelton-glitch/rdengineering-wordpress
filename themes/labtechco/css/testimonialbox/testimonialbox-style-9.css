@@ -1,0 +1,140 @@
+.ts-testimonialbox-style-9.themestek-box-testimonial .themestek-box-content .themestek-testimonial-text{
+	font-size: 24px;
+	font-style: normal;
+	line-height: 36px;
+	font-weight: 400;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+.ts-testimonialbox-style-9.themestek-box .themestek-post-item{
+	display: flex;
+	align-items: center;
+}
+.ts-testimonialbox-style-9 .themestek-box-desc{
+	margin-bottom: 20px !important;
+}
+.ts-testimonialbox-style-9.themestek-box-testimonial .themestek-box-img{
+	width: auto;
+	margin-right: 60px;
+}
+.rtl .ts-testimonialbox-style-9.themestek-box-testimonial .themestek-box-img{
+	margin-left: 60px;
+	margin-right: 0;
+}
+.ts-testimonialbox-style-9.themestek-box-testimonial .themestek-item-thumbnail{
+	width: 211px;
+}
+.ts-testimonialbox-style-9.themestek-box-testimonial .themestek-item-thumbnail img{
+	width: 211px;
+	height: 211px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+.entry-content .ts-testimonialbox-style-9.themestek-box-testimonial h3.themestek-author-name{
+	font-size: 20px;
+	line-height: 24px;
+	text-transform: none;
+	font-weight: 500;
+	color: var(--tste-labtechco-skincolor-dark);
+}
+.ts-testimonialbox-style-9.themestek-box-testimonial .themestek-box-footer{
+	font-size: 14px;
+	line-height: 24px;
+	margin-left: 10px;
+}
+.rtl .ts-testimonialbox-style-9.themestek-box-testimonial .themestek-box-footer{
+	margin-right: 10px;
+	margin-left: 0;
+}
+.ts-testimonialbox-style-9.themestek-box-testimonial .themestek-box-footer::before{
+	content: '-';
+	display: inline-block;
+	margin-right: 5px;
+}
+.rtl .ts-testimonialbox-style-9.themestek-box-testimonial .themestek-box-footer::before{
+	margin-left: 5px;
+	margin-right: 0;
+}
+.ts-testimonialbox-style-9.themestek-box-testimonial .themestek-box-title{
+	display: flex;
+}
+.ts-testimonialbox-style-9.themestek-box .themestek-box-content{
+	position: relative;
+	padding-right: 170px;
+}
+.rtl .ts-testimonialbox-style-9.themestek-box .themestek-box-content{
+	padding-left: 170px;
+	padding-right: 0;
+}
+.ts-testimonialbox-style-9.themestek-box .themestek-box-content::after{
+	position: absolute;
+	top: 30px;
+	right: 0;
+	font-family: "ts-labtechco-icons";
+	content: "\e84a";
+	font-size: 95px;
+	line-height: 95px;
+	-webkit-transform: scaleX(-1);
+	-moz-transform: scaleX(-1);
+	-ms-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	transform: scaleX(-1);
+	color: #dedee7;
+}
+.rtl .ts-testimonialbox-style-9.themestek-box .themestek-box-content::after{
+	left: 0;
+	right: inherit;
+	-webkit-transform: none;
+	-ms-transform: none;
+	-moz-transform: none;
+	-o-transform: none;
+	transform: none;
+}
+.entry-content .ts-textcolor-white .ts-testimonialbox-style-9.themestek-box-testimonial h3.themestek-author-name,
+.ts-textcolor-white .ts-testimonialbox-style-9.themestek-box-testimonial .themestek-box-content .themestek-testimonial-text,
+.entry-content .ts-bgcolor-darkgrey .ts-testimonialbox-style-9.themestek-box-testimonial h3.themestek-author-name,
+.ts-bgcolor-darkgrey .ts-testimonialbox-style-9.themestek-box-testimonial .themestek-box-content .themestek-testimonial-text{
+	color: #fff;
+}
+
+/*=== Responsive ===*/
+@media(max-width:767px){
+	.ts-testimonialbox-style-9.themestek-box .themestek-post-item{
+		display: block;
+	}
+	.ts-testimonialbox-style-9.themestek-box-testimonial .themestek-box-img{
+		text-align: center;
+		width: 100%;
+		margin: 0 0 30px;
+	}
+	.ts-testimonialbox-style-9.themestek-box-testimonial .themestek-item-thumbnail{
+		display: inline-block;
+	}
+	.ts-testimonialbox-style-9.themestek-box .themestek-box-content{
+		padding-right: 0;
+		text-align: center;
+	}
+	.ts-testimonialbox-style-9.themestek-box .themestek-box-content::after{
+		display: none;
+	}
+	.ts-testimonialbox-style-9.themestek-box-testimonial .themestek-box-title{
+		text-align: center;
+		justify-content: center;
+	}
+}
+
+@media(max-width:540px){
+	.ts-testimonialbox-style-9.themestek-box-testimonial .themestek-box-title{
+		flex-direction: column;
+	}
+	.rtl .ts-testimonialbox-style-9.themestek-box-testimonial .themestek-box-footer,
+	.ts-testimonialbox-style-9.themestek-box-testimonial .themestek-box-footer{
+		margin: 10px 0 0;
+	}
+	.ts-testimonialbox-style-9.themestek-box-testimonial .themestek-box-footer::before{
+		display: none;
+	}
+}

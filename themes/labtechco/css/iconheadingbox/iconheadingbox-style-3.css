@@ -1,0 +1,50 @@
+.ts-ihbox-style-3.ts-ihbox *,
+.ts-ihbox-style-3.ts-ihbox,
+.ts-ihbox-style-3.ts-ihbox .ts-ihbox-contents .ts-cta3-content-wrapper,
+.ts-ihbox-style-3.ts-ihbox .ts-ihbox-heading,
+.ts-ihbox-style-3.ts-ihbox h2.ts-custom-heading,
+.ts-ihbox-style-3.ts-ihbox .ts-ihbox-contents .ts-ihbox-content,
+.ts-ihbox-style-3.ts-ihbox .ts-icon-skincolor i{
+	-webkit-transition: all 0.5s cubic-bezier(.645,.045,.355,1);
+	-o-transition: all 0.5s cubic-bezier(.645,.045,.355,1);
+	transition: all 0.5s cubic-bezier(.645,.045,.355,1);
+}
+.ts-ihbox-style-3.ts-ihbox{
+	padding: 45px;
+	margin-bottom: 30px;
+}
+.ts-ihbox-style-3.ts-ihbox .ts-ihbox-contents .ts-cta3-content-wrapper,
+.ts-ihbox-style-3.ts-ihbox .ts-ihbox-contents .ts-ihbox-content{
+	color: var(--tste-labtechco-skincolor-dark);
+}
+.ts-bgcolor-darkgrey .ts-ihbox-style-3.ts-ihbox .ts-ihbox-contents .ts-ihbox-content,
+.ts-bgcolor-skincolor .ts-ihbox-style-3.ts-ihbox .ts-ihbox-contents .ts-ihbox-content{
+	color: #8893b9;
+}
+.ts-ihbox-style-3.ts-ihbox:hover,
+.ts-ihbox-style-3.ts-ihbox:hover .ts-ihbox-heading,
+.ts-ihbox-style-3.ts-ihbox:hover .ts-ihbox-contents .ts-ihbox-content,
+.ts-ihbox-style-3.ts-ihbox:hover .ts-ihbox-contents .ts-cta3-content-wrapper,
+.ts-ihbox-style-3.ts-ihbox:hover h2.ts-custom-heading,
+.ts-ihbox-style-3.ts-ihbox:hover .ts-icon-skincolor i{
+	color: #fff !important;
+}
+.ts-bgcolor-skincolor .ts-ihbox-style-3 .ts-icon-skincolor i{
+	color: #fff;
+}
+.ts-ihbox-style-3,
+.ts-ihbox-style-3 .ts-vc_general.ts-vc_cta3.ts-vc_cta3-align-left .ts-vc_cta3-content{
+	text-align: center;
+}
+.ts-ihbox-style-3 .ts-table-cell{
+	display: inline-block;
+}
+.ts-ihbox-style-3 .ts-ihbox-icon-wrapper{
+	margin-bottom: 15px;
+}
+.ts-ihbox-style-3.ts-ihbox:hover{
+	background-color: var(--tste-labtechco-skincolor);
+}
+.ts-ihbox-style-3 .ts-ihbox-contents{
+	display: inline-block;
+}

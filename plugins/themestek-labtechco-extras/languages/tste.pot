@@ -1,0 +1,2180 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ThemeStek Extras for LabtechCO Theme\n"
+"POT-Creation-Date: 2019-01-30 10:40+0530\n"
+"PO-Revision-Date: 2016-04-01 11:48+0530\n"
+"Last-Translator: \n"
+"Language-Team: ThemeStek Team <themestek@gmail.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.3\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c;"
+"_nc:4c,1,2;_x:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_ex:1,2c;esc_attr__;esc_attr_e;"
+"esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../core.php:329 ../core.php:342
+msgid "Previous page"
+msgstr ""
+
+#: ../core.php:330 ../core.php:343
+msgid "Next page"
+msgstr ""
+
+#: ../core.php:436
+msgid "Default"
+msgstr ""
+
+#: ../core.php:704
+msgid "Comment navigation"
+msgstr ""
+
+#: ../core.php:707
+msgid "Older Comments"
+msgstr ""
+
+#: ../core.php:711
+msgid "Newer Comments"
+msgstr ""
+
+#: ../core.php:772 ../core.php:8217
+msgctxt "Used before publish date."
+msgid "Posted on"
+msgstr ""
+
+#: ../core.php:795 ../core.php:8106
+msgctxt "Used before post author name."
+msgid "Author"
+msgstr ""
+
+#: ../core.php:810 ../core.php:8121
+msgid "Leave a comment"
+msgstr ""
+
+#: ../core.php:827 ../core.php:8138 ../core.php:8250
+msgctxt "Used before category names."
+msgid "Categories"
+msgstr ""
+
+#: ../core.php:835 ../core.php:4410 ../core.php:4420 ../core.php:8146
+msgctxt "Used between list items, there is a space after the comma."
+msgid ", "
+msgstr ""
+
+#: ../core.php:841 ../core.php:8152
+msgctxt "Used before tag names."
+msgid "Tags"
+msgstr ""
+
+#: ../core.php:1594 ../core.php:1599 ../cs-framework/functions/actions.php:84
+msgid "Loading..."
+msgstr ""
+
+#: ../core.php:1770 ../custom-post-types/ts-team.php:227
+msgid "Phone"
+msgstr ""
+
+#: ../core.php:1775 ../custom-post-types/ts-team.php:222
+msgid "Email"
+msgstr ""
+
+#: ../core.php:1786 ../custom-post-types/ts-team.php:232
+msgid "Website"
+msgstr ""
+
+#: ../core.php:2020
+msgid "Next"
+msgstr ""
+
+#: ../core.php:2021
+msgid "Next post:"
+msgstr ""
+
+#: ../core.php:2023
+msgid "Previous"
+msgstr ""
+
+#: ../core.php:2024
+msgid "Previous post:"
+msgstr ""
+
+#: ../core.php:2116
+#, php-format
+msgid "%s "
+msgstr ""
+
+#: ../core.php:3351
+msgid "All"
+msgstr ""
+
+#: ../core.php:3515
+msgid "Top image and bottom content (default)"
+msgstr ""
+
+#: ../core.php:3516
+msgid "Left image and right content "
+msgstr ""
+
+#: ../core.php:3517
+msgid "Right image and left content "
+msgstr ""
+
+#: ../core.php:3548
+msgid "Team Member Box - Style 1"
+msgstr ""
+
+#: ../core.php:3553
+msgid "Team Member Box - Style 2"
+msgstr ""
+
+#: ../core.php:3558
+msgid "Team Member Box - Style 3"
+msgstr ""
+
+#: ../core.php:3563
+msgid "Team Member Box - Style 4"
+msgstr ""
+
+#: ../core.php:3575
+msgid "Portfolio Box - Style 1"
+msgstr ""
+
+#: ../core.php:3580
+msgid "Portfolio Box - Style 2"
+msgstr ""
+
+#: ../core.php:3585
+msgid "Portfolio Box - Style 3"
+msgstr ""
+
+#: ../core.php:3597
+msgid "Left image and right content"
+msgstr ""
+
+#: ../core.php:3602
+msgid "Top image and bottom content"
+msgstr ""
+
+#: ../core.php:3607
+msgid "No image and full-width content"
+msgstr ""
+
+#: ../core.php:3612
+msgid "Top image and full-width content"
+msgstr ""
+
+#: ../core.php:3624 ../core.php:3683
+msgid "Service Box - Style 1"
+msgstr ""
+
+#: ../core.php:3629 ../core.php:3688
+msgid "Service Box - Style 2"
+msgstr ""
+
+#: ../core.php:3642
+msgid "Testimonial Box - Style 1"
+msgstr ""
+
+#: ../core.php:3647
+msgid "Testimonial Box - Style 2"
+msgstr ""
+
+#: ../core.php:3652
+msgid "Testimonial Box - Style 3"
+msgstr ""
+
+#: ../core.php:3665
+msgid "Blog Box - Style 1"
+msgstr ""
+
+#: ../core.php:3670
+msgid "Blog Box - Style 2"
+msgstr ""
+
+#: ../core.php:3693
+msgid "Service Box - Style 3"
+msgstr ""
+
+#: ../core.php:3698
+msgid "Service Box - Style 4"
+msgstr ""
+
+#: ../core.php:3703
+msgid "Service Box - Style 5"
+msgstr ""
+
+#: ../core.php:3708
+msgid "Service Box - Style 6"
+msgstr ""
+
+#: ../core.php:3720
+msgid "Facts in Digits Box - Style 1"
+msgstr ""
+
+#: ../core.php:3725
+msgid "Facts in Digits Box - Style 2"
+msgstr ""
+
+#: ../core.php:3730
+msgid "Facts in Digits Box - Style 3"
+msgstr ""
+
+#: ../core.php:3742
+msgid "Pricing Table - Style 1"
+msgstr ""
+
+#: ../core.php:3757
+msgid "Clients Box - Style 1"
+msgstr ""
+
+#: ../core.php:3762
+msgid "Clients Box - Style 2"
+msgstr ""
+
+#: ../core.php:3800
+msgid "Simple Logo view"
+msgstr ""
+
+#: ../core.php:3801
+msgid "Logo with Separator view"
+msgstr ""
+
+#: ../core.php:3802
+msgid "Boxed view"
+msgstr ""
+
+#: ../core.php:4042
+msgid "Read More"
+msgstr ""
+
+#: ../core.php:4608
+msgid "Blog"
+msgstr ""
+
+#: ../core.php:4632
+#, php-format
+msgid "Category Archives: %s"
+msgstr ""
+
+#: ../core.php:4642
+#, php-format
+msgid "Tag Archives: %s"
+msgstr ""
+
+#: ../core.php:4661
+#, php-format
+msgid "Posts classified under: %s"
+msgstr ""
+
+#: ../core.php:4677
+#, php-format
+msgid "Author Archives: %s"
+msgstr ""
+
+#: ../core.php:4689
+#, php-format
+msgid "Search Results for %s"
+msgstr ""
+
+#: ../core.php:4697
+msgid "EVENTS"
+msgstr ""
+
+#: ../core.php:4705
+msgid "Events Calendar"
+msgstr ""
+
+#: ../core.php:4711
+msgid "Events"
+msgstr ""
+
+#: ../core.php:4718
+msgid "Events on: "
+msgstr ""
+
+#: ../core.php:4726 ../core.php:4737
+msgid "Forum"
+msgstr ""
+
+#: ../core.php:4730
+#, php-format
+msgid "Daily Archives: %s"
+msgstr ""
+
+#: ../core.php:4732
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr ""
+
+#: ../core.php:4732
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: ../core.php:4734
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr ""
+
+#: ../core.php:4734
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: ../core.php:4739
+msgid "Archives"
+msgstr ""
+
+#: ../core.php:5198 ../core.php:5352 ../core.php:5917
+msgid "Open"
+msgstr ""
+
+#: ../core.php:6699 ../core.php:6727
+msgid "(No Slider Found)"
+msgstr ""
+
+#: ../core.php:7361
+msgid "See Event"
+msgstr ""
+
+#: ../core.php:7423
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: ../core.php:7428
+msgid "says:"
+msgstr ""
+
+#: ../core.php:7433
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: ../core.php:7433
+msgid "(Edit)"
+msgstr ""
+
+#: ../core.php:7563
+msgid "Back to results"
+msgstr ""
+
+#: ../core.php:7565
+msgid "View more"
+msgstr ""
+
+#: ../core.php:7576
+#, php-format
+msgid "%s results"
+msgstr ""
+
+#: ../core.php:7614
+#, php-format
+msgid "%1$s found in %2$s"
+msgstr ""
+
+#: ../core.php:7623
+#, php-format
+msgid ""
+"Sorry, but nothing matched in %1$s with your search terms.  But we found results in other "
+"sections:"
+msgstr ""
+
+#: ../core.php:7627
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some different "
+"keywords."
+msgstr ""
+
+#: ../core.php:7709
+#, php-format
+msgid "%1$s found"
+msgstr ""
+
+#: ../core.php:7738
+msgctxt "label"
+msgid "Search for:"
+msgstr ""
+
+#: ../core.php:7739
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr ""
+
+#: ../core.php:7743
+msgctxt "submit button"
+msgid "Search"
+msgstr ""
+
+#: ../core.php:8038
+#, php-format
+msgctxt "1: post format name. 2: date"
+msgid "%1$s on %2$s"
+msgstr ""
+
+#: ../cs-framework/classes/framework.class.php:171
+msgid "Success. Imported backup options."
+msgstr ""
+
+#: ../cs-framework/classes/framework.class.php:176
+msgid "Default options restored."
+msgstr ""
+
+#: ../cs-framework/classes/framework.class.php:195
+msgid "Default options restored for only this section."
+msgstr ""
+
+#: ../cs-framework/classes/framework.class.php:333
+msgid "Settings saved."
+msgstr ""
+
+#: ../cs-framework/classes/framework.class.php:335
+msgid "Save"
+msgstr ""
+
+#: ../cs-framework/classes/framework.class.php:335
+msgid "Saving..."
+msgstr ""
+
+#: ../cs-framework/classes/framework.class.php:336
+msgid "Restore"
+msgstr ""
+
+#: ../cs-framework/classes/framework.class.php:339
+#: ../cs-framework/fields/backup/backup.php:29
+msgid "Reset All Options"
+msgstr ""
+
+#: ../cs-framework/classes/framework.class.php:343
+msgid "show all options"
+msgstr ""
+
+#: ../cs-framework/classes/options.class.php:125
+msgid "CONFIG"
+msgstr ""
+
+#: ../cs-framework/classes/options.class.php:131
+#: ../cs-framework/classes/options.class.php:151
+msgid "USAGE"
+msgstr ""
+
+#: ../cs-framework/classes/options.class.php:137
+msgid "VALUE"
+msgstr ""
+
+#: ../cs-framework/classes/options.class.php:155
+msgid "ID"
+msgstr ""
+
+#: ../cs-framework/classes/options.class.php:227
+#, php-format
+msgid "You are editing language: ( %s )"
+msgstr ""
+
+#: ../cs-framework/classes/shortcode.class.php:82
+#: ../cs-framework/classes/shortcode.class.php:90
+#: ../cs-framework/fields/textarea/textarea.php:27
+msgid "Add Shortcode"
+msgstr ""
+
+#: ../cs-framework/classes/shortcode.class.php:92
+msgid "Select a shortcode"
+msgstr ""
+
+#: ../cs-framework/classes/shortcode.class.php:108
+msgid "Insert Shortcode"
+msgstr ""
+
+#: ../cs-framework/fields/background/background.php:34
+#: ../cs-framework/fields/background/background.php:35
+#: ../cs-framework/fields/upload/upload.php:23 ../cs-framework/fields/upload/upload.php:24
+msgid "Upload"
+msgstr ""
+
+#: ../cs-framework/fields/background/background.php:36
+#: ../cs-framework/fields/upload/upload.php:25
+msgid "Use Image"
+msgstr ""
+
+#: ../cs-framework/fields/backup/backup.php:21
+msgid "Import a Backup"
+msgstr ""
+
+#: ../cs-framework/fields/backup/backup.php:22
+msgid "copy-paste your backup string here"
+msgstr ""
+
+#: ../cs-framework/fields/backup/backup.php:27
+msgid "Export and Download Backup"
+msgstr ""
+
+#: ../cs-framework/fields/backup/backup.php:28
+msgid "or"
+msgstr ""
+
+#: ../cs-framework/fields/backup/backup.php:30
+msgid "Please be sure for reset all of framework options."
+msgstr ""
+
+#: ../cs-framework/fields/gallery/gallery.php:21
+msgid "Add Gallery"
+msgstr ""
+
+#: ../cs-framework/fields/gallery/gallery.php:22
+msgid "Edit Gallery"
+msgstr ""
+
+#: ../cs-framework/fields/gallery/gallery.php:23
+msgid "Clear"
+msgstr ""
+
+#: ../cs-framework/fields/group/group.php:22
+msgid "Adding"
+msgstr ""
+
+#: ../cs-framework/fields/group/group.php:45 ../cs-framework/fields/group/group.php:77
+msgid "Remove"
+msgstr ""
+
+#: ../cs-framework/fields/icon/icon.php:25 ../cs-framework/functions/actions.php:82
+msgid "Add Icon"
+msgstr ""
+
+#: ../cs-framework/fields/icon/icon.php:26
+msgid "Remove Icon"
+msgstr ""
+
+#: ../cs-framework/fields/image/image.php:22
+msgid "Add Image"
+msgstr ""
+
+#: ../cs-framework/fields/sorter/sorter.php:24
+msgid "Enabled Modules"
+msgstr ""
+
+#: ../cs-framework/fields/sorter/sorter.php:25
+msgid "Disabled Modules"
+msgstr ""
+
+#: ../cs-framework/fields/switcher/switcher.php:20
+msgid "on"
+msgstr ""
+
+#: ../cs-framework/fields/switcher/switcher.php:20
+msgid "off"
+msgstr ""
+
+#: ../cs-framework/fields/typography/typography.php:73
+msgid "Web Safe Fonts"
+msgstr ""
+
+#: ../cs-framework/fields/typography/typography.php:79
+msgid "Google Fonts"
+msgstr ""
+
+#: ../cs-framework/fields/typography/typography.php:107
+#: ../cs-framework/functions/actions.php:32
+msgid "Error! Can not load json file."
+msgstr ""
+
+#: ../cs-framework/functions/actions.php:83
+msgid "Search a Icon..."
+msgstr ""
+
+#: ../cs-framework/functions/helpers.php:49
+msgid "This field class is not available!"
+msgstr ""
+
+#: ../cs-framework/functions/validate.php:14
+msgid "Please write a valid email address!"
+msgstr ""
+
+#: ../cs-framework/functions/validate.php:33
+msgid "Please write a numeric data!"
+msgstr ""
+
+#: ../cs-framework/functions/validate.php:51
+msgid "Fatal Error! This field is required!"
+msgstr ""
+
+#: ../custom-post-types/ts-client.php:7
+msgctxt "post type general name"
+msgid "Clients"
+msgstr ""
+
+#: ../custom-post-types/ts-client.php:8
+msgctxt "post type singular name"
+msgid "Client"
+msgstr ""
+
+#: ../custom-post-types/ts-client.php:9
+msgctxt "admin menu"
+msgid "Client Logos"
+msgstr ""
+
+#: ../custom-post-types/ts-client.php:10
+msgctxt "add new on admin bar"
+msgid "Client"
+msgstr ""
+
+#: ../custom-post-types/ts-client.php:11
+msgctxt "client"
+msgid "Add New"
+msgstr ""
+
+#: ../custom-post-types/ts-client.php:12
+msgid "Add New Client"
+msgstr ""
+
+#: ../custom-post-types/ts-client.php:13
+msgid "New Client"
+msgstr ""
+
+#: ../custom-post-types/ts-client.php:14
+msgid "Edit Client"
+msgstr ""
+
+#: ../custom-post-types/ts-client.php:15
+msgid "View Client"
+msgstr ""
+
+#: ../custom-post-types/ts-client.php:16
+msgid "All Clients"
+msgstr ""
+
+#: ../custom-post-types/ts-client.php:17
+msgid "Search Client"
+msgstr ""
+
+#: ../custom-post-types/ts-client.php:18
+msgid "Parent Client:"
+msgstr ""
+
+#: ../custom-post-types/ts-client.php:19
+msgid "No client found."
+msgstr ""
+
+#: ../custom-post-types/ts-client.php:20
+msgid "No client found in Trash."
+msgstr ""
+
+#: ../custom-post-types/ts-client.php:48
+msgctxt "taxonomy general name"
+msgid "Client Group"
+msgstr ""
+
+#: ../custom-post-types/ts-client.php:49
+msgctxt "taxonomy singular name"
+msgid "Client Group"
+msgstr ""
+
+#: ../custom-post-types/ts-client.php:50
+msgid "Search Client Group"
+msgstr ""
+
+#: ../custom-post-types/ts-client.php:51
+msgid "All Client Groups"
+msgstr ""
+
+#: ../custom-post-types/ts-client.php:52 ../custom-post-types/ts-slides.php:51
+#: ../custom-post-types/ts-team.php:91 ../custom-post-types/ts-testimonial.php:54
+msgid "Parent Group"
+msgstr ""
+
+#: ../custom-post-types/ts-client.php:53 ../custom-post-types/ts-slides.php:52
+#: ../custom-post-types/ts-team.php:92 ../custom-post-types/ts-testimonial.php:55
+msgid "Parent Group:"
+msgstr ""
+
+#: ../custom-post-types/ts-client.php:54 ../custom-post-types/ts-slides.php:53
+#: ../custom-post-types/ts-team.php:93 ../custom-post-types/ts-testimonial.php:56
+msgid "Edit Group"
+msgstr ""
+
+#: ../custom-post-types/ts-client.php:55 ../custom-post-types/ts-slides.php:54
+#: ../custom-post-types/ts-team.php:94 ../custom-post-types/ts-testimonial.php:57
+msgid "Update Group"
+msgstr ""
+
+#: ../custom-post-types/ts-client.php:56
+msgid "Add New Client Group"
+msgstr ""
+
+#: ../custom-post-types/ts-client.php:57
+msgid "New Client Group Name"
+msgstr ""
+
+#: ../custom-post-types/ts-client.php:58
+msgid "Client Group"
+msgstr ""
+
+#: ../custom-post-types/ts-client.php:77
+msgid "Client Name"
+msgstr ""
+
+#: ../custom-post-types/ts-client.php:90
+msgid "Select/Upload Image of the Client"
+msgstr ""
+
+#: ../custom-post-types/ts-client.php:112 ../custom-post-types/ts-portfolio.php:150
+#: ../custom-post-types/ts-portfolio.php:353 ../custom-post-types/ts-service.php:150
+#: ../custom-post-types/ts-service.php:332 ../custom-post-types/ts-team.php:163
+#: ../custom-post-types/ts-testimonial.php:113 ../themestek-labtechco-extras.php:495
+msgid "Featured Image"
+msgstr ""
+
+#: ../custom-post-types/ts-client.php:146
+msgid "LabtechCO: Client Hover image"
+msgstr ""
+
+#: ../custom-post-types/ts-client.php:157
+msgid "Upload hover logo of the client"
+msgstr ""
+
+#: ../custom-post-types/ts-client.php:158
+msgid ""
+"This is optional. Select or upload hover logo of the client. This is requred for some "
+"Client Logo Box styles."
+msgstr ""
+
+#: ../custom-post-types/ts-client.php:159
+msgid "Upload Hover Logo"
+msgstr ""
+
+#: ../custom-post-types/ts-client.php:170
+msgid "LabtechCO: Client Details"
+msgstr ""
+
+#: ../custom-post-types/ts-client.php:182 ../custom-post-types/ts-testimonial.php:160
+msgid "Website Link"
+msgstr ""
+
+#: ../custom-post-types/ts-client.php:183 ../custom-post-types/ts-testimonial.php:161
+msgid "(Optional) Please fill person or company's website link"
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:20
+msgctxt "post type general name"
+msgid "Portfolio"
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:21
+msgctxt "post type singular name"
+msgid "Portfolio"
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:22
+msgctxt "admin menu"
+msgid "Portfolio"
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:23
+msgctxt "add new on admin bar"
+msgid "Portfolio"
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:24 ../custom-post-types/ts-portfolio.php:47
+msgctxt "portfolio"
+msgid "Add New"
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:25
+msgid "Add New Portfolio"
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:26
+msgid "New Portfolio"
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:27
+msgid "Edit Portfolio"
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:28
+msgid "View Portfolio"
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:29
+msgid "All Portfolio"
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:30
+msgid "Search Portfolio"
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:31
+msgid "Parent Portfolio:"
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:32
+msgid "No portfolio found."
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:33
+msgid "No portfolio found in Trash."
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:48 ../custom-post-types/ts-service.php:48
+#: ../custom-post-types/ts-team.php:49
+msgid "Add New "
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:49 ../custom-post-types/ts-service.php:49
+#: ../custom-post-types/ts-team.php:50
+msgid "New "
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:50 ../custom-post-types/ts-service.php:50
+#: ../custom-post-types/ts-team.php:51
+msgid "Edit "
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:51 ../custom-post-types/ts-service.php:51
+#: ../custom-post-types/ts-team.php:52
+msgid "View "
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:52 ../custom-post-types/ts-service.php:52
+#: ../custom-post-types/ts-team.php:53
+msgid "All "
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:53 ../custom-post-types/ts-service.php:53
+#: ../custom-post-types/ts-team.php:54
+msgid "Search "
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:54 ../custom-post-types/ts-service.php:54
+#: ../custom-post-types/ts-team.php:55
+msgid "Parent "
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:55 ../custom-post-types/ts-portfolio.php:56
+#: ../custom-post-types/ts-service.php:55 ../custom-post-types/ts-service.php:56
+#: ../custom-post-types/ts-team.php:56 ../custom-post-types/ts-team.php:57
+msgid "No "
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:87 ../custom-post-types/ts-portfolio.php:88
+#: ../custom-post-types/ts-portfolio.php:97 ../custom-post-types/ts-portfolio.php:102
+#: ../themestek-labtechco-extras.php:891
+msgid "Portfolio Category"
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:89
+msgid "Search Portfolio Category"
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:90
+msgid "All Portfolio Category"
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:91
+msgid "Parent Portfolio Category"
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:92
+msgid "Parent Portfolio Category:"
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:93
+msgid "Edit Portfolio Category"
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:94
+msgid "Update Portfolio Category"
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:95
+msgid "Add New Portfolio Category"
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:96
+msgid "New Portfolio Category Name"
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:105 ../custom-post-types/ts-portfolio.php:106
+#: ../custom-post-types/ts-portfolio.php:115 ../custom-post-types/ts-service.php:105
+#: ../custom-post-types/ts-service.php:106 ../custom-post-types/ts-service.php:115
+#: ../custom-post-types/ts-team.php:104 ../custom-post-types/ts-team.php:105
+#: ../custom-post-types/ts-team.php:114
+#, php-format
+msgid "%s"
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:107 ../custom-post-types/ts-service.php:107
+#: ../custom-post-types/ts-team.php:106
+#, php-format
+msgid "Search %s"
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:108 ../custom-post-types/ts-service.php:108
+#: ../custom-post-types/ts-team.php:107
+#, php-format
+msgid "All %s"
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:109 ../custom-post-types/ts-service.php:109
+#: ../custom-post-types/ts-team.php:108
+#, php-format
+msgid "Parent %s"
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:110 ../custom-post-types/ts-service.php:110
+#: ../custom-post-types/ts-team.php:109
+#, php-format
+msgid "Parent %s:"
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:111 ../custom-post-types/ts-service.php:111
+#: ../custom-post-types/ts-team.php:110
+#, php-format
+msgid "Edit %s"
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:112 ../custom-post-types/ts-service.php:112
+#: ../custom-post-types/ts-team.php:111
+#, php-format
+msgid "Update %s"
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:113 ../custom-post-types/ts-service.php:113
+#: ../custom-post-types/ts-team.php:112
+#, php-format
+msgid "Add New %s"
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:114 ../custom-post-types/ts-service.php:114
+#: ../custom-post-types/ts-team.php:113
+#, php-format
+msgid "New %s Name"
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:268
+msgid ""
+"There is no option to show. Please create some options from \"Theme Options > Portfolio "
+"Settings\" section."
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:286
+#, php-format
+msgid "LabtechCO: %s Short Description Text"
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:297
+msgid "Short Description Text"
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:298
+msgid "Test"
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:298 ../custom-post-types/ts-portfolio.php:326
+#: ../custom-post-types/ts-team.php:246
+#, php-format
+msgid ""
+"You can manage (change icon or title of the line) from \"Theme Opitons > %s Settings\" "
+"section."
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:311
+#, php-format
+msgid "LabtechCO: %s List Options"
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:323
+msgid "List Values"
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:326 ../custom-post-types/ts-team.php:245
+#: ../custom-post-types/ts-team.php:298
+msgid ""
+"You can add values of this each line and the line will appear on front side. The empty "
+"value line will be hidden."
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:339 ../custom-post-types/ts-service.php:318
+msgid "LabtechCO: Featured Image / Video / Slider"
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:351 ../custom-post-types/ts-service.php:330
+msgid "Featured Image / Video / Slider"
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:354 ../custom-post-types/ts-service.php:333
+msgid "Video (YouTube or Vimeo)"
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:355 ../custom-post-types/ts-service.php:334
+msgid "Audio (SoundCloud embed code)"
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:356 ../custom-post-types/ts-service.php:335
+msgid "Image Slider"
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:359 ../custom-post-types/ts-service.php:338
+msgid "Select what you want to show as featured. Image or Video"
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:367 ../custom-post-types/ts-service.php:346
+msgid "Paste video url (oembed) or embed code."
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:373 ../custom-post-types/ts-service.php:352
+msgid "SoundCloud (or any other service) Embed Code or MP3 file path."
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:375 ../custom-post-types/ts-service.php:354
+msgid "Paste SoundCloud or any other service embed code here"
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:388 ../custom-post-types/ts-service.php:367
+msgid "Slider Images"
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:393 ../custom-post-types/ts-service.php:372
+msgid "Select images for Slider gallery."
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:415
+#, php-format
+msgid "LabtechCO: %s View Style"
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:427
+#, php-format
+msgid "Single View Style for %s (for current only)"
+msgstr ""
+
+#: ../custom-post-types/ts-portfolio.php:430
+#, php-format
+msgid "Select view for single %s. For this post only."
+msgstr ""
+
+#: ../custom-post-types/ts-service.php:7 ../custom-post-types/ts-service.php:8
+#: ../themestek-labtechco-extras.php:892
+msgid "Service"
+msgstr ""
+
+#: ../custom-post-types/ts-service.php:11
+msgid "Service Categories"
+msgstr ""
+
+#: ../custom-post-types/ts-service.php:12 ../custom-post-types/ts-service.php:87
+#: ../custom-post-types/ts-service.php:88 ../custom-post-types/ts-service.php:97
+#: ../custom-post-types/ts-service.php:102 ../themestek-labtechco-extras.php:893
+msgid "Service Category"
+msgstr ""
+
+#: ../custom-post-types/ts-service.php:20
+msgctxt "post type general name"
+msgid "Service"
+msgstr ""
+
+#: ../custom-post-types/ts-service.php:21
+msgctxt "post type singular name"
+msgid "Service"
+msgstr ""
+
+#: ../custom-post-types/ts-service.php:22
+msgctxt "admin menu"
+msgid "Service"
+msgstr ""
+
+#: ../custom-post-types/ts-service.php:23
+msgctxt "add new on admin bar"
+msgid "Service"
+msgstr ""
+
+#: ../custom-post-types/ts-service.php:24 ../custom-post-types/ts-service.php:47
+msgctxt "service"
+msgid "Add New"
+msgstr ""
+
+#: ../custom-post-types/ts-service.php:25
+msgid "Add New Service"
+msgstr ""
+
+#: ../custom-post-types/ts-service.php:26
+msgid "New Service"
+msgstr ""
+
+#: ../custom-post-types/ts-service.php:27
+msgid "Edit Service"
+msgstr ""
+
+#: ../custom-post-types/ts-service.php:28
+msgid "View Service"
+msgstr ""
+
+#: ../custom-post-types/ts-service.php:29
+msgid "All Service"
+msgstr ""
+
+#: ../custom-post-types/ts-service.php:30
+msgid "Search Service"
+msgstr ""
+
+#: ../custom-post-types/ts-service.php:31
+msgid "Parent Service:"
+msgstr ""
+
+#: ../custom-post-types/ts-service.php:32
+msgid "No service found."
+msgstr ""
+
+#: ../custom-post-types/ts-service.php:33
+msgid "No service found in Trash."
+msgstr ""
+
+#: ../custom-post-types/ts-service.php:89
+msgid "Search Service Category"
+msgstr ""
+
+#: ../custom-post-types/ts-service.php:90
+msgid "All Service Category"
+msgstr ""
+
+#: ../custom-post-types/ts-service.php:91
+msgid "Parent Service Category"
+msgstr ""
+
+#: ../custom-post-types/ts-service.php:92
+msgid "Parent Service Category:"
+msgstr ""
+
+#: ../custom-post-types/ts-service.php:93
+msgid "Edit Service Category"
+msgstr ""
+
+#: ../custom-post-types/ts-service.php:94
+msgid "Update Service Category"
+msgstr ""
+
+#: ../custom-post-types/ts-service.php:95
+msgid "Add New Service Category"
+msgstr ""
+
+#: ../custom-post-types/ts-service.php:96
+msgid "New Service Category Name"
+msgstr ""
+
+#: ../custom-post-types/ts-service.php:271
+msgid ""
+"There is no option to show. Please create some options from \"Theme Options > Service "
+"Settings\" section."
+msgstr ""
+
+#: ../custom-post-types/ts-slides.php:8
+msgctxt "post type general name"
+msgid "Slides"
+msgstr ""
+
+#: ../custom-post-types/ts-slides.php:9
+msgctxt "post type singular name"
+msgid "Slide"
+msgstr ""
+
+#: ../custom-post-types/ts-slides.php:10
+msgctxt "admin menu"
+msgid "Slides"
+msgstr ""
+
+#: ../custom-post-types/ts-slides.php:11
+msgctxt "add new on admin bar"
+msgid "Slide"
+msgstr ""
+
+#: ../custom-post-types/ts-slides.php:12
+msgctxt "slide"
+msgid "Add New"
+msgstr ""
+
+#: ../custom-post-types/ts-slides.php:13
+msgid "Add New Slide"
+msgstr ""
+
+#: ../custom-post-types/ts-slides.php:14
+msgid "New Slide"
+msgstr ""
+
+#: ../custom-post-types/ts-slides.php:15
+msgid "Edit Slide"
+msgstr ""
+
+#: ../custom-post-types/ts-slides.php:16
+msgid "View Slide"
+msgstr ""
+
+#: ../custom-post-types/ts-slides.php:17
+msgid "All Slides"
+msgstr ""
+
+#: ../custom-post-types/ts-slides.php:18
+msgid "Search Slide"
+msgstr ""
+
+#: ../custom-post-types/ts-slides.php:19
+msgid "Parent Slide:"
+msgstr ""
+
+#: ../custom-post-types/ts-slides.php:20
+msgid "No slide found."
+msgstr ""
+
+#: ../custom-post-types/ts-slides.php:21
+msgid "No slide found in Trash."
+msgstr ""
+
+#: ../custom-post-types/ts-slides.php:47
+msgctxt "taxonomy general name"
+msgid "Slide Group"
+msgstr ""
+
+#: ../custom-post-types/ts-slides.php:48
+msgctxt "taxonomy singular name"
+msgid "Slide Group"
+msgstr ""
+
+#: ../custom-post-types/ts-slides.php:49 ../custom-post-types/ts-team.php:89
+#: ../custom-post-types/ts-testimonial.php:52
+msgid "Search Group"
+msgstr ""
+
+#: ../custom-post-types/ts-slides.php:50 ../custom-post-types/ts-testimonial.php:53
+msgid "All Groups"
+msgstr ""
+
+#: ../custom-post-types/ts-slides.php:55 ../custom-post-types/ts-team.php:95
+#: ../custom-post-types/ts-testimonial.php:58
+msgid "Add New Group"
+msgstr ""
+
+#: ../custom-post-types/ts-slides.php:56 ../custom-post-types/ts-team.php:96
+#: ../custom-post-types/ts-testimonial.php:59
+msgid "New Group Name"
+msgstr ""
+
+#: ../custom-post-types/ts-slides.php:57
+msgid "Slide Group"
+msgstr ""
+
+#: ../custom-post-types/ts-slides.php:77
+msgid "Slide Image"
+msgstr ""
+
+#: ../custom-post-types/ts-slides.php:96
+msgid "LabtechCO: Slide Options"
+msgstr ""
+
+#: ../custom-post-types/ts-slides.php:103
+msgid "Slide Options"
+msgstr ""
+
+#: ../custom-post-types/ts-slides.php:103
+msgid "Options for Slides"
+msgstr ""
+
+#: ../custom-post-types/ts-slides.php:109
+msgid "Description"
+msgstr ""
+
+#: ../custom-post-types/ts-slides.php:110
+msgid "Add description text for this slide"
+msgstr ""
+
+#: ../custom-post-types/ts-slides.php:115
+msgid "Button Text"
+msgstr ""
+
+#: ../custom-post-types/ts-slides.php:116
+msgid "Add text for button"
+msgstr ""
+
+#: ../custom-post-types/ts-slides.php:121
+msgid "Button Link"
+msgstr ""
+
+#: ../custom-post-types/ts-slides.php:122
+msgid "Add URL for button"
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:23
+msgctxt "Team Member CPT general name"
+msgid "Team Members"
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:24
+msgctxt "Team Member CPT singular name"
+msgid "Team Member"
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:25
+msgctxt "Team Member CPT admin menu"
+msgid "Team Member"
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:26
+msgctxt "Team Member CPT add new on admin bar"
+msgid "Team Member"
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:27 ../custom-post-types/ts-team.php:48
+msgctxt "Team Member CPT"
+msgid "Add New"
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:28
+msgid "Add New Team Member"
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:29
+msgid "New Team Member"
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:30
+msgid "Edit Team Member"
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:31
+msgid "View Team Member"
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:32
+msgid "All Team Members"
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:33
+msgid "Search Team Member"
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:34
+msgid "Parent Team Member:"
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:35
+msgid "No team member found."
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:36
+msgid "No team member found in Trash."
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:87
+msgctxt "taxonomy general name"
+msgid "Team Group"
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:88
+msgctxt "taxonomy singular name"
+msgid "Team Group"
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:90
+msgid "All Team Groups"
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:97 ../custom-post-types/ts-team.php:101
+#: ../themestek-labtechco-extras.php:895
+msgid "Team Group"
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:101
+msgid "Team Groups"
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:140
+#, php-format
+msgid "%s's Image"
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:212
+#, php-format
+msgid "%s's General Details"
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:217
+msgid "Position"
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:239
+#, php-format
+msgid "You can add extra lines from \"Theme Opitons > %s Settings\" section."
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:245
+#, php-format
+msgid "%s's Extra Details:"
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:250
+#, php-format
+msgid "%s's Extra Details"
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:262
+#, php-format
+msgid ""
+"This extra field is added from \"Theme Options > %s Settings\" section. You can manage "
+"this field from that section."
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:285
+#, php-format
+msgid "LabtechCO: %s's Details"
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:298
+#, php-format
+msgid "%s's General Details:"
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:312
+#, php-format
+msgid "LabtechCO: %s's Social Links"
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:326
+msgid "Social Links"
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:327
+msgid ""
+"Add your social services here. Also you can reorder the Social Links as per your choice. "
+"Just drag and drop items to reorder and save settings"
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:328
+msgid "Add New Social Links"
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:334
+msgid "Social Sevice"
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:336
+msgid "Twitter"
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:337
+msgid "YouTube"
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:338
+msgid "Flickr"
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:339
+msgid "Facebook"
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:340
+msgid "LinkedIn"
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:341
+msgid "Google+"
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:342
+msgid "Yelp"
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:343
+msgid "Dribbble"
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:344
+msgid "Pinterest"
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:345
+msgid "Podcast"
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:346
+msgid "Instagram"
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:347
+msgid "Xing"
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:348
+msgid "Vimeo"
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:349
+msgid "VK"
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:350
+msgid "Houzz"
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:351
+msgid "Issuu"
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:352
+msgid "Google Drive"
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:353
+msgid "RSS"
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:357
+msgid "Select Social service from here"
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:362
+msgid "Link to Social service selected above"
+msgstr ""
+
+#: ../custom-post-types/ts-team.php:363
+msgid "Paste URL only"
+msgstr ""
+
+#: ../custom-post-types/ts-testimonial.php:10
+msgctxt "Testimonials post type general name"
+msgid "Testimonials"
+msgstr ""
+
+#: ../custom-post-types/ts-testimonial.php:11
+msgctxt "Testimonials post type singular name"
+msgid "Testimonial"
+msgstr ""
+
+#: ../custom-post-types/ts-testimonial.php:12
+msgctxt "Testimonials post type admin menu"
+msgid "Testimonials"
+msgstr ""
+
+#: ../custom-post-types/ts-testimonial.php:13
+msgctxt "Testimonials post type - add new on admin bar"
+msgid "Testimonial"
+msgstr ""
+
+#: ../custom-post-types/ts-testimonial.php:14
+msgctxt "testimonial"
+msgid "Add New"
+msgstr ""
+
+#: ../custom-post-types/ts-testimonial.php:15
+msgid "Add New Testimonial"
+msgstr ""
+
+#: ../custom-post-types/ts-testimonial.php:16
+msgid "New Testimonial"
+msgstr ""
+
+#: ../custom-post-types/ts-testimonial.php:17
+msgid "Edit Testimonial"
+msgstr ""
+
+#: ../custom-post-types/ts-testimonial.php:18
+msgid "View Testimonial"
+msgstr ""
+
+#: ../custom-post-types/ts-testimonial.php:19
+msgid "All Testimonials"
+msgstr ""
+
+#: ../custom-post-types/ts-testimonial.php:20
+msgid "Search Testimonial"
+msgstr ""
+
+#: ../custom-post-types/ts-testimonial.php:21
+msgid "Parent Testimonial:"
+msgstr ""
+
+#: ../custom-post-types/ts-testimonial.php:22
+msgid "No testimonial found."
+msgstr ""
+
+#: ../custom-post-types/ts-testimonial.php:23
+msgid "No testimonial found in Trash."
+msgstr ""
+
+#: ../custom-post-types/ts-testimonial.php:50
+msgctxt "taxonomy general name"
+msgid "Testimonial Group"
+msgstr ""
+
+#: ../custom-post-types/ts-testimonial.php:51
+msgctxt "taxonomy singular name"
+msgid "Testimonial Group"
+msgstr ""
+
+#: ../custom-post-types/ts-testimonial.php:60
+msgid "Testimonial Group"
+msgstr ""
+
+#: ../custom-post-types/ts-testimonial.php:80
+msgid "Person or Company Name"
+msgstr ""
+
+#: ../custom-post-types/ts-testimonial.php:91
+msgid "Select/Upload Image of Person or Company"
+msgstr ""
+
+#: ../custom-post-types/ts-testimonial.php:148
+msgid "LabtechCO: Testimonial Details"
+msgstr ""
+
+#: ../custom-post-types/ts-testimonial.php:166
+msgid "Person Designation or Company Name"
+msgstr ""
+
+#: ../custom-post-types/ts-testimonial.php:167
+msgid ""
+"(Optional) Please fill designation of the person. Fill Company name if it is a company"
+msgstr ""
+
+#: ../custom-post-types/ts-testimonial.php:173
+msgid "Select Star Ratings"
+msgstr ""
+
+#: ../custom-post-types/ts-testimonial.php:175
+msgid "One star"
+msgstr ""
+
+#: ../custom-post-types/ts-testimonial.php:176
+msgid "Two stars"
+msgstr ""
+
+#: ../custom-post-types/ts-testimonial.php:177
+msgid "Three stars"
+msgstr ""
+
+#: ../custom-post-types/ts-testimonial.php:178
+msgid "Four stars"
+msgstr ""
+
+#: ../custom-post-types/ts-testimonial.php:179
+msgid "Five stars"
+msgstr ""
+
+#: ../custom-post-types/ts-testimonial.php:182
+msgid "Please select star ratings."
+msgstr ""
+
+#: ../demo-content-setup/demo-content-setup.php:186
+msgid "NOTE:"
+msgstr ""
+
+#: ../demo-content-setup/demo-content-setup.php:187
+msgid ""
+"This process may overwrite your existing content or settings. So please do this on fresh "
+"WordPress setup only."
+msgstr ""
+
+#: ../demo-content-setup/demo-content-setup.php:189
+msgid ""
+"Also if you already included demo data than this will add multiple menu links and you "
+"need to remove the repeated menu items by going to \"Admin > Appearance > menus\" section."
+msgstr ""
+
+#: ../demo-content-setup/demo-content-setup.php:231
+msgid "I agree, continue demo content setup"
+msgstr ""
+
+#: ../demo-content-setup/demo-content-setup.php:232
+msgid "Cancel"
+msgstr ""
+
+#: ../demo-content-setup/one-click-demo/demo-content.php:172
+#: ../demo-content-setup/one-click-demo/wordpress-importer/wordpress-importer.php:374
+#, php-format
+msgid ""
+"Failed to create new user for %s. Their posts will be attributed to the current user."
+msgstr ""
+
+#: ../demo-content-setup/one-click-demo/demo-content.php:249
+msgid "Inserting Categories..."
+msgstr ""
+
+#: ../demo-content-setup/one-click-demo/demo-content.php:266
+msgid "All Categories were inserted successfully. Inserting Tags..."
+msgstr ""
+
+#: ../demo-content-setup/one-click-demo/demo-content.php:281
+msgid "All Tags were inserted successfully. Inserting Terms..."
+msgstr ""
+
+#: ../demo-content-setup/one-click-demo/demo-content.php:299
+msgid "All Terms were inserted successfully. Inserting Posts..."
+msgstr ""
+
+#: ../demo-content-setup/one-click-demo/demo-content.php:319
+msgid "All Posts were inserted successfully. Importing images..."
+msgstr ""
+
+#: ../demo-content-setup/one-click-demo/demo-content.php:354
+msgid "All Images were inserted successfully. Inserting demo sliders..."
+msgstr ""
+
+#: ../demo-content-setup/one-click-demo/demo-content.php:366
+msgid "RevSlider plugin not found. Setting the widgets and options..."
+msgstr ""
+
+#: ../demo-content-setup/one-click-demo/demo-content.php:369
+msgid "All demo sliders inserted successfully. Setting the widgets and options..."
+msgstr ""
+
+#: ../demo-content-setup/one-click-demo/wordpress-importer/parsers.php:42
+#: ../demo-content-setup/one-click-demo/wordpress-importer/parsers.php:72
+#: ../demo-content-setup/one-click-demo/wordpress-importer/parsers.php:80
+msgid "There was an error when reading this WXR file"
+msgstr ""
+
+#: ../demo-content-setup/one-click-demo/wordpress-importer/parsers.php:43
+msgid "Details are shown above. The importer will now try again with a different parser..."
+msgstr ""
+
+#: ../demo-content-setup/one-click-demo/wordpress-importer/parsers.php:84
+#: ../demo-content-setup/one-click-demo/wordpress-importer/parsers.php:89
+#: ../demo-content-setup/one-click-demo/wordpress-importer/parsers.php:279
+#: ../demo-content-setup/one-click-demo/wordpress-importer/parsers.php:471
+msgid "This does not appear to be a WXR file, missing/invalid WXR version number"
+msgstr ""
+
+#: ../demo-content-setup/one-click-demo/wordpress-importer/wordpress-importer.php:134
+#: ../demo-content-setup/one-click-demo/wordpress-importer/wordpress-importer.php:143
+#: ../demo-content-setup/one-click-demo/wordpress-importer/wordpress-importer.php:194
+#: ../demo-content-setup/one-click-demo/wordpress-importer/wordpress-importer.php:198
+#: ../demo-content-setup/one-click-demo/wordpress-importer/wordpress-importer.php:207
+msgid "Sorry, there has been an error."
+msgstr ""
+
+#: ../demo-content-setup/one-click-demo/wordpress-importer/wordpress-importer.php:135
+msgid "The file does not exist, please try again."
+msgstr ""
+
+#: ../demo-content-setup/one-click-demo/wordpress-importer/wordpress-importer.php:178
+msgid "All done."
+msgstr ""
+
+#: ../demo-content-setup/one-click-demo/wordpress-importer/wordpress-importer.php:178
+msgid "Have fun!"
+msgstr ""
+
+#: ../demo-content-setup/one-click-demo/wordpress-importer/wordpress-importer.php:179
+msgid "Remember to update the passwords and roles of imported users."
+msgstr ""
+
+#: ../demo-content-setup/one-click-demo/wordpress-importer/wordpress-importer.php:199
+#, php-format
+msgid ""
+"The export file could not be found at <code>%s</code>. It is likely that this was caused "
+"by a permissions problem."
+msgstr ""
+
+#: ../demo-content-setup/one-click-demo/wordpress-importer/wordpress-importer.php:215
+#, php-format
+msgid ""
+"This WXR file (version %s) may not be supported by this version of the importer. Please "
+"consider updating."
+msgstr ""
+
+#: ../demo-content-setup/one-click-demo/wordpress-importer/wordpress-importer.php:240
+#, php-format
+msgid "Failed to import author %s. Their posts will be attributed to the current user."
+msgstr ""
+
+#: ../demo-content-setup/one-click-demo/wordpress-importer/wordpress-importer.php:266
+msgid "Assign Authors"
+msgstr ""
+
+#: ../demo-content-setup/one-click-demo/wordpress-importer/wordpress-importer.php:267
+msgid ""
+"To make it easier for you to edit and save the imported content, you may want to reassign "
+"the author of the imported item to an existing user of this site. For example, you may "
+"want to import all the entries as <code>admin</code>s entries."
+msgstr ""
+
+#: ../demo-content-setup/one-click-demo/wordpress-importer/wordpress-importer.php:269
+#, php-format
+msgid ""
+"If a new user is created by WordPress, a new password will be randomly generated and the "
+"new user&#8217;s role will be set as %s. Manually changing the new user&#8217;s details "
+"will be necessary."
+msgstr ""
+
+#: ../demo-content-setup/one-click-demo/wordpress-importer/wordpress-importer.php:279
+msgid "Import Attachments"
+msgstr ""
+
+#: ../demo-content-setup/one-click-demo/wordpress-importer/wordpress-importer.php:282
+msgid "Download and import file attachments"
+msgstr ""
+
+#: ../demo-content-setup/one-click-demo/wordpress-importer/wordpress-importer.php:286
+msgid "Submit"
+msgstr ""
+
+#: ../demo-content-setup/one-click-demo/wordpress-importer/wordpress-importer.php:299
+msgid "Import author:"
+msgstr ""
+
+#: ../demo-content-setup/one-click-demo/wordpress-importer/wordpress-importer.php:310
+msgid "or create new user with login name:"
+msgstr ""
+
+#: ../demo-content-setup/one-click-demo/wordpress-importer/wordpress-importer.php:313
+msgid "as a new user:"
+msgstr ""
+
+#: ../demo-content-setup/one-click-demo/wordpress-importer/wordpress-importer.php:321
+msgid "assign posts to an existing user:"
+msgstr ""
+
+#: ../demo-content-setup/one-click-demo/wordpress-importer/wordpress-importer.php:323
+msgid "or assign posts to an existing user:"
+msgstr ""
+
+#: ../demo-content-setup/one-click-demo/wordpress-importer/wordpress-importer.php:324
+msgid "- Select -"
+msgstr ""
+
+#: ../demo-content-setup/one-click-demo/wordpress-importer/wordpress-importer.php:425
+#, php-format
+msgid "Failed to import category %s"
+msgstr ""
+
+#: ../demo-content-setup/one-click-demo/wordpress-importer/wordpress-importer.php:465
+#, php-format
+msgid "Failed to import post tag %s"
+msgstr ""
+
+#: ../demo-content-setup/one-click-demo/wordpress-importer/wordpress-importer.php:511
+#: ../demo-content-setup/one-click-demo/wordpress-importer/wordpress-importer.php:652
+#, php-format
+msgid "Failed to import %s %s"
+msgstr ""
+
+#: ../demo-content-setup/one-click-demo/wordpress-importer/wordpress-importer.php:537
+#, php-format
+msgid "Failed to import &#8220;%s&#8221;: Invalid post type %s"
+msgstr ""
+
+#: ../demo-content-setup/one-click-demo/wordpress-importer/wordpress-importer.php:618
+#, php-format
+msgid "Failed to import %s &#8220;%s&#8221;"
+msgstr ""
+
+#: ../demo-content-setup/one-click-demo/wordpress-importer/wordpress-importer.php:783
+msgid "Menu item skipped due to missing menu slug"
+msgstr ""
+
+#: ../demo-content-setup/one-click-demo/wordpress-importer/wordpress-importer.php:790
+#, php-format
+msgid "Menu item skipped due to invalid menu slug: %s"
+msgstr ""
+
+#: ../demo-content-setup/one-click-demo/wordpress-importer/wordpress-importer.php:853
+msgid "Fetching attachments is not enabled"
+msgstr ""
+
+#: ../demo-content-setup/one-click-demo/wordpress-importer/wordpress-importer.php:866
+msgid "Invalid file type"
+msgstr ""
+
+#: ../demo-content-setup/one-click-demo/wordpress-importer/wordpress-importer.php:924
+#, php-format
+msgid "Remote server returned %1$d %2$s for %3$s"
+msgstr ""
+
+#: ../demo-content-setup/one-click-demo/wordpress-importer/wordpress-importer.php:937
+msgid "Remote file is incorrect size"
+msgstr ""
+
+#: ../demo-content-setup/one-click-demo/wordpress-importer/wordpress-importer.php:942
+msgid "Zero size file downloaded"
+msgstr ""
+
+#: ../demo-content-setup/one-click-demo/wordpress-importer/wordpress-importer.php:948
+#, php-format
+msgid "Remote file is too large, limit is %s"
+msgstr ""
+
+#: ../demo-content-setup/one-click-demo/wordpress-importer/wordpress-importer.php:1047
+msgid "Import WordPress"
+msgstr ""
+
+#: ../demo-content-setup/one-click-demo/wordpress-importer/wordpress-importer.php:1054
+#, php-format
+msgid ""
+"A new version of this importer is available. Please update to version %s to ensure "
+"compatibility with newer export files."
+msgstr ""
+
+#: ../demo-content-setup/one-click-demo/wordpress-importer/wordpress-importer.php:1069
+msgid ""
+"Howdy! Upload your WordPress eXtended RSS (WXR) file and we&#8217;ll import the posts, "
+"pages, comments, custom fields, categories, and tags into this site."
+msgstr ""
+
+#: ../demo-content-setup/one-click-demo/wordpress-importer/wordpress-importer.php:1070
+msgid "Choose a WXR (.xml) file to upload, then click Upload file and import."
+msgstr ""
+
+#: ../demo-content-setup/one-click-demo/wordpress-importer/wordpress-importer.php:1146
+msgid ""
+"Import <strong>posts, pages, comments, custom fields, categories, and tags</strong> from "
+"a WordPress export file."
+msgstr ""
+
+#: ../icon-picker/icon-picker.php:25
+msgid "FontAwesome"
+msgstr ""
+
+#: ../icon-picker/icon-picker.php:26
+msgid "Themify icons"
+msgstr ""
+
+#: ../icon-picker/icon-picker.php:27
+msgid "Skotroke Gap Icon"
+msgstr ""
+
+#: ../icon-picker/icon-picker.php:28
+msgid "Linecons"
+msgstr ""
+
+#: ../icon-picker/icon-picker.php:29
+msgid "Lab Icon"
+msgstr ""
+
+#: ../themestek-labtechco-extras.php:227 ../themestek-labtechco-extras.php:228
+msgid "LabtechCO Extra Options"
+msgstr ""
+
+#: ../themestek-labtechco-extras.php:519
+msgid "Twitter Link"
+msgstr ""
+
+#: ../themestek-labtechco-extras.php:520
+msgid "Facebook Link"
+msgstr ""
+
+#: ../themestek-labtechco-extras.php:521
+msgid "LinkedIn Link"
+msgstr ""
+
+#: ../themestek-labtechco-extras.php:522
+msgid "Google Plus Link"
+msgstr ""
+
+#: ../themestek-labtechco-extras.php:890
+msgid "Portfolio"
+msgstr ""
+
+#: ../themestek-labtechco-extras.php:894
+msgid "Team Member"
+msgstr ""
+
+#: ../themestek-labtechco-extras.php:899
+msgid "Left Sidebar for Blog"
+msgstr ""
+
+#: ../themestek-labtechco-extras.php:901
+msgid "This is left sidebar for blog section"
+msgstr ""
+
+#: ../themestek-labtechco-extras.php:909
+msgid "Right Sidebar for Blog"
+msgstr ""
+
+#: ../themestek-labtechco-extras.php:911
+msgid "This is right sidebar for blog section"
+msgstr ""
+
+#: ../themestek-labtechco-extras.php:919
+msgid "Left Sidebar for Pages"
+msgstr ""
+
+#: ../themestek-labtechco-extras.php:921
+msgid "This is left sidebar for pages"
+msgstr ""
+
+#: ../themestek-labtechco-extras.php:929
+msgid "Right Sidebar for Pages"
+msgstr ""
+
+#: ../themestek-labtechco-extras.php:931
+msgid "This is right sidebar for pages"
+msgstr ""
+
+#: ../themestek-labtechco-extras.php:940 ../themestek-labtechco-extras.php:960
+#: ../themestek-labtechco-extras.php:981 ../themestek-labtechco-extras.php:1001
+#: ../themestek-labtechco-extras.php:1023 ../themestek-labtechco-extras.php:1044
+#, php-format
+msgid "Left Sidebar for %1$s"
+msgstr ""
+
+#: ../themestek-labtechco-extras.php:942
+msgid "This is left sidebar for Portfolio"
+msgstr ""
+
+#: ../themestek-labtechco-extras.php:950 ../themestek-labtechco-extras.php:970
+#: ../themestek-labtechco-extras.php:991 ../themestek-labtechco-extras.php:1011
+#: ../themestek-labtechco-extras.php:1034 ../themestek-labtechco-extras.php:1054
+#, php-format
+msgid "Right Sidebar for %1$s"
+msgstr ""
+
+#: ../themestek-labtechco-extras.php:952
+msgid "This is right sidebar for Portfolio"
+msgstr ""
+
+#: ../themestek-labtechco-extras.php:962
+msgid "This is left sidebar for Portfolio Category pages."
+msgstr ""
+
+#: ../themestek-labtechco-extras.php:972
+msgid "This is right sidebar for Portfolio Category pages."
+msgstr ""
+
+#: ../themestek-labtechco-extras.php:983
+msgid "This is left sidebar for Service"
+msgstr ""
+
+#: ../themestek-labtechco-extras.php:993
+msgid "This is right sidebar for Service"
+msgstr ""
+
+#: ../themestek-labtechco-extras.php:1003
+msgid "This is left sidebar for Service Category pages."
+msgstr ""
+
+#: ../themestek-labtechco-extras.php:1013
+msgid "This is right sidebar for Service Category pages."
+msgstr ""
+
+#: ../themestek-labtechco-extras.php:1025
+msgid "This is left sidebar for Team Member"
+msgstr ""
+
+#: ../themestek-labtechco-extras.php:1036
+msgid "This is right sidebar for Team Member"
+msgstr ""
+
+#: ../themestek-labtechco-extras.php:1046
+msgid "This is left sidebar for Team Member Group."
+msgstr ""
+
+#: ../themestek-labtechco-extras.php:1056
+msgid "This is right sidebar for Team Member Group"
+msgstr ""
+
+#: ../themestek-labtechco-extras.php:1064
+msgid "Left Sidebar for Search"
+msgstr ""
+
+#: ../themestek-labtechco-extras.php:1066
+msgid "This is left sidebar for search"
+msgstr ""
+
+#: ../themestek-labtechco-extras.php:1073
+msgid "Right Sidebar for search"
+msgstr ""
+
+#: ../themestek-labtechco-extras.php:1075
+msgid "This is right sidebar for search"
+msgstr ""
+
+#: ../themestek-labtechco-extras.php:1085
+msgid "First Footer - 1st Widget Area"
+msgstr ""
+
+#: ../themestek-labtechco-extras.php:1087
+msgid "This is first footer widget area for first row of footer."
+msgstr ""
+
+#: ../themestek-labtechco-extras.php:1094
+msgid "First Footer - 2nd Widget Area"
+msgstr ""
+
+#: ../themestek-labtechco-extras.php:1096
+msgid "This is second footer widget area for first row of footer."
+msgstr ""
+
+#: ../themestek-labtechco-extras.php:1103
+msgid "First Footer - 3rd Widget Area"
+msgstr ""
+
+#: ../themestek-labtechco-extras.php:1105
+msgid "This is third footer widget area for first row of footer."
+msgstr ""
+
+#: ../themestek-labtechco-extras.php:1112
+msgid "First Footer - 4th Widget Area"
+msgstr ""
+
+#: ../themestek-labtechco-extras.php:1114
+msgid "This is fourth footer widget area for first row of footer."
+msgstr ""
+
+#: ../themestek-labtechco-extras.php:1123
+msgid "Second Footer - 1st Widget Area"
+msgstr ""
+
+#: ../themestek-labtechco-extras.php:1125
+msgid "This is first footer widget area for second row of footer."
+msgstr ""
+
+#: ../themestek-labtechco-extras.php:1132
+msgid "Second Footer - 2nd Widget Area"
+msgstr ""
+
+#: ../themestek-labtechco-extras.php:1134
+msgid "This is second footer widget area for second row of footer."
+msgstr ""
+
+#: ../themestek-labtechco-extras.php:1141
+msgid "Second Footer - 3rd Widget Area"
+msgstr ""
+
+#: ../themestek-labtechco-extras.php:1143
+msgid "This is third footer widget area for second row of footer."
+msgstr ""
+
+#: ../themestek-labtechco-extras.php:1150
+msgid "Second Footer - 4th Widget Area"
+msgstr ""
+
+#: ../themestek-labtechco-extras.php:1152
+msgid "This is fourth footer widget area for second row of footer."
+msgstr ""
+
+#: ../themestek-labtechco-extras.php:1173
+msgid "This is custom widget developed from \"LabtechCO Options\"."
+msgstr ""
+
+#: ../vc-templates/vc-templates-functions.php:99
+msgid "Premium Templates"
+msgstr ""
+
+#: ../vc-templates/vc-templates-functions.php:101
+msgid "All Templates"
+msgstr ""
+
+#: ../vc/themestek_attach_image/themestek_attach_image.php:32
+msgid "Add image"
+msgstr ""
+
+#: ../vc/themestek_attach_image/themestek_attach_image.php:35
+msgid "Add images"
+msgstr ""
+
+#: ../vc/themestek_css_editor/themestek_css_editor.php:132
+#: ../vc/themestek_css_editor/themestek_css_editor.php:134
+msgid "Break Column in this (and below) screen size."
+msgstr ""

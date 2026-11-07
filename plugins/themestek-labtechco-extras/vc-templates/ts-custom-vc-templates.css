@@ -1,0 +1,162 @@
+
+/* VC Templates */
+body .vc_templates-template-type-default_templates {
+	position: relative;
+	width: calc( 100% / 3 - 2% ) !important;
+	float: left !important;
+	background: none !important;
+	margin: 10px 1%;
+	padding: 0 !important;
+	box-shadow: none !important;
+	border: 0 !important;
+	text-shadow: none !important;
+	border-radius: 4px !important;
+	height: auto !important;
+	min-height: 50px !important;
+	line-height: inherit !important;
+	transition: all .2s ease-in-out !important;
+}
+.vc_templates-template-type-default_templates:hover {
+	transform: scale(1.2);
+	z-index: 999 !important
+}
+.vc_templates-template-type-default_templates .vc_ui-list-bar-item-trigger {
+	padding: 0 !important
+}
+body .vc_templates-template-type-default_templates span {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: -1
+}
+body .vc_templates-template-type-default_templates img {
+	width: 100%
+}
+body .vc_templates-template-type-default_templates .vc_ui-list-bar-item {
+	border: 0 !important;
+	margin: 0 6px 12px;
+	box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+	transition: all .2s ease-in-out
+}
+body .vc_templates-template-type-default_templates:hover .vc_ui-list-bar-item {
+	box-shadow: 0px 12px 10px 0px rgba(0, 0, 0, 0.1)
+}
+.vc_templates-template-type-default_templates .vc_ui-list-bar-item-actions {
+	display: none !important
+}
+.ts_templates_items .vc_ui-template-list .vc_ui-list-bar-item-trigger {
+	position: relative;
+	font-size: 0px !important;
+	min-height: 60px;
+	width: 100%
+}
+.vc_ui-template-list .vc_ui-list-bar-item-trigger:before {
+	content: '';
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	border: 2px solid transparent;
+	border-right-color: #fff;
+	border-radius: 100%;
+	left: 46%;
+	top: 25%;
+	z-index: -1;
+	animation: ts_anim .8s linear infinite !important
+}
+.vc_add-element-container .wpb-elements-list {
+	overflow-y: unset !important
+}
+.wpb-content-layouts li {
+	transform: scale(1);
+	animation: czZoomIn .4s ease-in-out forwards
+}
+@keyframes czZoomIn {0% {transform: scale(0)}100% {transform: scale(1)}}
+.ts_vc_nums {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	opacity: .3;
+	font-weight: 300;
+	font-size: 14px
+}
+.ts_vc_filters {
+	margin: 0 -18px
+}
+.ts_vc_filters li {
+	border-bottom-right-radius: 50px;
+	border-top-right-radius: 50px;
+	cursor: pointer;
+	font-size: 13px;
+	font-weight: 400;
+	margin-right: 20px;
+	padding: 2px 20px;
+	color: #9f9f9f;
+	position: relative;
+}
+.ts_vc_filters .ts_active {
+	background: rgb(4, 115, 170);
+	color: #fff;
+	font-weight: 700
+}
+.ts_vc_filters span {
+	opacity: 0.4;
+	padding: 3px 12px;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%)
+}
+.ts_vc_filters .ts_active span {
+	opacity: 1
+}
+.ts_templates_items .ts_active {
+	display: block !important
+}
+.ts_templates_items .ts_deactive {
+	display: none !important
+}
+[id*="fixed_side"] .csf-field-key-element-visibility-on-sticky, 
+[id*="fixed_side"] .csf-field-key-hide-on-mobile, 
+[id*="fixed_side"] .csf-field-key-hide-on-tablet {
+    display: none !important
+}
+
+@keyframes ts_anim {
+	0% { transform: translate(-50%, -50%) rotate(0deg) } 100% { transform: translate(-50%, -50%) rotate(359deg) }
+}
+.vc_ui-list-bar-item-trigger:before {
+	content: '';
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	border: 2px solid rgba(167, 167, 167, 0.3);
+	border-right-color: #fff;
+	border-radius: 100%;
+	left: 50%;
+	top: 50%;
+	z-index: -1;
+	animation: ts_anim .8s linear infinite !important
+}
+
+.ts_template_loader_after:after {
+	content: '';
+	position: absolute;
+	left: 50%;
+	top: 28%;
+	width: 26px;
+	height: 26px;
+	border: 2px solid rgba(167, 167, 167, 0.3);
+	font-size: 0 !important;
+	border-right-color: #494972 !important;
+	border-radius: 100%;
+	transform: translate(-50%, -50%);
+	animation: ts_anim .6s linear infinite
+}
+.ts_template_loader_after:after {
+	top: 46%;
+	left: 46%
+}
+.vc_ui-template-list .ts_template_loader_after .vc_ui-list-bar-item-trigger:before {
+	display: none
+}

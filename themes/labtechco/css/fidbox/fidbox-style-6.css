@@ -1,0 +1,42 @@
+.ts-fidbox-style-6 .ts-fld-contents  h6.ts-fid-title{
+	font-size: 15px;
+	line-height: 24px;
+	text-transform: none;
+	letter-spacing: 0.5px;
+}
+.ts-fidbox-style-6 .ts-fld-contents{
+	display: flex;
+	padding: 10px;
+}
+.ts-fidbox-style-6 h3.ts-fid-inner{
+	display: flex;
+	font-size: 55px;
+	line-height: 55px;
+}
+.ts-fidbox-style-6 .ts-fld-contents sup{
+	font-size: 60%;
+	top: 17px;
+}
+.ts-fidbox-style-6 .ts-fld-contents h6.ts-fid-title{
+	padding-left: 33px;
+	line-height: 28px;
+}
+.rtl .ts-fidbox-style-6 .ts-fld-contents h6.ts-fid-title{
+	padding-right: 33px;
+	padding-left: 0;
+}
+.fid-text-white .ts-fidbox-style-6 .ts-fld-contents .ts-fid-inner,
+.fid-text-white .ts-fidbox-style-6 .ts-fld-contents span,
+.fid-text-white .ts-fidbox-style-6 .ts-fld-contents .ts-fid-inner span{
+	color: #fff;
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+	.ts-fidbox-style-6 .ts-fld-contents{
+		padding: 0;
+	}
+	.ts-fidbox-style-6 h3.ts-fid-inner{
+		font-size: 40px;
+		line-height: 40px;
+	}
+}

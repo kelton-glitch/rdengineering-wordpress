@@ -1,0 +1,20 @@
+.ts-bgcolor-grey .ts-servicebox-style-1{
+	background-color: #fff
+}
+.ts-servicebox-style-1.themestek-box .themestek-box-desc{
+	margin-bottom: 0;
+}
+.ts-servicebox-style-1.themestek-box  .themestek-box-content-inner{
+	padding: 20px 30px;
+}
+.ts-servicebox-style-1.themestek-box .themestek-pf-box-title h3{
+	font-size: 20px;
+	font-weight: 500;
+	margin-bottom: 15px;
+}
+.ts-servicebox-style-1.themestek-box .themestek-box-category a{
+	color: var(--tste-labtechco-skincolor);
+}
+.ts-servicebox-style-1{
+	background-color: var(--tste-labtechco-skincolor-light);
+}

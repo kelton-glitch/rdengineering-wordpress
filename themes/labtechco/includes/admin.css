@@ -1,0 +1,1280 @@
+/** 
+ *  CSS style for admin section only
+ */
+
+/* ************************************************* */
+/* ************  Global Classes ******************** */
+.ts-hide{
+	display:none;
+}
+
+/* ************************************************** */
+/* ************  Hide VC message ******************** */
+#vc_license-activation-notice{
+	display: none;
+}
+
+/* ************************************************** */
+/* *********  VC - TS ImageSelector element ********* */
+.ts-imgselector-thumb-w{
+	padding: 10px 0;
+}
+.ts-imgselector-thumb-inner{
+	cursor: pointer;
+	border: 3px solid #eaeaea;
+	padding: 5px;
+	text-align: center;
+}
+.ts-imgselector-thumb-inner img{
+	max-width: 100%;
+	height: auto;
+}
+.ts-imgselector-thumb-selected .ts-imgselector-thumb-inner{
+	border: 3px solid blue;
+}
+.ts-imgselector-thumb-selected .ts-imgselector-thumb-inner:after{
+	font-family: 'FontAwesome';
+	content: "\f00c";
+	position: absolute;
+	bottom: 0px;
+	right: 15px;
+	width: 20px;
+	height: 20px;
+	background-color: blue;
+	color: white;
+	font-size: 11px;
+	text-align: center;
+}
+.ts-imgselector-thumb-wrapper{
+    padding: 10px;
+    position: relative;
+    margin-top: 35px;
+}
+.ts-imgselector-thumbs-heading{
+	background: #0473aa;
+    position: absolute;
+    top: -24px;
+    left: -3px;
+    color: white;
+    padding: 2px 15px;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+.ts-demo-setup-success-message {
+	border: 1px solid #6ddc6d;
+	padding: 5px;
+	background: #ceffce;
+	margin-bottom: 10px;
+	color: #007900;
+}
+.vc_panel-tabs select.sgicon, .vc_panel-tabs select option.sgicon {
+    font-family: inherit;
+}
+
+/* ************  Custom Widget design ********* */
+.ts-widget-infobox{
+	border: 1px solid #5ad0f5;
+	padding: 10px;
+	margin-top: 15px;
+	margin-bottom: 10px;
+	background: #f2fcff;
+	color: #035d88;
+}
+
+/* ************************************************** */
+/* ************  VC - TS CSS Editor element ********* */
+/* ************  themestek_css_editor *************** */
+.themestek-css-editor .vc_css-editor .vc_layout-onion .vc_margin .vc_border .vc_padding{
+	margin:0;
+}
+.themestek-css-editor .vc_layout-onion{
+	width: 300px !important;
+}
+.themestek-css-editor-w .ts-css-editor-tab-active a{
+	font-weight: bold;
+	background-color: white;
+	outline: none;
+	text-decoration: none;
+}
+.themestek-css-editor{
+	display: none;
+}
+.themestek-css-editor.ts-css-editor-option-active{
+	display: block;
+}
+.ts-css-editor-tab-w {
+    background: whitesmoke;
+}
+.ts-css-editor-tab-w li {
+	float: left;
+    padding: 0;
+    margin: 10px 10px 0 10px;
+}
+.ts-css-editor-tab-w li:last-child{
+	/*clear:both;*/
+}
+.ts-css-editor-tab-w li a{
+    padding: 10px;
+    background: whitesmoke;
+	text-decoration: none;
+	outline: none;
+	display: block;
+}
+.ts-css-editor-tab-w li a:focus{
+	box-shadow: none;
+}
+
+.ts-css-editor-tab-w:after {
+    content: " ";
+    clear: both;
+    display: block;
+}
+.vc_properties-list .ts-css-editor-head-custom-w{
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+.vc_properties-list .ts-css-editor-head-custom-w h4{
+	float: left;
+    margin-right: 30px;
+    margin-top: 9px;
+}
+
+.vc_properties-list .ts-css-editor-head-custom-w input{
+	width: 100px;
+    float: left;
+    margin-right: 10px;
+}
+.vc_properties-list .ts-css-editor-head-custom-w small{
+	padding-top: 10px;
+	display: inline-block;
+}
+.ts-css-editor-colbreak-w {
+	padding-bottom: 15px;
+}
+
+/* ******************************************************* */
+/* ************  CS Customizer styles ******************** */
+.cs-framework .cs-expand-all{
+	display: none !important;
+}
+/* change button styles */
+#customize-controls .cs-field-heading{
+	background-color: white !important;
+	font-size: 17px !important;
+}
+#customize-controls .cs-field-heading small{
+	font-size: 12px;
+	line-height: 16px;
+	color: #a2a2a2;
+}
+.customize-control.customize-control-cs_field:hover div.cs-element{
+	background-color: whitesmoke;
+}
+.cs-sections .cs-element input[type="text"],
+.cs-sections .cs-element input[type="number"],
+.cs-sections .cs-element select{
+	width: auto;
+}
+.cs-framework .cs-body .cs-nav ul ul::before{
+	background-color: #f9f9f9;
+	border-right: 1px solid #eeeeee;
+	border-top: 1px solid #f9f9f9;
+	top: -1px;
+	left:0;
+	width:15px;
+}
+span.ts-toptions-head-highlight {
+	color: #006799;
+	font-weight: bold;
+}
+.cs-body .cs-nav > ul > li:nth-child(1) > ul > li:nth-child(2){
+	display: none !important;
+}
+body.edit-tags-php .cs-field-upload .button{
+	top: 36px !important;
+	right: 2px !important;
+}
+body.term-php .cs-field-upload .button{
+	top: 24px !important;
+	right: 2px !important;
+}
+
+/* *************************************************** */
+/* ************  Sidebar meta box ******************** */
+#cs-tab-ts_sidebar_options .cs-field-image-select > label{
+    margin: 0 10px 10px 0;
+}
+#cs-tab-ts_sidebar_options .cs-field-image-select > label:nth-child(3n+3){
+	margin-right:0;
+}
+
+/* ************************************************************* */
+/* ***************  Shortcode Popup correction ***************** */
+body .ui-dialog .ui-dialog-titlebar-close{
+	width: 32px;
+    height: 32px;
+	top: 36%;
+}
+body .ui-dialog .ui-dialog-titlebar-close span{
+	display: none
+}
+body .ui-dialog-titlebar-close:before{
+	line-height: 32px;
+}
+
+/* ******************************************* */
+/* ******   ts_labtechco icon library ******** */
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before, [class^="flaticon-"]:after, [class*=" flaticon-"]:after{
+	margin-left: 0;
+} 
+ 
+/* ************************************************* */
+/* ******   CodeStar Framework addon styles ******** */
+@media (max-width: 1460px){
+	.cs-element.cs-field-image_select label img {
+		max-width: 223px;
+	}
+}
+@media (max-width: 1232px){
+	.cs-element.cs-field-image_select label img {
+		max-width: 170px;
+	}
+}
+.cs-element.ts-header-style label img {
+    max-width: 650px;
+    width: 100%;
+}
+.cs-element.cs-field-image_select label{
+	margin: 10px;
+}
+.cs-element.cs-field-image_select label img{
+	opacity: 1;
+}
+.cs-nav li i{
+	display: none;
+}
+
+/* Theme Options heading element */
+.cs-element.cs-field-heading small {
+    font-size: 13px;
+    font-weight: normal;
+    padding-top: 10px;
+    display: block;
+    color: #525252;
+}
+
+/* The Events Calender is disturbing the color picker so we added this css */
+.cs-field-color_picker .cs-alpha-slider {
+    border: none;
+    background: none;
+}
+
+/* Theme Options Radio - "small" tag text colo */
+.cs-element.cs-field-radio label small {
+    color: #a7a7a7;
+}
+
+/* Theme Options : sticky header */
+.cs-header.is_stuck {
+    margin-top: 30px;
+}
+.cs-framework .cs-header{
+	z-index: 99;
+}
+
+/* ThemeStek Dimensions options */
+.cs-framework.cs-option-framework .ts-hard-crop-wrapper label{
+	display: inline-block;
+}
+
+.cs-framework.cs-option-framework .cs-field-image-select label{
+	display: inline-block;
+}
+
+/* field: ThemeStek_Background */
+.cs-field-themestek_background .ts-cs-background-image-picker input {
+    display: none;
+}
+.cs-field-themestek_background .cs-preview img {
+    max-height: 90px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.cs-field-themestek_background .cs-preview .cs-preview-inner{
+	overflow: hidden;
+}
+
+.cs-field-themestek_background .cs-preview {
+    display: inline-block;
+    position: relative;
+    padding: 4px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
+    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
+	width: 90px;
+	height: 90px;
+}
+.cs-field-themestek_background .cs-remove:hover {
+    opacity: 1;
+}
+.cs-field-themestek_background .cs-remove {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 22px;
+    height: 22px;
+    font-size: 11px;
+    line-height: 22px;
+    text-align: center;
+    cursor: pointer;
+    color: #fff;
+    background-color: #e14d43;
+    opacity: 0.8;
+    -moz-transition: opacity 0.2s;
+    -o-transition: opacity 0.2s;
+    -webkit-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+}
+.ts-cs-background-image-picker{
+	float: left;
+	width: 115px;
+	text-align: left;
+	margin-right: 10px;
+	margin-top: 5px;
+}
+.ts-background-option small {
+    color: #989898;
+}
+.ts-cs-background-image-picker-inner {
+    display: inline-block;
+    text-align: center;
+}
+.ts-cs-background-options-wrapper-bottom {
+	padding-top: 15px;
+}
+.ts-cs-background-options-wrapper-top select,
+.ts-cs-background-options-wrapper-bottom select {
+	min-width: 110px;
+}
+.ts-cs-background-options-wrapper-top .cs-element,
+.ts-cs-background-options-wrapper-bottom .cs-element {
+	padding-right: 10px !important;
+}
+.cs-field-themestek_background .cs-preview img.hidden,
+.cs-field-themestek_background .ts-cs-remove.hidden{
+	display: none;
+}
+.cs-field-themestek_background .ts-cs-background-heading-noimg {
+    font-size: 11px;
+    padding-top: 15px;
+    color: #A0A0A0;
+}
+.cs-field-themestek_background  .ts-background-option {
+	display: block;
+	float: left;
+	width: 140px;
+}
+.cs-field-themestek_background  .ts-background-option select {
+	min-width: 95%;
+}
+.cs-field-themestek_background  .cs-pseudo-field {
+	display: block;
+}
+
+/* CS Metabox options */
+.cs-metabox-framework .cs-field-heading {
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 18px;
+	color: #4E4E4E;
+}
+
+/* field: ThemeStek_Dimensions */
+.cs-field-themestek_dimensions .input-prepend {
+	margin-right: 10px;
+    font-size: 0;
+    white-space: nowrap;
+    float: left;
+    display: inline-block;
+    margin-bottom: 6px;
+}
+.cs-field-themestek_dimensions .add-on {
+	height: 20px;
+}
+.cs-field-themestek_dimensions .input-prepend .add-on {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    float: left;
+}
+.cs-field-themestek_dimensions .input-append .add-on, .cs-field-themestek_dimensions .input-prepend .add-on {
+    width: auto;
+    display: inline-block;
+    min-width: 16px;
+    padding: 3px 4px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+    text-shadow: 0 1px 0 #ffffff;
+    background-color: #eeeeee;
+    border: 1px solid #cccccc;
+}
+
+.input-prepend.input-append .add-on:first-child, .input-prepend.input-append .btn:first-child {
+    -webkit-border-radius: 4px 0 0 4px;
+    -moz-border-radius: 4px 0 0 4px;
+    border-radius: 4px 0 0 4px;
+}
+
+.cs-field-themestek_dimensions .input-append input {
+    border-right: 0;
+    margin-bottom: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-right: 0;
+    float: left;
+    margin-top: 0;
+    display: block;
+}
+.cs-field-themestek_dimensions .input-prepend input {
+	border-left: 0;
+	margin-bottom: 0;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	margin-left: 0;
+	padding-top: 4px;
+	padding-bottom: 3px;
+	float: left;
+	margin-top: 0;
+	display: block;
+	border: 1px solid #ddd;
+}
+.cs-field-themestek_dimensions .mini, .cs-field-themestek_dimensions input[type=text].mini {
+	width: 60px;
+	text-align: center;
+}
+
+.input-prepend.input-append .add-on:last-child, .input-prepend.input-append .btn:last-child {
+	margin-left: -1px;
+	-webkit-border-radius: 0 4px 4px 0;
+	-moz-border-radius: 0 4px 4px 0;
+	border-radius: 0 4px 4px 0;
+}
+.field-ts-dimensions-input{
+	border: 1px solid #C8C8C8;
+	border-radius: 3px;
+	padding: 3px 10px;
+	float:left;
+	background-color: #fff;
+}
+.ts-dimensions-wrapper{
+	height: 40px;
+}
+
+/* field: ThemeStek_skin_color */
+.themestek-skin-color-w{
+	width: 310px;
+	border: 2px solid #ececec;
+}
+.themestek-skin-color-list {
+	margin: 0 auto;
+	width: 240px;
+	padding: 20px 0;
+}
+.themestek-skin-color-list a {
+	display: block;
+	width: 40px;
+	height: 40px;
+	text-indent: -99999px;
+	font-size: 1px;
+	float: left;
+	margin: 4px;
+}
+.themestek-or-text-wrapper {
+	margin: 0 10px;
+	position: relative;
+}
+.themestek-or-text {
+	display: block;
+	text-align: center;
+	font-weight: bold;
+}
+.themestek-or-text:before,
+.themestek-or-text:after{
+	content: " ";
+	position: absolute;
+	display: block;
+	width:130px;
+	height: 2px;
+	background: #ececec;
+	top: 8px;
+}
+.themestek-or-text:before{
+	left:-10px;
+}
+.themestek-or-text:after{
+	right:-10px;;
+}
+
+.themestek-skin-color-picker-w {
+	text-align: center;
+    padding: 25px;
+}
+
+/* Page loader option style */
+.cs-element-pre-loader-image label {
+    width: 100px;
+    background: white;
+    border: 2px solid #E8E8E8;
+    height: 60px;
+	text-align: center;
+	padding: 5px 0;
+	position: relative;
+}
+.cs-element-pre-loader-image label img {
+    border: 0 solid transparent !important;
+	max-height: 35px;
+	padding-top: 12px !important;
+}
+.cs-element-pre-loader-image label.ts-pre-loader-option-selected{
+	border-color: #0073aa;
+}
+.cs-element-pre-loader-image label.ts-pre-loader-option-selected:after {
+	position: absolute;
+	background: #0073aa;
+	color: white;
+	bottom: 0;
+	right: 0;
+	margin: 0;
+	content: "\f00c";
+	font-family: fontAwesome;
+	padding: 0 2px 0 4px;
+	font-size: 10px;
+}
+
+/* ThemeStek Typography */
+.cs-ts-typography-dropdown-w {
+    width: 40%;
+    float: left;
+	padding-right: 20px;
+	padding-bottom: 10px;
+}
+.cs-ts-typography-dropdown-w select{
+	width: 95%;
+}
+.cs-field-themestek_typography small {
+    color: #989898;
+}
+
+.ts-fancy-input-w .input-append {
+    margin-right: 10px;
+    font-size: 0;
+    white-space: nowrap;
+    float: left;
+    display: inline-block;
+    margin-bottom: 6px;
+}
+.ts-fancy-input-w input.mini {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 55px;
+    text-align: center;
+    margin: 0;
+    height: 28px;
+    top: 3px;
+    padding: 0 2px 0 5px;
+    text-decoration: none;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.ts-fancy-input-w .input-append .add-on,
+.ts-fancy-input-w .input-prepend .add-on {
+    width: auto;
+    display: inline-block;
+    min-width: 16px;
+    padding: 3px 4px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+    text-shadow: 0 1px 0 #ffffff;
+    background-color: #eeeeee;
+    border: 1px solid #cccccc;
+}
+.ts-fancy-input-w .input-append .add-on {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    margin-left: -2px;
+    padding-top: 4px !important;
+    padding-bottom: 2px !important;
+}
+.ts-fancy-input-w {
+    float: left;
+    width: 92px;
+}
+.ts-typography-font-color-w {
+    float: left;
+    width: 255px;
+}
+.ts-typography-load-all-varient-w{
+	padding-top: 10px;
+}
+.ts-typo-all-varient-input{
+	float: left;
+	padding-bottom: 15px;
+	padding-top: 3px;
+	padding-right: 5px;
+}
+.ts-typography-load-all-varient-w {
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    margin-top: 21px;
+    border-radius: 3px;
+	max-width: 470px;
+}
+.cs-element.cs-field-themestek_typography input[type="text"],
+.cs-element.cs-field-themestek_typography select,
+.cs-element.cs-field-themestek_typography textarea{
+	width: 90%;
+}
+.cs-element.cs-field-themestek_typography input[type="number"]{
+	width: 60px;
+	height: 30px;
+}
+.cs-framework .cs-element.cs-field-themestek_typography label{
+	display: block;
+}
+.cs-element.cs-field-themestek_typography .ts-typography-font-color-w input[type="text"]{
+	width: auto;
+}
+.cs-framework .cs-element.cs-field-themestek_typography .ts-typography-font-color-w label{
+	display: inline-block;
+}
+
+/* ThemeStek_image */
+.cs-field-themestek_image input {
+	display: none;
+}
+.cs-field-themestek_image .cs-preview {
+	display: inline-block;
+	position: relative;
+	padding: 4px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	background-color: #f9f9f9;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	-moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
+	-webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
+}
+.cs-field-themestek_image .cs-preview img {
+	max-height: 90px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.cs-field-themestek_image .cs-remove {
+	position: absolute;
+	top: 4px;
+	right: 4px;
+	width: 22px;
+	height: 22px;
+	font-size: 11px;
+	line-height: 22px;
+	text-align: center;
+	cursor: pointer;
+	color: #fff;
+	background-color: #e14d43;
+	opacity: 0.8;
+	-moz-transition: opacity 0.2s;
+	-o-transition: opacity 0.2s;
+	-webkit-transition: opacity 0.2s;
+	transition: opacity 0.2s;
+}
+.cs-field-themestek_image .cs-remove:hover {
+	opacity: 1;
+}
+#side-sortables .cs-field-image_select label img { /*  */
+    max-width: 66px;
+    width: auto;
+}
+
+/* Heading element */
+body .cs-field-heading{
+	background-color: #ECECEC !important;
+	line-height: 1.5em;
+}
+body .cs-element.cs-field-heading small{
+	padding-top: 5px;
+	line-height: 20px;
+}
+
+/* Codestar : Image radio selector */
+body .cs-field-image_select label img{
+	padding: 3px;
+	border: 3px solid #eee;
+}
+body .cs-field-image_select input:checked ~ img{
+	border-color: #2BBAFF;
+}
+
+/* Codestar : Radio selector */
+cs-field-radio .cs-fieldset ul li small {
+    font-size: 10px;
+    color: #969696;
+}
+
+/* Codestar: Textarea */
+body .cs-field-textarea textarea {
+	font-family: Monospace, "Courier New";
+}
+
+/* Codestar: Custom message for No Slider */
+.ts-no-slider-message{
+	border: 1px solid #f98d8d;
+	padding: 5px 10px;
+	background: #fdebeb;
+	margin-top: 15px;
+}
+.ts-no-slider-message, .ts-no-slider-message a{
+	color: #7b4848;
+}
+
+/* ************************************************* */
+/* ****** Visual Composer: ThemeStek elements ***** */
+.vc_element-icon.icon-themestek-vc{
+	background-image: url('images/themestek-vc-logo.png');
+}
+.vc_btn3.vc_btn3-color-grey.vc_btn3-style-text{  /* ThemeStek button: Normal Text style */
+	background: transparent;
+}
+div[data-vc-shortcode-param-name="css_editor_1200"] div.vc_col-xs-5.vc_settings,
+div[data-vc-shortcode-param-name="css_editor_991"] div.vc_col-xs-5.vc_settings,
+div[data-vc-shortcode-param-name="css_editor_768"] div.vc_col-xs-5.vc_settings{
+	display: none !important;
+}
+
+/* ************************************************* */
+/* ******          Meta box design             ***** */
+body .cs-metabox-framework .cs-content .cs-section-title h3 {
+	text-transform: none;
+	font-size: 17px !important;
+}
+body .cs-metabox-framework .cs-content .cs-section-title h3 small {
+	display: block;
+	font-weight: normal;
+	font-size: 14px;
+}
+body .cs-text-muted {
+	padding-top: 5px;
+}
+
+/* ThemeStek Background in metaboxes */
+.cs-metabox-framework .cs-field-themestek_background .ts-background-option{
+	width: 200px;
+	padding-bottom: 5px;
+}
+.cs-metabox-framework .cs-field-themestek_background .ts-background-option label{
+	display: block;
+}
+.cs-metabox-framework .cs-field-themestek_background .ts-cs-background-options-wrapper-bottom{
+	padding-top: 0;
+}
+
+/* Gallery tab content */
+#cfpf-format-gallery-preview{
+	display: none !important;
+}
+#post-body-content #postimagediv,
+#cfpf-format-gallery-preview #_themestek_metabox_gallery{
+	margin-top: 10px;
+}
+
+/* Icon or Theem Options link */
+#toplevel_page_themestek-theme-options div.wp-menu-image:before {
+	background-image: url(images/themestek-small-logo.png);
+	background-size: 100%;
+	display: block;
+	width: 16px;
+	height: 6px;
+	content: "";
+	margin-top: 7px;
+	margin-left: 11px;
+	background-repeat: no-repeat;
+}
+
+svg{
+	fill: currentColor;
+}
+
+/***********************************************************/
+/************ New Icon picker **************/
+.vc_column:nth-child(2).wpb_el_type_themestek_iconpicker[data-vc-shortcode-param-name="i_icon_linecons"],
+.vc_column:nth-child(2).wpb_el_type_themestek_iconpicker[data-vc-shortcode-param-name="icon_linecons"]{
+	padding-top: 0;
+}
+.vc_column:nth-child(3).wpb_el_type_themestek_iconpicker[data-vc-shortcode-param-name="i_icon_themify"],
+.vc_column:nth-child(3).wpb_el_type_themestek_iconpicker[data-vc-shortcode-param-name="icon_themify"]{
+	padding-top: 0;
+}
+.vc_column:nth-child(4).wpb_el_type_themestek_iconpicker[data-vc-shortcode-param-name="i_icon_fontawesome"],
+.vc_column:nth-child(4).wpb_el_type_themestek_iconpicker[data-vc-shortcode-param-name="icon_fontawesome"]{
+	padding-top: 0;
+}
+
+.iconpicker-popover {
+    z-index: 999999 !important;
+}
+.ts-iconpicker-btn{
+	color: #006e92;
+	padding: 5px;
+	display: inline-block;
+	font-size: 20px;
+}
+.ts-ipicker-selector{
+	border: 1px solid #ededed;
+    background-color: #fff;
+	width: 100px;
+    height: 37px;
+}
+.ts-ipicker-selected-icon{
+	line-height: 40px;
+	display: block;
+    width: 60px;
+    height: 100%;
+    float: left;
+    text-align: center;
+}
+.ts-ipicker-selector-button{
+	background-color: #f4f4f4;
+    border-left: 1px solid #e1e1e1;
+    color: #999;
+	
+	width: 39px;
+    height: 100%;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    float: left;
+}
+.themestek-iconpicker-list {
+	border: 1px solid #efefef;
+	display: inline-block;
+	padding: 10px;
+	margin-top: 2px;
+	background: #f9f9f9;
+	text-align: center;
+}
+.ts-ipicker-selector-button i{
+	line-height: 39px;
+}
+.iconpicker input.search-control{
+	width: 100% !important;
+}
+span.ts-ipicker-selected-icon i {
+    font-size: 21px;
+    line-height: 32px;
+    display: block;
+    padding-top: 2px;
+}
+.themestek-iconpicker-list[data-icon]:before {
+	display: none;
+}
+
+.ts-ipicker-selector-w .btn {
+	display: inline-block;
+	margin-bottom: 0;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1.42857143;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 0;
+	outline: none;
+}
+
+.ts-ipicker-selector-w .btn:hover,
+.ts-ipicker-selector-w .btn:focus {
+  color: #333;
+  text-decoration: none;
+}
+.ts-ipicker-selector-w .btn:active,
+.ts-ipicker-selector-w .btn.active {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+          box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+}
+.ts-ipicker-selector-w .btn.disabled,
+.ts-ipicker-selector-w .btn[disabled],
+fieldset[disabled] .btn {
+  pointer-events: none;
+  cursor: not-allowed;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  opacity: .65;
+}
+.ts-ipicker-selector-w .btn-default {
+	color: #333;
+	background-color: #fff;
+	border-color: #ccc;
+	width: 36px;
+	height: 20px;
+}
+.ts-ipicker-selector-w .btn-default:hover,
+.ts-ipicker-selector-w .btn-default:focus,
+.ts-ipicker-selector-w .btn-default:active,
+.ts-ipicker-selector-w .btn-default.active,
+.ts-ipicker-selector-w .open > .dropdown-toggle.btn-default {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+.ts-ipicker-selector-w .btn-default:active,
+.ts-ipicker-selector-w .btn-default.active,
+.ts-ipicker-selector-w .open > .dropdown-toggle.btn-default {
+  background-image: none;
+}
+
+.ts-ipicker-selector-w .btn-default .badge {
+  color: #fff;
+  background-color: #333;
+}
+.ts-ipicker-selector-w .btn-primary {
+  color: #fff;
+  background-color: #428bca;
+  border-color: #357ebd;
+}
+.ts-ipicker-selector-w .btn-primary:hover,
+.ts-ipicker-selector-w .btn-primary:focus,
+.ts-ipicker-selector-w .btn-primary:active,
+.ts-ipicker-selector-w .btn-primary.active,
+.ts-ipicker-selector-w .open > .dropdown-toggle.btn-primary {
+  color: #fff;
+  background-color: #3071a9;
+  border-color: #285e8e;
+}
+.ts-ipicker-selector-w .btn-primary:active,
+.ts-ipicker-selector-w .btn-primary.active,
+.ts-ipicker-selector-w .open > .dropdown-toggle.btn-primary {
+  background-image: none;
+}
+
+.ts-ipicker-selector-w .btn-primary .badge {
+  color: #428bca;
+  background-color: #fff;
+}
+.ts-ipicker-selector-w .btn-success {
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+.ts-ipicker-selector-w .btn-success:hover,
+.ts-ipicker-selector-w .btn-success:focus,
+.ts-ipicker-selector-w .btn-success:active,
+.ts-ipicker-selector-w .btn-success.active,
+.ts-ipicker-selector-w .open > .dropdown-toggle.btn-success {
+  color: #fff;
+  background-color: #449d44;
+  border-color: #398439;
+}
+.ts-ipicker-selector-w .btn-success:active,
+.ts-ipicker-selector-w .btn-success.active,
+.ts-ipicker-selector-w .open > .dropdown-toggle.btn-success {
+  background-image: none;
+}
+.ts-ipicker-selector-w .btn-success .badge {
+  color: #5cb85c;
+  background-color: #fff;
+}
+.ts-ipicker-selector-w .btn-info {
+  color: #fff;
+  background-color: #5bc0de;
+  border-color: #46b8da;
+}
+.ts-ipicker-selector-w .btn-info:hover,
+.ts-ipicker-selector-w .btn-info:focus,
+.ts-ipicker-selector-w .btn-info:active,
+.ts-ipicker-selector-w .btn-info.active,
+.ts-ipicker-selector-w .open > .dropdown-toggle.btn-info {
+  color: #fff;
+  background-color: #31b0d5;
+  border-color: #269abc;
+}
+.ts-ipicker-selector-w .btn-info:active,
+.ts-ipicker-selector-w .btn-info.active,
+.ts-ipicker-selector-w .open > .dropdown-toggle.btn-info {
+  background-image: none;
+}
+.ts-ipicker-selector-w .btn-info .badge {
+  color: #5bc0de;
+  background-color: #fff;
+}
+.ts-ipicker-selector-w .btn-warning {
+  color: #fff;
+  background-color: #f0ad4e;
+  border-color: #eea236;
+}
+.ts-ipicker-selector-w .btn-warning:hover,
+.ts-ipicker-selector-w .btn-warning:focus,
+.ts-ipicker-selector-w .btn-warning:active,
+.ts-ipicker-selector-w .btn-warning.active,
+.ts-ipicker-selector-w .open > .dropdown-toggle.btn-warning {
+  color: #fff;
+  background-color: #ec971f;
+  border-color: #d58512;
+}
+.ts-ipicker-selector-w .btn-warning:active,
+.ts-ipicker-selector-w .btn-warning.active,
+.ts-ipicker-selector-w .open > .dropdown-toggle.btn-warning {
+  background-image: none;
+}
+.ts-ipicker-selector-w .btn-warning .badge {
+  color: #f0ad4e;
+  background-color: #fff;
+}
+.ts-ipicker-selector-w .btn-danger {
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+.ts-ipicker-selector-w .btn-danger:hover,
+.ts-ipicker-selector-w .btn-danger:focus,
+.ts-ipicker-selector-w .btn-danger:active,
+.ts-ipicker-selector-w .btn-danger.active,
+.ts-ipicker-selector-w .open > .dropdown-toggle.btn-danger {
+  color: #fff;
+  background-color: #c9302c;
+  border-color: #ac2925;
+}
+.ts-ipicker-selector-w .btn-danger:active,
+.ts-ipicker-selector-w .btn-danger.active,
+.ts-ipicker-selector-w .open > .dropdown-toggle.btn-danger {
+  background-image: none;
+}
+.ts-ipicker-selector-w .btn-danger .badge {
+  color: #d9534f;
+  background-color: #fff;
+}
+.ts-ipicker-selector-w .btn-link {
+  font-weight: normal;
+  color: #428bca;
+  cursor: pointer;
+  border-radius: 0;
+}
+.ts-ipicker-selector-w .btn-link,
+.ts-ipicker-selector-w .btn-link:active,
+.ts-ipicker-selector-w .btn-link[disabled],
+.ts-ipicker-selector-w fieldset[disabled] .btn-link {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.ts-ipicker-selector-w .btn-link,
+.ts-ipicker-selector-w .btn-link:hover,
+.ts-ipicker-selector-w .btn-link:focus,
+.ts-ipicker-selector-w .btn-link:active {
+  border-color: transparent;
+}
+.ts-ipicker-selector-w .btn-link:hover,
+.ts-ipicker-selector-w .btn-link:focus {
+  color: #2a6496;
+  text-decoration: underline;
+  background-color: transparent;
+}
+.ts-ipicker-selector-w .btn-link[disabled]:hover,
+.ts-ipicker-selector-w fieldset[disabled] .btn-link:hover,
+.ts-ipicker-selector-w .btn-link[disabled]:focus,
+.ts-ipicker-selector-w fieldset[disabled] .btn-link:focus {
+  color: #777;
+  text-decoration: none;
+}
+.ts-ipicker-selector-w .btn-lg,
+.ts-ipicker-selector-w .btn-group-lg > .btn {
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 6px;
+}
+.ts-ipicker-selector-w .btn-sm,
+.ts-ipicker-selector-w .btn-group-sm > .btn {
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+.ts-ipicker-selector-w .btn-xs,
+.ts-ipicker-selector-w .btn-group-xs > .btn {
+  padding: 1px 5px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+.ts-ipicker-selector-w .btn-block {
+  display: block;
+  width: 100%;
+}
+.ts-ipicker-selector-w .btn-block + .btn-block {
+  margin-top: 5px;
+}
+.ts-ipicker-selector-w input[type="submit"].btn-block,
+.ts-ipicker-selector-w input[type="reset"].btn-block,
+.ts-ipicker-selector-w input[type="button"].btn-block {
+  width: 100%;
+}
+
+.ts-ipicker-selector-w div.btn.themestek-iconpicker:hover{
+	background: #fff;
+}
+
+/************ Color selector dropdown ************/
+.ts_vc_colored-dropdown option{background-color:#ffffff!important;color:#000000!important}
+.ts_vc_colored-dropdown .blue{background-color:#5472D2!important;color:#fff!important}
+.ts_vc_colored-dropdown .turquoise{background-color:#00C1CF!important;color:#fff!important}
+.ts_vc_colored-dropdown .pink{background-color:#FE6C61!important;color:#fff!important}
+.ts_vc_colored-dropdown .violet{background-color:#8D6DC4!important;color:#fff!important}
+.ts_vc_colored-dropdown .peacoc{background-color:#4CADC9!important;color:#fff!important}
+.ts_vc_colored-dropdown .chino{background-color:#CEC2AB!important;color:#fff!important}
+.ts_vc_colored-dropdown .mulled-wine,.ts_vc_colored-dropdown .mulled_wine{background-color:#50485B!important;color:#fff!important}
+.ts_vc_colored-dropdown .vista-blue,.ts_vc_colored-dropdown .vista_blue{background-color:#75D69C!important;color:#fff!important}
+.ts_vc_colored-dropdown .black{background-color:#2A2A2A!important;color:#fff!important}
+.ts_vc_colored-dropdown .grey{background-color:#EBEBEB!important;color:#666!important}
+.ts_vc_colored-dropdown .orange{background-color:#F7BE68!important;color:#fff!important}
+.ts_vc_colored-dropdown .sky{background-color:#5AA1E3!important;color:#fff!important}
+.ts_vc_colored-dropdown .green{background-color:#6DAB3C!important;color:#fff!important}
+.ts_vc_colored-dropdown .juicy-pink,.ts_vc_colored-dropdown .juicy_pink{background-color:#F4524D!important;color:#fff!important}
+.ts_vc_colored-dropdown .sandy-brown,.ts_vc_colored-dropdown .sandy_brown{background-color:#F79468!important;color:#fff!important}
+.ts_vc_colored-dropdown .purple{background-color:#B97EBB!important;color:#fff!important}
+.ts_vc_colored-dropdown .white{background-color:#FFF!important;color:#666!important}
+.wpb_vc_param_value.wpb-select .bar_blue, .wpb_vc_param_value.wpb-select.bar_blue { background-color: #0074CC!important; color: #fff!important}
+.wpb_vc_param_value.wpb-select .bar_turquoise, .wpb_vc_param_value.wpb-select.bar_turquoise { background-color: #49afcd!important; color: #fff!important}
+.wpb_vc_param_value.wpb-select .bar_green, .wpb_vc_param_value.wpb-select.bar_green { background-color: #5bb75b!important; color: #fff!important}
+.wpb_vc_param_value.wpb-select .bar_orange, .wpb_vc_param_value.wpb-select.bar_orange { background-color: #faa732!important; color: #fff!important}
+.wpb_vc_param_value.wpb-select .bar_red, .wpb_vc_param_value.wpb-select.bar_red { background-color: #da4f49!important; color: #fff!important}
+.wpb_vc_param_value.wpb-select .bar_black, .wpb_vc_param_value.wpb-select.bar_black { background-color: #414141!important; color: #fff!important}
+.wpb_vc_param_value.wpb-select .bar_grey, .wpb_vc_param_value.wpb-select.bar_grey { background-color: #e0e0e0!important; color: #fff!important}
+/****************************************************/
+
+/**************** ThemeStek List ******************/
+.ts-simplify-textarea textarea {
+	font-family: inherit !important;
+	font-size: 13px !important;
+	height: 60px;
+}
+
+/**************** ThemeStek Icon Picker in CodeStar (Theme Options) ***************/
+
+.ts-iconpicker-left,
+.ts-iconpicker-right{
+	float: left;
+}
+.ts-iconpicker-left{
+	padding-right: 20px;
+}
+.ts-iconpicker-left select{
+	padding: 7px;
+	height: auto;
+	line-height: 14px;
+}
+.cs-groups .cs-fieldset .ts-iconpicker-right {
+	width:170px;
+	overflow: visible;
+}
+
+@media (max-width: 1265px){
+	.ts-iconpicker-left,
+	.ts-iconpicker-right{
+		float: none;
+	}
+	.ts-iconpicker-left{
+		padding-bottom: 15px;
+	}
+}
+/***********************************************************************************/
+/** VC My Templates **/
+.vc_ui-template-list .vc_templates-template-type-my_templates .vc_ui-list-bar-item-trigger {
+    font-size: 15px !important;
+}
+.vc_ui-template-list .vc_ui-list-bar-item-actions{
+	min-width: 110px !important;
+}
+
+@media (max-width: 1440px) {
+#themestek-demo-import-form-inner .ts-import-demo-boxes-w {
+		overflow: auto;
+		height: 630px;
+	}
+}
+/***************************/
+/**** Slider Revolution ****/
+#rso_menu_notices,
+#add_on_management,
+#contactsupport,
+#new_slider_from_template,
+div.rso_scrollmenuitem[data-ref="#plugin_activation_row"],
+#plugin_update_row,
+#plugin_activation_row,
+#plugin_news_row{
+	display: none !important;
+}
+#rs_overview .new_slider_block i.material-icons,
+.rs_library_element .rsle_footer i.material-icons,
+#current_width_height i.material-icons{
+    width: unset;
+    height: auto;
+    position: inherit;
+}
+.rsle_footer .show_rsle.material-icons{
+    font-size: 20px;
+}
+
+/********************************/
+/**** CodeStar view settings ****/
+div[data-controller="blog_view_box"] label {
+    width: 28%;
+}
+div[data-controller="blog_view_box"] label img {
+    width: 100%;
+    height: auto;
+}
+/* Widget custom option */
+.themestek-widget-option {
+	border: 1px solid #c7c7c7;
+	padding: 0 10px;
+	background: #ededed;
+	margin-bottom: 15px;
+}
+.themestek-widget-option input {
+	border-radius: 0;
+}
+.themestek-widget-option label {
+	font-weight: bold;
+	letter-spacing: 0.5px;
+}
+.themestek-widget-small-text,
+.themestek-widget-small-text code{
+	font-size: 11px;
+}
+.themestek-alert-message{
+	color: red;
+	font-weight: 500;
+}

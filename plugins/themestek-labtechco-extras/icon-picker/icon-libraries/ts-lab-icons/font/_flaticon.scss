@@ -1,0 +1,223 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 06/08/2018 07:26
+    */
+
+    @font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
+
+    .flaticon-dropper:before { content: "\f100"; }
+.flaticon-space-capsule:before { content: "\f101"; }
+.flaticon-rocket:before { content: "\f102"; }
+.flaticon-prism:before { content: "\f103"; }
+.flaticon-nuclear:before { content: "\f104"; }
+.flaticon-microscope:before { content: "\f105"; }
+.flaticon-earth-globe:before { content: "\f106"; }
+.flaticon-dropper-1:before { content: "\f107"; }
+.flaticon-rocket-launch:before { content: "\f108"; }
+.flaticon-bottle:before { content: "\f109"; }
+.flaticon-orbit:before { content: "\f10a"; }
+.flaticon-burn:before { content: "\f10b"; }
+.flaticon-astronaut:before { content: "\f10c"; }
+.flaticon-flask:before { content: "\f10d"; }
+.flaticon-beaker:before { content: "\f10e"; }
+.flaticon-thermometer:before { content: "\f10f"; }
+.flaticon-rocket-launch-1:before { content: "\f110"; }
+.flaticon-dna:before { content: "\f111"; }
+.flaticon-atomic:before { content: "\f112"; }
+.flaticon-syringe:before { content: "\f113"; }
+.flaticon-nuclear-1:before { content: "\f114"; }
+.flaticon-microscope-1:before { content: "\f115"; }
+.flaticon-test-tube:before { content: "\f116"; }
+.flaticon-bottle-1:before { content: "\f117"; }
+.flaticon-poison:before { content: "\f118"; }
+.flaticon-microscope-2:before { content: "\f119"; }
+.flaticon-test-tube-1:before { content: "\f11a"; }
+.flaticon-dna-1:before { content: "\f11b"; }
+.flaticon-caduceus:before { content: "\f11c"; }
+.flaticon-bacteria:before { content: "\f11d"; }
+.flaticon-dna-2:before { content: "\f11e"; }
+.flaticon-dna-3:before { content: "\f11f"; }
+.flaticon-magnet:before { content: "\f120"; }
+.flaticon-thermometer-1:before { content: "\f121"; }
+.flaticon-element:before { content: "\f122"; }
+.flaticon-rat:before { content: "\f123"; }
+.flaticon-molecule:before { content: "\f124"; }
+.flaticon-apple:before { content: "\f125"; }
+.flaticon-earth:before { content: "\f126"; }
+.flaticon-observation:before { content: "\f127"; }
+.flaticon-magnifying-glass:before { content: "\f128"; }
+.flaticon-petri-dish:before { content: "\f129"; }
+.flaticon-compass:before { content: "\f12a"; }
+.flaticon-molecular:before { content: "\f12b"; }
+.flaticon-telescope:before { content: "\f12c"; }
+.flaticon-axis:before { content: "\f12d"; }
+.flaticon-calculator:before { content: "\f12e"; }
+.flaticon-scientist:before { content: "\f12f"; }
+.flaticon-solar-system:before { content: "\f130"; }
+.flaticon-satellite:before { content: "\f131"; }
+.flaticon-microscope-3:before { content: "\f132"; }
+.flaticon-book:before { content: "\f133"; }
+.flaticon-clipboard:before { content: "\f134"; }
+.flaticon-test-tube-2:before { content: "\f135"; }
+.flaticon-cell:before { content: "\f136"; }
+.flaticon-dna-structure:before { content: "\f137"; }
+.flaticon-earth-globe-1:before { content: "\f138"; }
+.flaticon-medicines:before { content: "\f139"; }
+.flaticon-statistics:before { content: "\f13a"; }
+.flaticon-bacteria-1:before { content: "\f13b"; }
+.flaticon-atom:before { content: "\f13c"; }
+.flaticon-flasks:before { content: "\f13d"; }
+.flaticon-samples:before { content: "\f13e"; }
+.flaticon-science:before { content: "\f13f"; }
+.flaticon-radiation:before { content: "\f140"; }
+.flaticon-suit:before { content: "\f141"; }
+.flaticon-shaker:before { content: "\f142"; }
+.flaticon-chemistry:before { content: "\f143"; }
+.flaticon-chemistry-1:before { content: "\f144"; }
+.flaticon-syringe-1:before { content: "\f145"; }
+.flaticon-gas-mask:before { content: "\f146"; }
+.flaticon-reproduction:before { content: "\f147"; }
+.flaticon-experiment:before { content: "\f148"; }
+.flaticon-petri-dish-1:before { content: "\f149"; }
+.flaticon-cloning:before { content: "\f14a"; }
+.flaticon-science-book:before { content: "\f14b"; }
+.flaticon-microbiology:before { content: "\f14c"; }
+.flaticon-poison-1:before { content: "\f14d"; }
+.flaticon-genetic:before { content: "\f14e"; }
+.flaticon-scientific:before { content: "\f14f"; }
+.flaticon-molecular-1:before { content: "\f150"; }
+.flaticon-bacteria-2:before { content: "\f151"; }
+.flaticon-research:before { content: "\f152"; }
+.flaticon-test-tube-3:before { content: "\f153"; }
+.flaticon-hazardous:before { content: "\f154"; }
+.flaticon-molecular-2:before { content: "\f155"; }
+.flaticon-chromosome:before { content: "\f156"; }
+.flaticon-chemical-reaction:before { content: "\f157"; }
+.flaticon-microscope-4:before { content: "\f158"; }
+.flaticon-cell-1:before { content: "\f159"; }
+.flaticon-laboratory:before { content: "\f15a"; }
+.flaticon-cell-division:before { content: "\f15b"; }
+    
+    $font-Flaticon-dropper: "\f100";
+    $font-Flaticon-space-capsule: "\f101";
+    $font-Flaticon-rocket: "\f102";
+    $font-Flaticon-prism: "\f103";
+    $font-Flaticon-nuclear: "\f104";
+    $font-Flaticon-microscope: "\f105";
+    $font-Flaticon-earth-globe: "\f106";
+    $font-Flaticon-dropper-1: "\f107";
+    $font-Flaticon-rocket-launch: "\f108";
+    $font-Flaticon-bottle: "\f109";
+    $font-Flaticon-orbit: "\f10a";
+    $font-Flaticon-burn: "\f10b";
+    $font-Flaticon-astronaut: "\f10c";
+    $font-Flaticon-flask: "\f10d";
+    $font-Flaticon-beaker: "\f10e";
+    $font-Flaticon-thermometer: "\f10f";
+    $font-Flaticon-rocket-launch-1: "\f110";
+    $font-Flaticon-dna: "\f111";
+    $font-Flaticon-atomic: "\f112";
+    $font-Flaticon-syringe: "\f113";
+    $font-Flaticon-nuclear-1: "\f114";
+    $font-Flaticon-microscope-1: "\f115";
+    $font-Flaticon-test-tube: "\f116";
+    $font-Flaticon-bottle-1: "\f117";
+    $font-Flaticon-poison: "\f118";
+    $font-Flaticon-microscope-2: "\f119";
+    $font-Flaticon-test-tube-1: "\f11a";
+    $font-Flaticon-dna-1: "\f11b";
+    $font-Flaticon-caduceus: "\f11c";
+    $font-Flaticon-bacteria: "\f11d";
+    $font-Flaticon-dna-2: "\f11e";
+    $font-Flaticon-dna-3: "\f11f";
+    $font-Flaticon-magnet: "\f120";
+    $font-Flaticon-thermometer-1: "\f121";
+    $font-Flaticon-element: "\f122";
+    $font-Flaticon-rat: "\f123";
+    $font-Flaticon-molecule: "\f124";
+    $font-Flaticon-apple: "\f125";
+    $font-Flaticon-earth: "\f126";
+    $font-Flaticon-observation: "\f127";
+    $font-Flaticon-magnifying-glass: "\f128";
+    $font-Flaticon-petri-dish: "\f129";
+    $font-Flaticon-compass: "\f12a";
+    $font-Flaticon-molecular: "\f12b";
+    $font-Flaticon-telescope: "\f12c";
+    $font-Flaticon-axis: "\f12d";
+    $font-Flaticon-calculator: "\f12e";
+    $font-Flaticon-scientist: "\f12f";
+    $font-Flaticon-solar-system: "\f130";
+    $font-Flaticon-satellite: "\f131";
+    $font-Flaticon-microscope-3: "\f132";
+    $font-Flaticon-book: "\f133";
+    $font-Flaticon-clipboard: "\f134";
+    $font-Flaticon-test-tube-2: "\f135";
+    $font-Flaticon-cell: "\f136";
+    $font-Flaticon-dna-structure: "\f137";
+    $font-Flaticon-earth-globe-1: "\f138";
+    $font-Flaticon-medicines: "\f139";
+    $font-Flaticon-statistics: "\f13a";
+    $font-Flaticon-bacteria-1: "\f13b";
+    $font-Flaticon-atom: "\f13c";
+    $font-Flaticon-flasks: "\f13d";
+    $font-Flaticon-samples: "\f13e";
+    $font-Flaticon-science: "\f13f";
+    $font-Flaticon-radiation: "\f140";
+    $font-Flaticon-suit: "\f141";
+    $font-Flaticon-shaker: "\f142";
+    $font-Flaticon-chemistry: "\f143";
+    $font-Flaticon-chemistry-1: "\f144";
+    $font-Flaticon-syringe-1: "\f145";
+    $font-Flaticon-gas-mask: "\f146";
+    $font-Flaticon-reproduction: "\f147";
+    $font-Flaticon-experiment: "\f148";
+    $font-Flaticon-petri-dish-1: "\f149";
+    $font-Flaticon-cloning: "\f14a";
+    $font-Flaticon-science-book: "\f14b";
+    $font-Flaticon-microbiology: "\f14c";
+    $font-Flaticon-poison-1: "\f14d";
+    $font-Flaticon-genetic: "\f14e";
+    $font-Flaticon-scientific: "\f14f";
+    $font-Flaticon-molecular-1: "\f150";
+    $font-Flaticon-bacteria-2: "\f151";
+    $font-Flaticon-research: "\f152";
+    $font-Flaticon-test-tube-3: "\f153";
+    $font-Flaticon-hazardous: "\f154";
+    $font-Flaticon-molecular-2: "\f155";
+    $font-Flaticon-chromosome: "\f156";
+    $font-Flaticon-chemical-reaction: "\f157";
+    $font-Flaticon-microscope-4: "\f158";
+    $font-Flaticon-cell-1: "\f159";
+    $font-Flaticon-laboratory: "\f15a";
+    $font-Flaticon-cell-division: "\f15b";

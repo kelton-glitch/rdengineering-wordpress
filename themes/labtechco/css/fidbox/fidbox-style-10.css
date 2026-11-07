@@ -1,0 +1,44 @@
+.ts-fidbox-style-10 .ts-fid-title{
+	font-size: 17px;
+	line-height: 30px;
+	font-weight: 500;
+}
+.ts-fidbox-style-10 .ts-fid-desc-w,
+.ts-fidbox-style-10 .ts-circle-w{
+	display: inline-block;
+}
+.ts-fidbox-style-10 .ts-circle-overlay h4{
+	margin: 0;
+}
+.ts-fidbox-style-10 .ts-circle-overlay .ts-circle-number{
+	font-size: 24px;
+	line-height: 36px;
+	font-weight: bold;
+}
+.ts-fidbox-style-10 .ts-fid-desc-w{
+	position: absolute;
+	top: 50%;
+	-khtml-transform: translateX(0%) translateY(-50%);
+	-moz-transform: translateX(0%) translateY(-50%);
+	-ms-transform: translateX(0%) translateY(-50%);
+	-o-transform: translateX(0%) translateY(-50%);
+	transform: translateX(0%) translateY(-50%);
+}
+.ts-fidbox-style-10 .ts-circle-w{
+	position: relative;
+}
+.ts-fidbox-style-10 .ts-circle-w sub,
+.ts-fidbox-style-10 .ts-circle-w sup{
+	font-size: 60%;
+}
+.ts-fidbox-style-10 .ts-fid-desc-w{
+	margin-left: 26px;
+}
+.rtl .ts-fidbox-style-10 .ts-fid-desc-w{
+	margin-right: 26px;
+	margin-left: 0;
+}
+.ts-textcolor-white .ts-fidbox-style-10 .ts-circle-number,
+.ts-textcolor-white .ts-fidbox-style-10 .ts-fid-title{
+	color: #fff;
+}

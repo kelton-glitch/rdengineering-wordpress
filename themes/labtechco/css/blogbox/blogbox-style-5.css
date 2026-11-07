@@ -1,0 +1,131 @@
+/* ts-blogbox-style-5 */
+.ts-blogbox-style-5 .post-item{
+	display: flex;
+}
+.ts-blogbox-style-5.themestek-box.themestek-blog-box-lr .themestek-box-content{
+	position: relative;
+	padding: 35px 20px 30px 30px !important; 
+}
+.ts-blogbox-style-5.themestek-box.themestek-blog-box-lr .themestek-box-content-inner{
+	padding-left: 0;
+}
+.rtl .ts-blogbox-style-5.themestek-box.themestek-blog-box-lr .themestek-box-content-inner{
+	padding-right: 0;
+}
+.ts-blogbox-style-5 .themestek-meta-date-wrapper{
+	display: inline-block;
+	padding: 5px 10px;
+	color: #fff;
+	margin-bottom: 13px;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+}
+.ts-blogbox-style-5 .themestek-blogbox-footer-commnent,
+.ts-blogbox-style-5 .ts-entry-meta-wrapper{
+	display: table-cell;
+}
+.ts-blogbox-style-5 .ts-entry-meta-wrapper{
+	padding-left: 20px;
+}
+.rtl .ts-blogbox-style-5 .ts-entry-meta-wrapper{
+	padding-left: 0;
+	padding-right: 20px;
+}
+.ts-blogbox-style-5 .ts-entry-meta-wrapper .author::before{
+	display: inline-block;
+	content: '\e804';
+	margin-right: 5px;
+	font-size: 12px;
+	color: var(--tste-labtechco-skincolor-dark);
+	font-family: 'ts-labtechco-icons';
+}
+.rtl .ts-blogbox-style-5 .ts-entry-meta-wrapper .author::before{
+	margin-left: 5px;
+	margin-right: 0;
+}
+.ts-blogbox-style-5 .ts-entry-meta-wrapper .ts-meta-line a,
+.ts-blogbox-style-5 .ts-entry-meta-wrapper .ts-meta-line span{
+	font-size: 14px;
+	font-family: "Work Sans", Tahoma, Geneva, sans-serif;
+	text-transform: none;
+	letter-spacing: 0;
+}
+.ts-blogbox-style-5 .themestek-box-content{
+	padding-left: 0;
+}
+.ts-blogbox-style-5 .themestek-box-img-left{
+	padding: 0;
+}
+.ts-blogbox-style-5 span.comments{
+	font-size: 14px;
+	color: #6d7579;
+}
+.ts-blogbox-style-5 .themestek-box-title h4{
+	text-transform: uppercase;
+	font-size: 21px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+.ts-blogbox-style-5 .themestek-blogbox-footer-left{
+	font-size: 13px;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+.ts-blogbox-style-5 i.themifyicon.ti-comment{
+	display: inline-block;
+	font-size: 12px;
+}
+.ts-blogbox-style-5 .pull-left a{
+	position: relative;
+	color: var(--tste-labtechco-skincolor-dark);
+	padding-right: 30px;
+}
+.rtl .ts-blogbox-style-5 .pull-left a{
+	padding-left: 30px;
+	padding-right: 0;
+}
+.ts-blogbox-style-5 .pull-left a::after{
+	position: absolute;
+	content: '\e818';
+	right: 10px;
+	font-size: 15px;
+	font-family: 'ts-labtechco-icons';
+}
+.rtl .ts-blogbox-style-5 .pull-left a::after{
+	left: 10px;
+	right: inherit;
+}
+.ts-blogbox-style-5 .ts-entry-meta-wrapper .ts-meta-line::after,
+.ts-blogbox-style-5 span.ts-meta-line.posted-on{
+	display: none;
+}
+.ts-blogbox-style-5 .pull-left a:hover,
+.ts-blogbox-style-5 .ts-entry-meta-wrapper .author::before,
+.ts-blogbox-style-5 span.ts-blogbox-comment-w i,
+.ts-blogbox-style-5 .ts-blogbox-comment-w:hover span,
+.ts-blogbox-style-5 .ts-entry-meta-wrapper:hover span,
+.ts-blogbox-style-5 .ts-entry-meta-wrapper:hover span a{
+	color: var(--tste-labtechco-skincolor);
+}
+.ts-blogbox-style-5 .themestek-meta-date-wrapper{
+	background-color: var(--tste-labtechco-skincolor);
+}
+.ts-blogbox-style-5.themestek-box .themestek-box-content{
+	background-color: var(--tste-labtechco-skincolor-light);
+}
+
+
+@media (max-width: 768px){
+	/*** ts-blogbox-style-5  ***/
+	.ts-blogbox-style-5 .themestek-box-img-left,
+	.ts-blogbox-style-5 .themestek-box-content{
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+	.themestek-box.ts-blogbox-style-5 .post-item{
+		display: block;
+	}
+	.ts-blogbox-style-5 .col-sm-6{
+		width: 100%;
+	}
+}

@@ -1,0 +1,117 @@
+<wpml-config>
+  <custom-types>
+    <custom-type translate="1">ts-portfolio</custom-type>
+    <custom-type translate="1">ts-service</custom-type>
+    <custom-type translate="1">ts-team-member</custom-type>
+    <custom-type translate="1">ts-testimonial</custom-type>
+    <custom-type translate="1">ts-client</custom-type>
+  </custom-types>
+  <taxonomies>
+    <taxonomy translate="1">ts-portfolio-category</taxonomy>
+    <taxonomy translate="1">ts-service-category</taxonomy>
+    <taxonomy translate="1">ts-team-group</taxonomy>
+    <taxonomy translate="1">ts-testimonial-group</taxonomy>
+    <taxonomy translate="1">ts-client-group</taxonomy>
+  </taxonomies>
+  <admin-texts>
+    <key name="labtechco_theme_options">
+      <key name="global_background">
+        <key name="image"/>
+        <key name="imageid"/>
+        <key name="repeat"/>
+        <key name="position"/>
+        <key name="attachment"/>
+        <key name="size"/>
+        <key name="color"/>
+      </key>
+      <key name="header_btn">
+        <key name="header_btn_text"/>
+        <key name="header_btn_link"/>
+      </key>
+      <key name="header_menu_position"/>
+      <key name="infostack_left_text"/>
+      <key name="infostack_right_text"/>
+      <key name="infostack_phone_text"/>
+      <key name="titlebar_background">
+        <key name="image"/>
+        <key name="imageid"/>
+        <key name="repeat"/>
+        <key name="position"/>
+        <key name="attachment"/>
+        <key name="size"/>
+        <key name="color"/>
+      </key>
+      <key name="logoimg">
+        <key name="id"/>
+        <key name="thumb-url"/>
+        <key name="full-url"/>
+      </key>
+      <key name="logoimg_sticky">
+        <key name="id"/>
+        <key name="thumb-url"/>
+        <key name="full-url"/>
+      </key>
+      <key name="footer_copyright_left"/>
+      <key name="footer_copyright_right"/>
+      <key name="portfolio_project_details"/>
+      <key name="portfolio_related_title"/>
+      <key name="pf_details_line">
+	   <key name="1">
+          <key name="pf_details_line_title"/>
+        </key>
+        <key name="2">
+          <key name="pf_details_line_title"/>
+        </key>
+        <key name="3">
+          <key name="pf_details_line_title"/>
+        </key>
+        <key name="4">
+          <key name="pf_details_line_title"/>
+        </key>
+        <key name="5">
+          <key name="pf_details_line_title"/>
+        </key>
+		<key name="6">
+          <key name="pf_details_line_title"/>
+        </key>
+		<key name="7">
+          <key name="pf_details_line_title"/>
+        </key>
+      </key>
+      <key name="portfolio_social_share_title"/>
+      <key name="error404_big_text"/>
+      <key name="error404_medium_text"/>
+      <key name="search_box_heading"/>
+      <key name="search_input"/>
+      <key name="searchnoresult"/>
+      <key name="uconstruction_background">
+        <key name="image"/>
+        <key name="imageid"/>
+        <key name="repeat"/>
+        <key name="position"/>
+        <key name="attachment"/>
+        <key name="size"/>
+        <key name="color"/>
+      </key>
+	  <key name="pf_type_title"/>
+      <key name="pf_type_title_singular"/>
+      <key name="pf_type_slug"/>
+      <key name="pf_cat_title"/>
+      <key name="pf_cat_title_singular"/>
+      <key name="pf_cat_slug"/>
+	  <key name="service_type_title"/>
+      <key name="service_type_title_singular"/>
+      <key name="service_type_slug"/>
+      <key name="service_cat_title"/>
+      <key name="service_cat_title_singular"/>
+      <key name="service_cat_slug"/>
+      <key name="team_type_title"/>
+      <key name="team_type_title_singular"/>
+      <key name="team_type_slug"/>
+      <key name="team_group_title"/>
+      <key name="team_group_title_singular"/>
+      <key name="team_group_slug"/>
+      <key name="blog_readmore_text"/>
+    </key>
+  </admin-texts>
+</wpml-config>

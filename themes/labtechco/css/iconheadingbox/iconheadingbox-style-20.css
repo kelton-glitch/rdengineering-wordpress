@@ -1,0 +1,73 @@
+.ts-ihbox.ts-ihbox-style-20 .ts-ihbox-contents .ts-ihbox-heading,
+.ts-ihbox.ts-ihbox-style-20 .ts-vc_general.ts-vc_cta3 .ts-custom-heading{
+	font-size: 20px;
+	line-height: 24px;
+	text-transform: none;
+	margin: 0 0 5px!important;
+}
+.ts-ihbox.ts-ihbox-style-20 .ts-large-icon i::before{
+	font-size: 45px;
+	line-height: 86px;
+}
+.ts-ihbox-style-20 .ts-ihbox-contents{
+	padding-left: 22px;
+}
+.rtl .ts-ihbox-style-20 .ts-ihbox-contents{
+	padding-right: 22px;
+	padding-left: 0;
+}
+.ts-ihbox.ts-ihbox-style-20  .ts-ihbox-icon,
+.ts-ihbox.ts-ihbox-style-20  .ts-ihbox-contents{
+	display: table-cell;
+	vertical-align: middle;
+}
+.ts-ihbox.ts-ihbox-style-20 .ts-ihbox-icon-wrapper{
+	width: 86px;
+	height: 86px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	background-color: #fff;
+	text-align: center;
+}
+.ts-bgcolor-transparent .ts-ihbox.ts-ihbox-style-20 .ts-ihbox-icon-wrapper,
+.ts-bgcolor-white .ts-ihbox.ts-ihbox-style-20 .ts-ihbox-icon-wrapper{
+	box-shadow: -3px 2px 7px 0px rgba(0, 0, 0, 0.1);
+}
+.ts-ihbox-style-20 .ts-ihbox-content,
+.ts-ihbox-style-20 .ts-cta3-content-wrapper,
+.ts-ihbox.ts-ihbox-style-20 .ts-ihbox-contents .ts-ihbox-heading,
+.ts-ihbox.ts-ihbox-style-20 .ts-vc_general.ts-vc_cta3 .ts-custom-heading{
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+.ts-ihbox.ts-ihbox-style-20 .ts-ihbox-icon-wrapper.ts-ihbox-icon-type-text{
+	font-size: 40px;
+	line-height: 86px;
+	color: var(--tste-labtechco-skincolor);
+}
+.ts-ihbox.ts-ihbox-style-20 .ts-ihbox-icon-wrapper img{
+	width: 86px;
+	height: 86px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+.ts-textcolor-white .ts-ihbox.ts-ihbox-style-20 a > i{
+	color: #fff;
+}
+
+/*=== Responsive ===*/
+@media (max-width: 575px){
+	.ts-ihbox.ts-ihbox-style-20 .ts-ihbox-contents .ts-ihbox-heading,
+	.ts-ihbox.ts-ihbox-style-20 .ts-vc_general.ts-vc_cta3 .ts-custom-heading{
+		font-size: 17px;
+	}
+	.ts-ihbox-style-20 .ts-ihbox-content,
+	.ts-ihbox-style-20 .ts-cta3-content-wrapper{
+		font-size: 15px;
+	}
+	
+}

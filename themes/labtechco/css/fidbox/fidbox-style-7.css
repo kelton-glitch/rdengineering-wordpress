@@ -1,0 +1,48 @@
+/* ts-fidbox-style-7 */
+.ts-fidbox-style-7{
+	position: absolute;
+	padding: 30px 20px 20px 45px;
+	overflow: hidden;
+	width: 150px;
+}
+.rtl .ts-fidbox-style-7{
+	padding-left: 20px;
+	padding-right: 45px;
+}
+.ts-fidbox-style-7 h3.ts-fid-inner{
+	font-size: 60px;
+	line-height: 60px;
+	margin-bottom: 0px;
+	font-weight: 500;
+	letter-spacing: -5px;
+	margin-left: -10px;
+}
+.ts-fidbox-style-7::after{
+	position: absolute;
+	content: "";
+	right: -10px;
+	top: 0;
+	width: 30px;
+	height: 30px;
+	background-color: #fff;
+}
+.rtl .ts-fidbox-style-7::after{
+	left: -10px;
+	right: inherit;
+}
+.ts-fidbox-style-7 h3.ts-fid-inner span:first-child,
+.ts-fidbox-style-7 h6.ts-fid-title{
+	color: #fff;
+}
+.ts-fidbox-style-7 h6.ts-fid-title{
+	font-size: 16px;
+	line-height: 19px;
+	font-family: "Work Sans", Tahoma, Geneva, sans-serif;
+	text-transform: none;
+}
+.ts-fidbox-style-7{
+	background-color: var(--tste-labtechco-skincolor);
+}
+.elementor-widget-ts_fid_element .ts-fidbox-style-7{
+	position: relative;
+}

@@ -1,0 +1,79 @@
+.ts-fidbox-style-5{
+	text-align: center;
+}
+.ts-fidbox-style-5 .ts-fld-contents{
+	position: relative;
+	padding: 20px 20px 15px 20px;
+	background-color: white;
+	width: 185px;
+	height: 160px;
+}
+.ts-fidbox-style-5  h3.ts-fid-inner{
+	margin-bottom: 0px;
+	display: inline-block;
+	margin-left: 20px;
+}
+.rtl .ts-fidbox-style-5 h3.ts-fid-inner{
+	margin-right: 20px;
+	margin-left: 0;
+}
+.ts-fidbox-style-5 h6.ts-fid-title{
+	font-size: 15px;
+	font-weight: 400;
+	text-transform: capitalize;
+	font-family: "Work Sans", Tahoma, Geneva, sans-serif;
+	line-height: 24px;
+}
+.ts-fidbox-style-5 h3.ts-fid-inner span:first-child,
+.ts-bgcolor-skincolor .ts-fidbox-style-5.ts-fid-boxstyle-without-icon h3.ts-fid-inner span,
+.ts-bgcolor-skincolor .ts-fidbox-style-5.ts-fid-boxstyle-without-icon h6.ts-fid-title,
+.ts-bgcolor-darkgrey .ts-fidbox-style-5.ts-fid-boxstyle-without-icon h3.ts-fid-inner span,
+.ts-bgcolor-darkgrey .ts-fidbox-style-5.ts-fid-boxstyle-without-icon h6.ts-fid-title,
+.ts-bgcolor-darkgrey .ts-fidbox-style-5.ts-fid-boxstyle-without-icon h3.ts-fid-inner,
+.ts-bgcolor-skincolor .ts-fidbox-style-5 .ts-fld-contents sup,
+.ts-bgcolor-skincolor .ts-fidbox-style-5.ts-fid-boxstyle-without-icon h3.ts-fid-inner{
+	color: var(--tste-labtechco-skincolor-dark);
+}
+.ts-fidbox-style-5 .ts-fld-contents  h5.ts-fid-title{
+	font-size: 15px;
+	line-height: 24px;
+	text-transform: none;
+	letter-spacing: 0.5px;
+}
+.ts-fidbox-style-5 .ts-fld-contents  h5.ts-fid-title{
+	color: #9fa3aa;
+	font-family: "Work Sans", sans-serif;
+}
+.ts-fidbox-style-5 .ts-fld-contents sup{
+	font-size: 34px;
+	top: -22px;
+}
+.ts-fidbox-style-5 .ts-fld-contents sup:last-child{
+	left: -14px;
+}
+.rtl .ts-fidbox-style-5 .ts-fld-contents sup:last-child{
+	right: -14px;
+	left: inherit;
+}
+.ts-fidbox-style-5 .ts-fld-contents::before{
+	position: absolute;
+	content: "";
+	width: 30px;
+	height: 30px;
+	top: 5px;
+	left: 5px;
+}
+.rtl .ts-fidbox-style-5 .ts-fld-contents::before{
+	right: 5px;
+	left: inherit;
+}
+.ts-fidbox-style-5 .ts-fld-contents sup{
+	color: var(--tste-labtechco-skincolor);
+}
+.ts-fidbox-style-5 .ts-fld-contents:before{
+	background-color: var(--tste-labtechco-skincolor);
+}
+.ts-fidbox-style-5 .ts-fld-contents::before{
+	background-image: -ms-linear-gradient(bottom, var(--tste-labtechco-first-gradient) 0%, var(--tste-labtechco-second-gradient) 100%);
+	background-image: linear-gradient(to bottom, var(--tste-labtechco-first-gradient) , var(--tste-labtechco-second-gradient));
+}

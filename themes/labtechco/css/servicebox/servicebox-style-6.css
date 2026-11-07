@@ -1,0 +1,72 @@
+.themestek-box.ts-servicebox-style-6{
+	position: relative;
+	background-color: white;
+	box-shadow: 0px 0px 24px 0px rgba(43, 76, 142, 0.08);
+}
+.themestek-box.ts-servicebox-style-6,
+.ts-servicebox-style-6 .ts-featured-wrapper img{
+	border-radius: 6px;
+}
+.ts-servicebox-style-6 .themestek-box-content{
+	padding: 15px 20px 20px 35px;
+}
+.ts-servicebox-style-6 .ts-ihbox-icon.ts-large-icon{
+	top: -55px;
+	border-radius: 50%;
+	-webkit-transition: all 0.3s ease 0s;
+	-moz-transition: all 0.3s ease 0s;
+	-ms-transition: all 0.3s ease 0s;
+	-o-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+}
+.ts-servicebox-style-6 .ts-large-icon i::before{
+	font-size: 30px;
+}
+.ts-servicebox-style-6 .themestek-box-content .ts-ihbox-icon img{
+	width: 30px;
+	height: auto;
+}
+.ts-servicebox-style-6 .themestek-box-category a{
+	letter-spacing: 1px;
+}
+.themestek-box.ts-servicebox-style-6 .themestek-pf-box-title h3{
+	text-transform: none;
+	margin-bottom: 12px;
+	font-size: 20px;
+	line-height: 28px;
+}
+.ts-servicebox-style-6 .themestek-box-content .themestek-box-category a{
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: 500;
+}
+.ts-servicebox-style-6 .ts-ihbox-icon.ts-large-icon{
+	position: absolute;
+	top: -33px;
+	right: 15px;
+	width: 60px;
+	text-align: center;
+	height: 60px;
+	color: white;
+	line-height: 60px;
+}
+.rtl .ts-servicebox-style-6 .ts-ihbox-icon.ts-large-icon{
+	left: 15px;
+	right: inherit;
+}
+.ts-servicebox-style-6.themestek-box .themestek-box-content-inner{
+	position: relative;
+}
+.ts-servicebox-style-6 .themestek-box-content .themestek-box-category a,
+.ts-servicebox-style-6 h3 a:hover{
+	color: var(--tste-labtechco-skincolor);
+}
+.ts-servicebox-style-6 .ts-ihbox-icon.ts-large-icon{
+	background-color: var(--tste-labtechco-skincolor);
+}
+.ts-servicebox-style-6:hover .ts-ihbox-icon.ts-large-icon{
+	background-color: var(--tste-labtechco-skincolor-dark);
+}
+.ts-servicebox-style-6 .themestek-box-category a:hover{
+	color: var(--tste-labtechco-skincolor-dark);
+}

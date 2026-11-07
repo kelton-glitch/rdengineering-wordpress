@@ -1,0 +1,76 @@
+.ts-testimonialbox-style-4 .themestek-box-author{
+	display: flex;
+	-webkit-box-align: center!important;
+	-ms-flex-align: center!important;
+	align-items: center!important;
+}
+.ts-testimonialbox-style-4 .themestek-box-img img{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	margin-right: 20px;
+}
+.ts-testimonialbox-style-4 blockquote.themestek-testimonial-text{
+	background-color: transparent;
+	padding: 29px 30px 0 50px;
+	font-style: normal;
+	font-weight: 400;
+	color: #8893b9;
+	font-size: 18px;
+	line-height: 26px;
+}
+.ts-bgcolor-skincolor .ts-testimonialbox-style-4 blockquote.themestek-testimonial-text{
+	color: #d5d6db;
+}
+.ts-testimonialbox-style-4 .ts-labtechco-icon-star::before{
+	margin: 0;
+}
+.ts-testimonialbox-style-4.themestek-box-testimonial .themestek-box-desc{
+	position: relative;
+}
+.ts-testimonialbox-style-4.themestek-box-testimonial .themestek-box-desc::after{
+	position: absolute;
+	font-family: "ts-labtechco-icons";
+	content: "\e84a";
+	font-size: 30px;
+	line-height: 34px;
+	top: 35px;
+	left: 0;
+	opacity: 0.2;
+}
+.entry-content .ts-testimonialbox-style-4.themestek-box-testimonial h3.themestek-author-name{
+	font-size: 16px;
+}
+.ts-testimonialbox-style-4 .themestek-box-img .themestek-icon-box{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	margin-right: 20px;
+}
+.ts-testimonialbox-style-4 .themestek-box-star{
+	margin-top: 15px;
+}
+.ts-bgcolor-skincolor .themestek-box-testimonial.ts-testimonialbox-style-4 .themestek-author-name,
+.ts-bgcolor-skincolor .themestek-box-testimonial.ts-testimonialbox-style-4 .themestek-author-name a{
+	color: var(--tste-labtechco-skincolor-light);
+}
+.ts-bgcolor-skincolor .ts-testimonialbox-style-4 .ts-labtechco-icon-star.ts-skincolor.ts-active{
+	color: var(--tste-labtechco-skincolor-dark);
+}
+.rtl .ts-testimonialbox-style-4.themestek-box-testimonial .themestek-box-desc::after{
+	left: inherit;
+	right: 0;
+	-webkit-transform: scaleX(-1);
+	-moz-transform: scaleX(-1);
+	-ms-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	transform: scaleX(-1);
+}
+.rtl .ts-testimonialbox-style-4 blockquote.themestek-testimonial-text{
+	padding-right: 50px;
+	padding-left: 30px;
+}
+.rtl .ts-testimonialbox-style-4 .themestek-box-img img{
+	margin-left: 20px;
+	margin-right: 0;
+}
