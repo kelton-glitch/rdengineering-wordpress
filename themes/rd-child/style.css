@@ -1,0 +1,160 @@
+/*
+Theme Name:   RD Engineering (Kadence Child)
+Theme URI:    https://rdengineeringsol.com
+Description:  Design system for RD Engineering Solution on top of Kadence: tokens, buttons, cards, accessibility and performance rules.
+Author:       RD Engineering Solution
+Template:     kadence
+Version:      0.1.0
+Text Domain:  rd-child
+*/
+
+/* ==========================================================================
+   1. Design tokens
+   PLACEHOLDER brand palette until the real logo and colours are supplied.
+   Change values here only; everything below reads these variables.
+   ========================================================================== */
+:root {
+	/* Brand */
+	--rd-primary: #0b4f6c;        /* deep water blue: headings, buttons, links (AAA on white) */
+	--rd-primary-dark: #083a50;
+	--rd-accent: #0fa3b1;         /* teal: decorative accents, icons (not for small text on white) */
+	--rd-energy: #f2a900;         /* amber: highlights, focus ring on dark backgrounds */
+	--rd-ink: #12232e;            /* body text */
+	--rd-muted: #4a5c68;          /* secondary text (AA on white and mist) */
+	--rd-mist: #f3f7f9;           /* alternate section background */
+	--rd-line: #d5e0e6;           /* borders */
+	--rd-white: #ffffff;
+	--rd-success: #1b7f4b;
+	--rd-danger: #b3261e;
+
+	/* Type: system stack = zero font downloads, instant text */
+	--rd-font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+	--rd-step--1: clamp(0.875rem, 0.85rem + 0.12vw, 0.9375rem);
+	--rd-step-0: clamp(1rem, 0.97rem + 0.15vw, 1.0625rem);
+	--rd-step-1: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
+	--rd-step-2: clamp(1.5rem, 1.3rem + 1vw, 2rem);
+	--rd-step-3: clamp(1.875rem, 1.5rem + 1.9vw, 2.75rem);
+	--rd-step-4: clamp(2.25rem, 1.7rem + 2.8vw, 3.5rem);
+
+	/* Space scale (8px base) */
+	--rd-s1: 0.5rem;
+	--rd-s2: 1rem;
+	--rd-s3: 1.5rem;
+	--rd-s4: 2rem;
+	--rd-s5: 3rem;
+	--rd-s6: 4.5rem;
+	--rd-s7: 6rem;
+
+	--rd-radius: 10px;
+	--rd-shadow: 0 1px 2px rgba(18, 35, 46, 0.06), 0 8px 24px rgba(18, 35, 46, 0.08);
+	--rd-tap: 48px;               /* minimum touch target */
+
+	/* Map into Kadence so theme and blocks follow the tokens */
+	--global-body-font-family: var(--rd-font);
+	--global-heading-font-family: var(--rd-font);
+	--global-palette1: var(--rd-primary);
+	--global-palette2: var(--rd-primary-dark);
+	--global-palette3: var(--rd-ink);
+	--global-palette4: var(--rd-muted);
+	--global-palette5: var(--rd-line);
+	--global-palette6: var(--rd-mist);
+	--global-palette7: var(--rd-mist);
+	--global-palette8: var(--rd-white);
+	--global-palette9: var(--rd-white);
+}
+
+/* ==========================================================================
+   2. Base
+   ========================================================================== */
+html { scroll-behavior: smooth; }
+body {
+	font-family: var(--rd-font);
+	font-size: var(--rd-step-0);
+	line-height: 1.65;
+	color: var(--rd-ink);
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+h1, h2, h3, h4 { color: var(--rd-primary); line-height: 1.2; letter-spacing: -0.01em; }
+h1 { font-size: var(--rd-step-4); }
+h2 { font-size: var(--rd-step-3); }
+h3 { font-size: var(--rd-step-2); }
+h4 { font-size: var(--rd-step-1); }
+p { max-width: 70ch; }
+a { color: var(--rd-primary); text-underline-offset: 0.2em; }
+a:hover { color: var(--rd-primary-dark); }
+img { height: auto; max-width: 100%; }
+
+@media (prefers-reduced-motion: reduce) {
+	html { scroll-behavior: auto; }
+	*, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+/* ==========================================================================
+   3. Accessibility (WCAG 2.2 AA)
+   ========================================================================== */
+:focus-visible { outline: 3px solid var(--rd-energy); outline-offset: 3px; border-radius: 2px; }
+.rd-skip-link {
+	position: absolute; left: -9999px; top: 0; z-index: 100000;
+	background: var(--rd-primary); color: var(--rd-white); padding: var(--rd-s1) var(--rd-s2);
+}
+.rd-skip-link:focus { left: var(--rd-s2); top: var(--rd-s2); }
+
+/* ==========================================================================
+   4. Components
+   ========================================================================== */
+.rd-section { padding-block: var(--rd-s6); }
+.rd-section--mist { background: var(--rd-mist); }
+.rd-container { width: min(100% - 2rem, 72rem); margin-inline: auto; }
+.rd-eyebrow { font-size: var(--rd-step--1); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--rd-muted); }
+
+.rd-btn,
+.wp-block-button__link,
+.wpcf7 input[type="submit"] {
+	display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+	min-height: var(--rd-tap); padding: 0.75rem 1.5rem;
+	background: var(--rd-primary); color: var(--rd-white);
+	font: 700 var(--rd-step-0)/1 var(--rd-font);
+	border: 2px solid var(--rd-primary); border-radius: var(--rd-radius);
+	text-decoration: none; cursor: pointer;
+	transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+.rd-btn:hover, .wp-block-button__link:hover, .wpcf7 input[type="submit"]:hover {
+	background: var(--rd-primary-dark); border-color: var(--rd-primary-dark); color: var(--rd-white);
+}
+.rd-btn--ghost { background: transparent; color: var(--rd-primary); }
+.rd-btn--ghost:hover { background: var(--rd-mist); color: var(--rd-primary-dark); }
+
+.rd-card {
+	background: var(--rd-white); border: 1px solid var(--rd-line); border-radius: var(--rd-radius);
+	padding: var(--rd-s4); box-shadow: var(--rd-shadow);
+}
+.rd-grid { display: grid; gap: var(--rd-s4); grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); }
+
+/* Forms: big touch targets, visible labels, clear errors */
+.wpcf7 input[type="text"], .wpcf7 input[type="email"], .wpcf7 input[type="tel"], .wpcf7 textarea, .wpcf7 select {
+	width: 100%; min-height: var(--rd-tap); padding: 0.75rem 1rem;
+	border: 2px solid var(--rd-line); border-radius: var(--rd-radius); background: var(--rd-white);
+	font: inherit; color: var(--rd-ink);
+}
+.wpcf7 input:focus, .wpcf7 textarea:focus, .wpcf7 select:focus { border-color: var(--rd-primary); outline: none; box-shadow: 0 0 0 3px rgba(11, 79, 108, 0.25); }
+.wpcf7-not-valid-tip { color: var(--rd-danger); font-weight: 600; }
+.wpcf7 form.sent .wpcf7-response-output { border-color: var(--rd-success); }
+
+/* ==========================================================================
+   5. Mobile contact bar (call / WhatsApp / quote)
+   ========================================================================== */
+.rd-mobile-bar { display: none; }
+@media (max-width: 782px) {
+	.rd-mobile-bar {
+		display: grid; grid-template-columns: repeat(3, 1fr);
+		position: fixed; inset: auto 0 0 0; z-index: 9999;
+		background: var(--rd-white); border-top: 1px solid var(--rd-line); box-shadow: 0 -4px 16px rgba(18, 35, 46, 0.1);
+	}
+	.rd-mobile-bar a {
+		display: flex; align-items: center; justify-content: center; min-height: 56px;
+		font-weight: 700; font-size: var(--rd-step--1); text-decoration: none; color: var(--rd-primary);
+	}
+	.rd-mobile-bar a + a { border-left: 1px solid var(--rd-line); }
+	body { padding-bottom: 56px; }
+}
