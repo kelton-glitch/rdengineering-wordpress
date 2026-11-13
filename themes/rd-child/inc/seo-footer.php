@@ -61,6 +61,20 @@ add_action('wp_head', function () {
 	}
 }, 2);
 
+/**
+ * The header logo is shown at about 150px (phones) to 230px (desktop), but WordPress's default
+ * `sizes` says 100vw, so phones download the 720px file (16.9 KB) instead of the 300px one (6 KB).
+ */
+add_filter('wp_calculate_image_sizes', function ($sizes, $size, $src, $meta, $attachment_id) {
+	$logo = (int) get_theme_mod('custom_logo');
+	if ($logo && (int) $attachment_id === $logo) {
+		return '(max-width: 782px) 150px, 230px';
+	}
+	return $sizes;
+}, 10, 5);
+
+/* Font preloads live in functions.php (Brand Display + Poppins). Public Sans retired 2026-11-13. */
+
 /** Contact Form 7 assets only where a form is shown (saves requests on every other page). */
 function rd_has_form_page() {
 	// Contact pages and water laboratory pages (EN and FR slugs) hold forms
@@ -93,19 +107,28 @@ add_action('kadence_before_footer', function () {
 	);
 	$phone = apply_filters('rd_phone', '+237695981047');
 	?>
-	<section class="rd-footer-contact" aria-label="<?php echo esc_attr($t['title']); ?>">
+	<?php /* Compact footer: who we are, where to go, one way to reach us. Hours and the quote button live in the page CTA, the header and the mobile dock. */ ?>
+	<section class="rd-footer-contact rd-footer-contact--slim" aria-label="<?php echo esc_attr($t['title']); ?>">
 		<div class="rd-container rd-footer-contact__inner">
-			<div>
+			<div class="rd-footer-contact__brand-col">
 				<p class="rd-footer-contact__brand"><?php echo esc_html($t['title']); ?></p>
-				<p><?php echo esc_html($t['tag']); ?></p>
+				<p class="rd-footer-contact__tag"><?php echo esc_html($t['tag']); ?></p>
 			</div>
-			<div>
-				<p><?php echo esc_html($t['addr']); ?></p>
-				<p><?php echo esc_html($t['hours']); ?></p>
-			</div>
-			<div>
-				<p><a href="tel:<?php echo esc_attr($phone); ?>"><?php echo esc_html('+237 695 981 047'); ?></a></p>
-				<p><a class="rd-btn" href="<?php echo esc_url($t['quote_url']); ?>"><?php echo esc_html($t['quote']); ?></a></p>
+			<?php
+			wp_nav_menu(array(
+				'theme_location'       => 'footer',
+				'container'            => 'nav',
+				'container_class'      => 'rd-footer-nav',
+				'container_aria_label' => $fr ? 'Pied de page' : 'Footer',
+				'menu_class'           => 'rd-footer-nav__list',
+				'depth'                => 1,
+				'fallback_cb'          => false,
+			));
+			?>
+			<div class="rd-footer-contact__meta">
+				<p><a class="rd-footer-contact__tel" href="tel:<?php echo esc_attr($phone); ?>"><?php echo rd_icon('phone', array('size' => 16, 'class' => 'rd-ico rd-ico--inline')); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?><span><?php echo esc_html('+237 695 981 047'); ?></span></a></p>
+				<p><?php echo rd_icon('pin', array('size' => 16, 'class' => 'rd-ico rd-ico--inline')); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?><span><?php echo esc_html($t['addr']); ?></span></p>
+				<?php rd_social_nav('compact'); ?>
 			</div>
 		</div>
 	</section>

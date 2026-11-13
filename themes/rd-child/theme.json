@@ -1,0 +1,54 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.7/theme.json",
+	"version": 3,
+	"settings": {
+		"appearanceTools": false,
+		"color": {
+			"custom": false,
+			"customDuotone": false,
+			"customGradient": false,
+			"defaultPalette": false,
+			"defaultGradients": false,
+			"palette": [
+				{ "slug": "flow-blue", "name": "Flow Blue", "color": "#0B71E0" },
+				{ "slug": "deep-current", "name": "Deep Current", "color": "#061B3A" },
+				{ "slug": "clear-water", "name": "Clear Water", "color": "#16C4D6" },
+				{ "slug": "signal-gold", "name": "Signal Gold", "color": "#FFB81C" },
+				{ "slug": "ink", "name": "Ink", "color": "#061B3A" },
+				{ "slug": "muted", "name": "Quiet Slate", "color": "#3D5069" },
+				{ "slug": "mist", "name": "Mist", "color": "#EEF4FB" },
+				{ "slug": "white", "name": "White", "color": "#FFFFFF" },
+				{ "slug": "line", "name": "Hairline", "color": "#C9D6E6" },
+				{ "slug": "link", "name": "Link Blue", "color": "#0A5FC0" },
+				{ "slug": "success", "name": "Success", "color": "#1B7F4B" },
+				{ "slug": "danger", "name": "Danger", "color": "#B3261E" }
+			]
+		},
+		"typography": {
+			"customFontSize": false,
+			"dropCap": false,
+			"fontFamilies": [
+				{
+					"fontFamily": "Poppins, system-ui, sans-serif",
+					"name": "Poppins",
+					"slug": "body"
+				},
+				{
+					"fontFamily": "\"Brand Display\", \"Arial Narrow\", sans-serif",
+					"name": "Brand Display",
+					"slug": "display"
+				}
+			]
+		},
+		"border": {
+			"radius": false
+		},
+		"spacing": {
+			"units": ["px", "rem", "%"]
+		},
+		"layout": {
+			"contentSize": "82rem",
+			"wideSize": "85rem"
+		}
+	}
+}

@@ -204,10 +204,10 @@ if (isset($ids['home'])) {
 
 $main = rd_build_menu('Main menu', array(
 	array('Services', 'services'),
-	array('Engineering', 'engineering-services', 'services'),
-	array('Water Laboratory', 'water-laboratory', 'services'),
-	array('Training', 'professional-training', 'services'),
-	array('Products', 'products', 'services'),
+	array('Engineering', 'engineering-services', 'services', 'rd-sub-hardhat', 'Design, build and supervise water, sanitation and energy works.'),
+	array('Water Laboratory', 'water-laboratory', 'services', 'rd-sub-flask', 'Chemical, physical and microbiological tests, with sampling on request.'),
+	array('Training', 'professional-training', 'services', 'rd-sub-book', 'Technical courses with certificates; corporate and on-site options.'),
+	array('Products', 'products', 'services', 'rd-sub-box', 'Treatment kits, solar gear and after-sales: prices on request.'),
 	array('About', 'about'),
 	array('FAQ', 'faq'),
 	array('Contact', 'contact'),

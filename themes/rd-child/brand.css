@@ -1,0 +1,5 @@
+/*
+ * DEPRECATED 2026-11-13: brand rules live in style.css (single CSS authority).
+ * This file is kept empty so old bookmarks and docs do not 404 if referenced.
+ * Do not enqueue. Do not add overrides here.
+ */

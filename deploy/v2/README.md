@@ -30,6 +30,14 @@ wp eval 'PLL()->model->clean_languages_cache(); flush_rewrite_rules();'
 ## Copy rules
 Only facts the company already publishes. Unknown facts (registration numbers, accreditation, team, references, prices) show as visible "To be supplied" boxes. The pictures are AI-generated illustrations and carry an "Illustrative image" caption until real photos replace them.
 
+## Quality gate
+Run after any UI change. It only reads: the site over HTTP, `DESIGN.md` and the theme CSS.
+```
+php deploy/v2/check.php http://127.0.0.1:8090      # VERBOSE=1 lists every passing page check
+```
+It checks: every page returns 200, exactly one h1, no skipped heading levels, title and description, hreflang pairs, alt text, no external hosts, none of the removed claims, first-load weight on a 390px phone, JavaScript weight, contrast of the colour pairs in `DESIGN.md`, theme tokens matching `DESIGN.md`, and one font family. It exits 1 on any failure.
+It cannot check what needs a browser: Lighthouse, tap targets, overflow at 390px, French string length, and how the page looks. Those are listed at the end of its output and in `CLAUDE.md`.
+
 ## To confirm with the owner before launch
 - WhatsApp availability on +237 695 981 047
 - Form recipients: `services@rdengineeringsol.com` (quotes), `waterlab@rdengineeringsol.com` (water tests)

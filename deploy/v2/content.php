@@ -108,6 +108,8 @@ function rd_cf7_form($lang, $kind) {
 		)));
 	}
 	update_post_meta($id, '_locale', $fr ? 'fr_FR' : 'en_US');
+	// Submit stays enabled; a missing consent tick is reported as an error instead of a dead grey button.
+	update_post_meta($id, '_additional_settings', "acceptance_as_validation: on\n");
 	return $id;
 }
 
@@ -365,11 +367,7 @@ function rd_pages_content($lang, array $img) {
 		rd_section(rd_head('', $x('Procurement readiness', 'Pour les équipes achats'), $x('Supplier file: status of each item', 'Dossier fournisseur : état de chaque pièce'), $x('None of these documents is published yet. Ask for any of them by email and it will be supplied when available.', 'Aucune de ces pièces n’est encore publiée. Demandez-les par e-mail : elles seront fournies dès qu’elles seront disponibles.')) . $fileBlock, true);
 
 	/* ---------------------------------------------------------------- CONTACT */
-	$out['contact'] = rd_section(
-		rd_p($x('Contact', 'Contact'), 'rd-eyebrow') . rd_h($x('Contact us and request a quote', 'Contactez-nous et demandez un devis'), 1) .
-		rd_p($x('Tell us about your project and we will reply with next steps.', 'Parlez-nous de votre projet et nous vous répondrons avec les prochaines étapes.')) .
-		rd_form_block(rd_cf7_form($lang, 'quote'), $x('Quote request', 'Demande de devis'))) .
-		rd_section(
+	$reach = rd_group(
 			rd_h($x('Other ways to reach us', 'Autres moyens de nous joindre'), 2) .
 			rd_ulc(array(
 				'<strong>' . $x('Phone:', 'Téléphone :') . '</strong> <a href="' . $tel . '">' . $phone . '</a> <span class="rd-note-inline">(' . $x('WhatsApp to be confirmed', 'WhatsApp à confirmer') . ')</span>',
@@ -379,7 +377,13 @@ function rd_pages_content($lang, array $img) {
 				'<strong>' . $x('Products:', 'Produits :') . '</strong> ' . $mail('products'),
 				'<strong>' . $x('Address:', 'Adresse :') . '</strong> ' . $base,
 				'<strong>' . $x('Hours:', 'Horaires :') . '</strong> ' . $hoursShort,
-			), 'rd-reach'), true);
+			), 'rd-reach'), 'rd-aside');
+	$out['contact'] = rd_section(
+		rd_p($x('Contact', 'Contact'), 'rd-eyebrow') . rd_h($x('Contact us and request a quote', 'Contactez-nous et demandez un devis'), 1) .
+		rd_p($x('Tell us about your project and we will reply with next steps.', 'Parlez-nous de votre projet et nous vous répondrons avec les prochaines étapes.')) .
+		rd_group(
+			rd_group(rd_form_block(rd_cf7_form($lang, 'quote'), $x('Quote request', 'Demande de devis')), 'rd-split__main') . $reach,
+			'rd-split'));
 
 	return $out;
 }

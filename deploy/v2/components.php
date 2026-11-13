@@ -46,7 +46,7 @@ function rd_cover($id, $alt, $caption, $inner) {
 	$cap = '<p class="rd-hero__cap">' . $caption . '</p>';
 	return "<!-- wp:cover {\"url\":\"$url\",\"id\":$id,\"dimRatio\":0,\"align\":\"full\",\"className\":\"rd-hero\"} -->\n"
 		. "<div class=\"wp-block-cover alignfull rd-hero\"><span aria-hidden=\"true\" class=\"wp-block-cover__background has-background-dim-0 has-background-dim\"></span>"
-		. "<img class=\"wp-block-cover__image-background wp-image-$id\" alt=\"" . esc_attr($alt) . "\" src=\"$url\" data-object-fit=\"cover\" fetchpriority=\"high\" loading=\"eager\" decoding=\"async\" sizes=\"100vw\"/>"
+		. "<img class=\"wp-block-cover__image-background wp-image-$id\" alt=\"" . esc_attr($alt) . "\" src=\"$url\" data-object-fit=\"cover\" fetchpriority=\"high\" loading=\"eager\" decoding=\"async\" sizes=\"(max-width: 600px) 98vw, 100vw\"/>"
 		. "<div class=\"wp-block-cover__inner-container\">\n$inner$cap\n</div></div>\n<!-- /wp:cover -->\n";
 }
 

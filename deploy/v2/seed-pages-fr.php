@@ -245,10 +245,10 @@ foreach ($pages as $key => $p) {
  * ------------------------------------------------------------------------- */
 $main = rd_build_menu('Menu principal', array(
 	array('Services', 'services'),
-	array('Ingénierie', 'engineering-services', 'services'),
-	array('Laboratoire de l’eau', 'water-laboratory', 'services'),
-	array('Formation', 'professional-training', 'services'),
-	array('Produits', 'products', 'services'),
+	array('Ingénierie', 'engineering-services', 'services', 'rd-sub-hardhat', 'Concevoir, construire et superviser les ouvrages d’eau, d’assainissement et d’énergie.'),
+	array('Laboratoire de l’eau', 'water-laboratory', 'services', 'rd-sub-flask', 'Analyses chimiques, physiques et microbiologiques, prélèvement sur demande.'),
+	array('Formation', 'professional-training', 'services', 'rd-sub-book', 'Formations techniques avec certificat ; options entreprise et sur site.'),
+	array('Produits', 'products', 'services', 'rd-sub-box', 'Kits, solaire et SAV : prix sur demande.'),
 	array('À propos', 'about'),
 	array('FAQ', 'faq'),
 	array('Contact', 'contact'),

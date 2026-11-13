@@ -144,7 +144,7 @@ function rd_build_menu($name, array $items, $ids) {
 	$pos = 1;
 	$byslug = array();
 	foreach ($items as $it) {
-		list($label, $slug, $parentSlug, $cls) = array_pad($it, 4, null);
+		list($label, $slug, $parentSlug, $cls, $desc) = array_pad($it, 5, null);
 		if (!isset($ids[$slug])) {
 			continue;
 		}
@@ -155,6 +155,9 @@ function rd_build_menu($name, array $items, $ids) {
 		);
 		if ($cls) {
 			$args['menu-item-classes'] = $cls;
+		}
+		if ($desc) {
+			$args['menu-item-description'] = $desc;
 		}
 		$key = $cls ? $slug . ':' . $cls : $slug;
 		$byslug[$key] = wp_update_nav_menu_item($mid, 0, $args);
