@@ -26,15 +26,6 @@ ASSET_RE = re.compile(
     re.I,
 )
 
-BANNER = """
-<div id="rd-progress-banner" style="position:sticky;top:0;z-index:100000;background:#061b3a;color:#fff;font:600 14px/1.4 system-ui,sans-serif;padding:10px 16px;text-align:center;border-bottom:3px solid #0b71e0">
-  Progress preview (static) · RD Engineering redesign · Not the live WordPress site ·
-  <a href="INDEX_HREF" style="color:#ffb81c">EN</a> ·
-  <a href="FR_HREF" style="color:#ffb81c">FR</a>
-</div>
-"""
-
-
 def fetch(url: str) -> bytes:
     req = urllib.request.Request(url, headers={"User-Agent": "rd-static-export/1.0"})
     with urllib.request.urlopen(req, timeout=45) as response:
@@ -109,10 +100,8 @@ def main() -> None:
         html = html.replace("http://127.0.0.1:8090", ".")
 
         if out_name == "index.html":
-            banner = BANNER.replace("INDEX_HREF", "./").replace("FR_HREF", "fr/")
             html = re.sub(r'href="[^"]*/fr/?"', 'href="fr/"', html)
         else:
-            banner = BANNER.replace("INDEX_HREF", "../").replace("FR_HREF", "./")
             html = re.sub(
                 r'(href=")[^"]*("(?:[^>]*)>\s*English\s*<)',
                 r"\1../\2",
@@ -120,7 +109,6 @@ def main() -> None:
                 flags=re.I,
             )
 
-        html = re.sub(r"(<body[^>]*>)", r"\1" + banner, html, count=1, flags=re.I)
         html_dir.mkdir(parents=True, exist_ok=True)
         html_path.write_text(html, encoding="utf-8")
         print(f"wrote {html_path} ({html_path.stat().st_size} B)")
