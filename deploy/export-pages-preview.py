@@ -84,9 +84,22 @@ def main() -> None:
         html_path = ROOT / out_name
         html_dir = html_path.parent
 
+        def page_href(path: str) -> str | None:
+            """Map local WP pretty URLs to static Pages paths for this HTML file."""
+            path = path.rstrip("/") + "/" if path not in ("", "/") else "/"
+            if out_name == "index.html":
+                mapping = {"/": "./", "/fr/": "fr/"}
+            else:
+                mapping = {"/": "../", "/fr/": "./"}
+            return mapping.get(path)
+
         def repl(match: re.Match[str]) -> str:
             url = match.group("url")
             clean = url.split("?")[0]
+            path_only = urllib.parse.urlparse(clean).path or "/"
+            mapped = page_href(path_only)
+            if mapped is not None:
+                return f'{match.group("attr")}={match.group("q")}{mapped}{match.group("q")}'
             rel = ensure_asset(clean)
             if not rel:
                 if "127.0.0.1" in url:
@@ -99,15 +112,24 @@ def main() -> None:
         html = ASSET_RE.sub(repl, raw)
         html = html.replace("http://127.0.0.1:8090", ".")
 
+        # Hard-fix language switchers (hreflang + Polylang menu items).
         if out_name == "index.html":
-            html = re.sub(r'href="[^"]*/fr/?"', 'href="fr/"', html)
+            html = re.sub(
+                r'(<link rel="alternate" href=")[^"]*(" hreflang="fr")',
+                r"\1fr/\2",
+                html,
+                count=1,
+            )
+            html = re.sub(r'(lang-item-fr[^>]*>\s*<a href=")[^"]*(")', r"\1fr/\2", html)
         else:
             html = re.sub(
-                r'(href=")[^"]*("(?:[^>]*)>\s*English\s*<)',
+                r'(<link rel="alternate" href=")[^"]*(" hreflang="en")',
                 r"\1../\2",
                 html,
-                flags=re.I,
+                count=1,
             )
+            html = re.sub(r'(lang-item-en[^>]*>\s*<a href=")[^"]*(")', r"\1../\2", html)
+            html = re.sub(r'(lang-item-fr[^>]*>\s*<a href=")[^"]*(")', r"\1./\2", html)
 
         html_dir.mkdir(parents=True, exist_ok=True)
         html_path.write_text(html, encoding="utf-8")
