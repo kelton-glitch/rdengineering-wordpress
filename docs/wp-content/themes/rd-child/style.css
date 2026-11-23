@@ -1028,3 +1028,195 @@ a:hover > .rd-sub__ico, a:focus-visible > .rd-sub__ico { background: var(--rd-pr
 #mobile-drawer .mobile-navigation .menu > li.lang-item.current-lang > a { background: #fff; color: var(--rd-primary-dark); box-shadow: none; padding-left: 1rem; }
 /* Call bar hides while the drawer is open so the dimmed page stays calm */
 body[class*="showing-popup-drawer-"] .rd-mobile-bar { display: none; }
+
+/* ==========================================================================
+   Phase A — inner page shell (shared with Engineering / Lab templates)
+   ========================================================================== */
+/* Kill Kadence page-title band when the block hero already carries the H1 */
+body:not(.home) .entry-hero,
+body:not(.home) .entry-header,
+body:not(.home) .wp-site-blocks > .entry-content-wrap > .entry-header {
+	display: none !important;
+}
+body:not(.home) .content-title-style-normal .entry-content-wrap,
+body:not(.home) .content-title-style-above .entry-content-wrap {
+	padding-top: 0;
+}
+.rd-page-hero {
+	background: var(--rd-primary-dark);
+	color: #fff;
+	padding-block: clamp(2.5rem, 2rem + 2vw, 4rem);
+	margin-top: 0 !important;
+}
+.rd-page-hero .rd-eyebrow { color: rgba(255, 255, 255, 0.72); }
+.rd-page-hero h1 { color: #fff; margin: 0 0 0.75rem; font-size: clamp(2.4rem, 1.8rem + 2.4vw, 3.8rem); }
+.rd-page-hero .rd-lead { color: rgba(255, 255, 255, 0.88); max-width: 38rem; font-size: clamp(1.05rem, 1rem + 0.2vw, 1.2rem); }
+.rd-page-hero .rd-note { color: rgba(255, 255, 255, 0.65); font-size: 0.9rem; max-width: 36rem; }
+.rd-page-hero .wp-block-buttons {
+	display: flex; flex-wrap: wrap; gap: 0.65rem; margin: 1.25rem 0 0.5rem;
+}
+.rd-page-hero .wp-block-button { margin: 0; }
+.rd-page-hero .wp-block-button__link,
+.rd-page-hero .rd-btn {
+	min-height: 48px;
+	padding: 0.7rem 1.25rem;
+	font-family: var(--rd-head);
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	font-weight: 700;
+	border-radius: 0;
+}
+.rd-page-hero .is-style-outline .wp-block-button__link,
+.rd-page-hero .rd-btn.rd-land__ghost,
+.rd-page-hero a.rd-btn[href^="tel"],
+.rd-page-hero a.rd-btn[href*="wa.me"] {
+	background: transparent !important;
+	color: #fff !important;
+	border: 1px solid rgba(255, 255, 255, 0.65) !important;
+}
+.rd-page-hero .wp-block-button:not(.is-style-outline) .wp-block-button__link,
+.rd-page-hero .rd-btn.rd-land__primary {
+	background: var(--rd-energy) !important;
+	color: var(--rd-primary-dark) !important;
+	border: 0 !important;
+}
+.rd-page-hero__grid {
+	display: grid;
+	gap: var(--rd-s4);
+	grid-template-columns: 1fr;
+	align-items: center;
+}
+.rd-page-hero__grid > .wp-block-group__inner-container { display: contents; }
+.rd-page-hero__media,
+.rd-page-hero .rd-media-slot {
+	margin: 0;
+	max-width: none;
+}
+.rd-page-hero__media img {
+	display: block;
+	width: 100%;
+	aspect-ratio: 4 / 3;
+	object-fit: cover;
+	border: 0;
+}
+.rd-page-hero__media .wp-element-caption {
+	color: rgba(255, 255, 255, 0.75);
+	font-size: 0.85rem;
+}
+@media (min-width: 900px) {
+	.rd-page-hero__grid { grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); gap: var(--rd-s5); }
+}
+
+/* Sample product / course cards: denser grid */
+body:not(.home) .rd-slots {
+	display: grid;
+	gap: 0.85rem;
+	grid-template-columns: 1fr;
+	margin: var(--rd-s3) 0;
+}
+body:not(.home) .rd-slot {
+	min-height: 7.5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 1.1rem 1.25rem;
+	background: var(--rd-white);
+	border: 1px solid var(--rd-line);
+	border-top: 4px solid var(--rd-primary);
+	border-radius: 0;
+}
+body:not(.home) .rd-slot p { margin: 0.2rem 0; max-width: none; }
+body:not(.home) .rd-slot .rd-chip { margin-left: 0.35rem; }
+@media (min-width: 700px) {
+	body:not(.home) .rd-slots { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1100px) {
+	body:not(.home) .rd-slots { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* FAQ / details on mist sections */
+body:not(.home) .wp-block-details {
+	border: 1px solid var(--rd-line);
+	background: var(--rd-white);
+	padding: 0.15rem 1rem;
+	margin: 0 0 0.55rem;
+}
+body:not(.home) .wp-block-details summary {
+	font-family: var(--rd-head);
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	font-weight: 700;
+	min-height: 48px;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+/* Dashed media placeholder */
+.rd-media-slot {
+	position: relative;
+	display: grid;
+	place-items: center;
+	min-height: 14rem;
+	margin: var(--rd-s3) 0 0;
+	background: var(--rd-mist);
+	border: 2px dashed var(--rd-gap);
+	padding: var(--rd-s3);
+	text-align: center;
+}
+.rd-page-hero .rd-media-slot {
+	background: rgba(255, 255, 255, 0.06);
+	border-color: rgba(255, 255, 255, 0.35);
+	min-height: 16rem;
+}
+.rd-media-slot__frame { position: absolute; inset: 0.75rem; border: 1px solid rgba(6, 27, 58, 0.12); pointer-events: none; }
+.rd-page-hero .rd-media-slot__frame { border-color: rgba(255, 255, 255, 0.18); }
+.rd-media-slot__mark {
+	font-family: var(--rd-head);
+	text-transform: uppercase;
+	letter-spacing: 0.12em;
+	font-size: 0.85rem;
+	color: var(--rd-amber-ink, #8a5a00);
+	background: var(--rd-gapbg, #fff7e0);
+	padding: 0.35rem 0.75rem;
+}
+.rd-page-hero .rd-media-slot__mark { color: var(--rd-primary-dark); background: var(--rd-energy); }
+.rd-media-slot__cap {
+	margin: 0.75rem 0 0;
+	max-width: 22rem;
+	font-size: 0.95rem;
+	color: var(--rd-muted, #3d5069);
+}
+.rd-page-hero .rd-media-slot__cap { color: rgba(255, 255, 255, 0.78); }
+
+/* Ingerop-style scope lists */
+.rd-scope {
+	display: grid;
+	gap: var(--rd-s4);
+	grid-template-columns: 1fr;
+	margin-top: var(--rd-s3);
+}
+.rd-scope > .wp-block-group__inner-container { display: contents; }
+.rd-scope__col h2 { margin-top: 0; font-size: clamp(1.5rem, 1.3rem + 0.6vw, 1.9rem); }
+ul.rd-scope__list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: grid;
+	gap: 0.45rem;
+}
+.rd-scope__list li {
+	margin: 0;
+	padding: 0.7rem 0.9rem;
+	background: var(--rd-white);
+	border: 1px solid var(--rd-line);
+	border-left: 4px solid var(--rd-primary);
+	min-height: 48px;
+	display: flex;
+	align-items: center;
+	gap: 0.35rem;
+	flex-wrap: wrap;
+}
+@media (min-width: 900px) {
+	.rd-scope { grid-template-columns: 1fr 1fr; }
+}

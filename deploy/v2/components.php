@@ -119,6 +119,51 @@ function rd_form_block($id, $title) {
 	return '<!-- wp:shortcode -->[contact-form-7 id="' . $id . '" title="' . $title . '"]<!-- /wp:shortcode -->' . "\n";
 }
 
+/**
+ * Inner-page hero band (Phase A shell): Deep Current panel + copy + optional media.
+ * $mediaHtml = rd_img(...) or rd_media_slot(...). Keep one H1 in $title via rd_h(..., 1).
+ */
+function rd_page_hero($eyebrow, $title, $lead, $btnsHtml = '', $mediaHtml = '') {
+	$text = rd_p($eyebrow, 'rd-eyebrow') . rd_h($title, 1) . ($lead ? rd_p($lead, 'rd-lead') : '') . $btnsHtml;
+	$inner = $mediaHtml
+		? rd_group(rd_group($text, 'rd-page-hero__text') . $mediaHtml, 'rd-page-hero__grid')
+		: rd_group($text, 'rd-page-hero__text');
+	return rd_group(rd_group($inner, 'rd-container'), 'rd-section rd-page-hero', true);
+}
+
+/** Dashed photo slot until a real image is supplied. */
+function rd_media_slot($caption) {
+	$mark = isset($GLOBALS['rd_sample']) ? $GLOBALS['rd_sample'] : 'Sample';
+	return rd_html(
+		'<figure class="rd-media-slot">'
+		. '<span class="rd-media-slot__frame" aria-hidden="true"></span>'
+		. '<span class="rd-media-slot__mark">' . esc_html($mark) . '</span>'
+		. '<figcaption class="rd-media-slot__cap">' . esc_html($caption) . '</figcaption>'
+		. '</figure>'
+	);
+}
+
+/** Ingerop-style two lists: services provided + technical skills / methods. */
+function rd_scope_grid($servicesTitle, array $services, $skillsTitle, array $skills) {
+	$left = rd_h($servicesTitle, 2) . rd_ulc($services, 'rd-scope__list');
+	$right = rd_h($skillsTitle, 2) . rd_ulc($skills, 'rd-scope__list');
+	return rd_group(rd_group($left, 'rd-scope__col') . rd_group($right, 'rd-scope__col'), 'rd-scope');
+}
+
+/** Closing CTA band used on inner pages. */
+function rd_page_close($title, $lead, $btnsHtml, $extra = '') {
+	return rd_section(
+		rd_p(isset($GLOBALS['rd_work_with']) ? $GLOBALS['rd_work_with'] : 'Work with us', 'rd-eyebrow') .
+		rd_h($title, 2) .
+		($lead ? rd_p($lead) : '') .
+		$btnsHtml .
+		$extra,
+		true,
+		'rd-section--close',
+		'contact'
+	);
+}
+
 function rd_find_image($file) {
 	$f = get_posts(array('post_type' => 'attachment', 'post_status' => 'inherit', 'meta_key' => '_rd_source', 'meta_value' => $file, 'numberposts' => 1, 'fields' => 'ids'));
 	return $f ? (int) $f[0] : 0;

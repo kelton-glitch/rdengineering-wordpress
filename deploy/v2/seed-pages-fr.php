@@ -98,54 +98,18 @@ $pages['services'] = array('Nos services', 'nos-services', 'services', '', 'Nos 
 
 $pages['engineering-services'] = array('Services d’ingénierie', 'services-ingenierie', 'services/engineering-services', 'services', 'Services d’ingénierie | RD Engineering Solution',
 	'Conception, construction, supervision et conseil pour des systèmes d’eau, d’assainissement et d’énergie au Cameroun.',
-	rd_section(
-		rd_p('Services', 'rd-eyebrow') . rd_h('Services d’ingénierie', 1) . rd_img($img['engineering'], 'rd-media') .
-		rd_p('Nous proposons un large éventail de solutions d’ingénierie : conception, construction, installation, maintenance et conseil dans des secteurs tels que le traitement de l’eau, le génie civil et les systèmes industriels.') .
-		rd_h('Ce qui est inclus', 2) .
-		rd_ul(array(
-			'<strong>Conception et conseil :</strong> études de faisabilité, conception de systèmes d’eau, d’assainissement et d’énergie.',
-			'<strong>Construction et supervision :</strong> systèmes d’approvisionnement en eau, installations sanitaires et infrastructures d’énergie renouvelable.',
-			'<strong>Renforcement des capacités :</strong> formation des techniciens, des ingénieurs et des communautés locales à la maintenance des systèmes.',
-			'<strong>Recherche et innovation :</strong> solutions d’ingénierie durables adaptées aux contextes locaux.',
-			'<strong>Services environnementaux :</strong> planification de la résilience climatique, études d’impact environnemental et social (EIES).',
-		)) . $cta) .
-	rd_section(
-		rd_h('Questions fréquentes', 2) .
-		rd_details('Pouvez-vous réaliser des projets d’ingénierie de petite comme de grande envergure ?', 'Oui. Notre équipe gère des projets de toutes tailles, des petits systèmes communautaires aux grands projets industriels ou municipaux.') .
-		rd_details('Proposez-vous des solutions d’ingénierie sur mesure ?', 'Oui. Chaque projet est unique : nous adaptons nos conceptions et nos plans de mise en œuvre aux besoins du client et aux conditions du site.') .
-		rd_details('Vos ingénieurs sont-ils certifiés ou agréés ?', 'Notre équipe d’ingénieurs couvre la conception, l’installation et la supervision de projets. Demandez-nous les qualifications de l’équipe pour votre appel d’offres ou votre projet.'), true));
-
+	$C['engineering-services']);
 $pages['water-laboratory'] = array('Laboratoire d’analyse de l’eau', 'laboratoire-eau', 'services/water-laboratory', 'services', 'Laboratoire d’analyse de l’eau | RD Engineering Solution',
 	'Analyses chimiques, physiques et microbiologiques de l’eau à Douala, avec prélèvement sur site possible.',
 	$C['water-laboratory']);
 
 $pages['professional-training'] = array('Formation professionnelle', 'formation-professionnelle', 'services/professional-training', 'services', 'Formation professionnelle | RD Engineering Solution',
 	'Formation technique et professionnelle en ingénierie, analyse de laboratoire, gestion de projet, sécurité et utilisation d’équipements.',
-	rd_section(
-		rd_p('Services', 'rd-eyebrow') . rd_h('Formation professionnelle', 1) . rd_img($img['training'], 'rd-media') .
-		rd_p('Nous organisons des programmes de formation technique et professionnelle en ingénierie, analyse de laboratoire, gestion de projet, normes de sécurité et utilisation d’équipements.') .
-		rd_h('Programmes', 2) .
-		rd_ul(array('Formation technique en ingénierie WASH (eau, assainissement et hygiène), analyse de l’eau et énergies renouvelables', 'Programmes de certification pour techniciens et ingénieurs', 'Formations courtes pour les ONG, les municipalités et les partenaires du secteur privé', 'Formation communautaire sur l’eau potable, l’hygiène et les pratiques d’assainissement', 'Programmes de stage et de mentorat pour étudiants et jeunes professionnels', 'Ateliers sur la gestion de projet, le suivi et la durabilité')) .
-		rd_h('Formation en entreprise et sur site', 2) .
-		rd_p('Nous proposons des programmes de formation en entreprise adaptés aux besoins spécifiques des organisations ou des projets.') . $cta) .
-	rd_section(
-		rd_h('Questions fréquentes', 2) .
-		rd_details('Qui peut s’inscrire à vos programmes de formation ?', 'Nos formations sont ouvertes aux étudiants, aux techniciens, aux ingénieurs et aux professionnels souhaitant perfectionner leurs compétences ou satisfaire aux exigences de certification de leur secteur.') .
-		rd_details('Délivrez-vous des certificats à l’issue de la formation ?', 'Oui. Les participants reçoivent un certificat après avoir terminé avec succès chaque programme de formation.') .
-		rd_details('Pouvez-vous organiser des formations sur site ou sur mesure pour les entreprises ?', 'Oui, nous proposons des programmes de formation en entreprise adaptés aux besoins spécifiques des organisations ou des projets.'), true));
+	$C['professional-training']);
 
 $pages['products'] = array('Produits', 'produits', 'services/products', 'services', 'Produits | RD Engineering Solution',
 	'Équipements de traitement de l’eau, instruments d’analyse, kits de forage et d’analyse de l’eau, pièces détachées et consommables.',
-	rd_section(
-		rd_p('Services', 'rd-eyebrow') . rd_h('Produits', 1) . rd_img($img['products'], 'rd-media') .
-		rd_p('Nous fournissons des produits d’ingénierie et de laboratoire. Les prix sont communiqués sur demande.') .
-		rd_ul(array('Produits de traitement de l’eau et d’assainissement : filtres, chlore, dalles de latrines, kits de lavage des mains', 'Solutions d’énergie renouvelable : pompes solaires, éclairage solaire, foyers améliorés', 'Outils et kits d’ingénierie abordables : kits de forage, kits d’analyse de l’eau', 'Innovations développées localement pour l’eau, l’assainissement et l’énergie', 'Distribution, maintenance et service après-vente')) .
-		rd_btns(array(array('Demander un devis produit', $U['contact'])))) .
-	rd_section(
-		rd_h('Questions fréquentes', 2) .
-		rd_details('Quels types de produits fournissez-vous ?', 'Nous fournissons des produits d’ingénierie et de laboratoire tels que des équipements de traitement de l’eau, des instruments d’analyse, des pièces détachées et des consommables.') .
-		rd_details('Proposez-vous un service après-vente ou de maintenance ?', 'Oui. Nous assurons l’assistance technique, la maintenance et le remplacement.') .
-		rd_details('Comment passer commande ou obtenir un devis ?', 'Contactez-nous via notre site web, par téléphone ou par e-mail en nous indiquant vos besoins ; notre équipe commerciale vous répondra avec les prix et les disponibilités.'), true));
+	$C['products']);
 
 $pages['about'] = array('À propos', 'a-propos', 'about', '', 'À propos | RD Engineering Solution',
 	'RD Engineering Solution est une entreprise d’ingénierie dans les domaines de l’eau, de l’assainissement et de l’énergie, basée à Bonassama-Douala, au Cameroun.',
@@ -157,32 +121,7 @@ $pages['tenders'] = array('Appels d’offres et marchés', 'appels-d-offres', 't
 
 $pages['faq'] = array('Foire aux questions', 'foire-aux-questions', 'faq', '', 'Foire aux questions | RD Engineering Solution',
 	'Réponses sur les services d’ingénierie, le laboratoire d’analyse de l’eau, la formation, les produits et la façon de contacter RD Engineering Solution.',
-	rd_section(
-		rd_h('Foire aux questions', 1) .
-		rd_h('Services d’ingénierie', 2) .
-		rd_details('Quels types de services d’ingénierie RD Engineering Solution propose-t-elle ?', 'Conception, construction, installation, maintenance et conseil dans des secteurs tels que le traitement de l’eau, le génie civil et les systèmes industriels.') .
-		rd_details('Pouvez-vous réaliser des projets de petite comme de grande envergure ?', 'Oui. Nous gérons des projets de toutes tailles, des petits systèmes communautaires aux grands projets industriels ou municipaux.') .
-		rd_details('Proposez-vous des solutions d’ingénierie sur mesure ?', 'Oui. Nous adaptons nos conceptions et nos plans de mise en œuvre aux besoins du client et aux conditions du site.') .
-		rd_h('Laboratoire d’analyse de l’eau', 2) .
-		rd_details('Quels services propose votre laboratoire d’analyse de l’eau ?', 'Des analyses chimiques, physiques et microbiologiques pour contribuer à garantir la qualité et la sécurité de l’eau pour des usages domestiques, industriels et environnementaux.') .
-		rd_details('Quels paramètres pouvez-vous analyser ?', 'pH, turbidité, solides dissous totaux (TDS), dureté, nitrates, métaux lourds, E. coli et autres indicateurs clés de la qualité de l’eau.') .
-		rd_details('Qui peut faire appel aux services de votre laboratoire ?', 'Particuliers, entreprises privées, municipalités, ONG et administrations.') .
-		rd_details('Comment soumettre un échantillon d’eau pour analyse ?', 'Venez à notre laboratoire ou contactez le service client pour obtenir les consignes de prélèvement et les modalités de dépôt. Nous proposons également un prélèvement sur site si nécessaire.') .
-		rd_h('Formation professionnelle', 2) .
-		rd_details('Quel type de formation professionnelle proposez-vous ?', 'Formation technique et professionnelle en ingénierie, analyse de laboratoire, gestion de projet, normes de sécurité et utilisation d’équipements.') .
-		rd_details('Qui peut s’inscrire à vos programmes de formation ?', 'Étudiants, techniciens, ingénieurs et professionnels souhaitant perfectionner leurs compétences ou satisfaire aux exigences de certification.') .
-		rd_details('Délivrez-vous des certificats à l’issue de la formation ?', 'Oui. Les participants reçoivent un certificat après avoir terminé avec succès chaque programme.') .
-		rd_details('Pouvez-vous organiser des formations sur site ou sur mesure pour les entreprises ?', 'Oui, nous proposons des programmes de formation en entreprise adaptés aux besoins spécifiques.') .
-		rd_h('Produits', 2) .
-		rd_details('Quels types de produits fournissez-vous ?', 'Des produits d’ingénierie et de laboratoire tels que des équipements de traitement de l’eau, des instruments d’analyse, des pièces détachées et des consommables.') .
-		rd_details('Proposez-vous un service après-vente ou de maintenance ?', 'Oui. Nous assurons l’assistance technique, la maintenance et le remplacement.') .
-		rd_details('Comment passer commande ou obtenir un devis ?', 'Contactez-nous via notre site web, par téléphone ou par e-mail en nous indiquant vos besoins ; notre équipe commerciale vous répondra avec les prix et les disponibilités.') .
-		rd_h('Contact et assistance', 2) .
-		rd_details('Comment contacter RD Engineering Solution ?', 'Utilisez le formulaire de contact de ce site, l’e-mail ou le téléphone. Notre équipe peut répondre à vos demandes, discuter de vos projets et planifier nos services.') .
-		rd_details('Où êtes-vous situés ?', 'Notre siège est situé à Bonassama-Douala, au Cameroun. Nous servons également des clients dans tout le pays et dans la région.') .
-		rd_details('Proposez-vous un accompagnement avant le début d’un projet ?', 'Oui. Nous proposons des consultations de projet et des études de faisabilité pour aider les clients à choisir l’approche technique et économique la mieux adaptée.') .
-		rd_details('Quels sont vos horaires d’ouverture ?', 'Du lundi au vendredi, de 9h à 18h, et le samedi sur rendez-vous.') .
-		$cta));
+	$C['faq']);
 
 $pages['contact'] = array('Nous contacter', 'nous-contacter', 'contact', '', 'Contact et demande de devis | RD Engineering Solution',
 	'Contactez RD Engineering Solution à Douala ou demandez un devis pour l’ingénierie, le laboratoire, la formation ou les produits.',
@@ -190,18 +129,7 @@ $pages['contact'] = array('Nous contacter', 'nous-contacter', 'contact', '', 'Co
 
 $pages['privacy'] = array('Politique de confidentialité', 'confidentialite', 'privacy', '', 'Politique de confidentialité | RD Engineering Solution',
 	'Comment RD Engineering Solution traite les informations personnelles collectées via ce site.',
-	rd_section(
-		rd_h('Politique de confidentialité', 1) .
-		rd_placeholder('BROUILLON. Ce texte est un point de départ en langage simple. Faites-le relire au regard des règles camerounaises de protection des données avant publication.') .
-		rd_h('Ce que nous collectons', 2) .
-		rd_p('Lorsque vous utilisez le formulaire de devis ou de contact, nous recevons les informations que vous saisissez : nom, e-mail, téléphone, organisation et votre message.') .
-		rd_h('Comment nous les utilisons', 2) .
-		rd_p('Nous utilisons ces informations uniquement pour répondre à votre demande. Nous ne les vendons pas.') .
-		rd_h('Qui y a accès', 2) .
-		rd_p('Notre équipe reçoit le formulaire par e-mail. L’hébergeur du site stocke le site et ses sauvegardes.') .
-		rd_h('Vos choix', 2) .
-		rd_p('Écrivez à <a href="mailto:services@rdengineeringsol.com">services@rdengineeringsol.com</a> pour savoir quelles informations nous détenons ou pour demander leur suppression.')));
-
+	$C['privacy']);
 /* ---------------------------------------------------------------------------
  * Create or update the French pages and link them to the English ones
  * ------------------------------------------------------------------------- */

@@ -58,51 +58,15 @@ $pages['services'] = array('Services', 'Services | RD Engineering Solution', 'En
 	$C['services']);
 
 $pages['engineering-services'] = array('Engineering Services', 'Engineering Services | RD Engineering Solution', 'Design, construction, supervision and consultancy for water, sanitation and energy systems in Cameroon.',
-	rd_section(
-		rd_p('Services', 'rd-eyebrow') . rd_h('Engineering Services', 1) . rd_img($img['engineering'], 'rd-media') .
-		rd_p('We offer a wide range of engineering solutions including design, construction, installation, maintenance and consultancy across sectors such as water treatment, civil works and industrial systems.') .
-		rd_h('What is included', 2) .
-		rd_ul(array(
-			'<strong>Design and consultancy:</strong> feasibility studies, design of water, sanitation and energy systems.',
-			'<strong>Construction and supervision:</strong> water supply systems, sanitation facilities and renewable energy infrastructure.',
-			'<strong>Capacity building:</strong> training technicians, engineers and local communities on system maintenance.',
-			'<strong>Research and innovation:</strong> sustainable engineering solutions tailored to local contexts.',
-			'<strong>Environmental services:</strong> climate resilience planning, Environmental and Social Impact Assessments (ESIAs).',
-		)) . $cta) .
-	rd_section(
-		rd_h('Common questions', 2) .
-		rd_details('Can you handle both small and large-scale engineering projects?', 'Yes. Our team manages projects of all sizes, from small community-based systems to large industrial or municipal projects.') .
-		rd_details('Do you offer customised engineering solutions?', 'Yes. Every project is unique, so we tailor our designs and implementation plans to client requirements and site conditions.') .
-		rd_details('Are your engineers certified or licensed?', 'Our engineering team covers design, installation and project supervision. Ask us for team qualifications for your tender or project.'), true));
-
+	$C['engineering-services']);
 $pages['water-laboratory'] = array('Water Laboratory', 'Water Testing Laboratory | RD Engineering Solution', 'Chemical, physical and microbiological water analysis in Douala, with on-site sampling available.',
 	$C['water-laboratory']);
 
 $pages['professional-training'] = array('Professional Training', 'Professional Training | RD Engineering Solution', 'Technical and professional training in engineering, laboratory analysis, project management, safety and equipment operation.',
-	rd_section(
-		rd_p('Services', 'rd-eyebrow') . rd_h('Professional Training', 1) . rd_img($img['training'], 'rd-media') .
-		rd_p('We organise technical and professional training programmes in engineering, laboratory analysis, project management, safety standards and equipment operation.') .
-		rd_h('Programmes', 2) .
-		rd_ul(array('Technical training in WASH engineering, water testing and renewable energy', 'Certification programmes for technicians and engineers', 'Short courses for NGOs, municipalities and private sector partners', 'Community-level training in safe water, hygiene and sanitation practices', 'Internship and mentorship programmes for students and young professionals', 'Workshops on project management, monitoring and sustainability')) .
-		rd_h('Corporate and on-site training', 2) .
-		rd_p('We offer tailored corporate training programmes designed to meet the specific needs of organisations or projects.') . $cta) .
-	rd_section(
-		rd_h('Common questions', 2) .
-		rd_details('Who can enrol in your training programmes?', 'Our training is open to students, technicians, engineers and professionals seeking to upgrade their skills or meet industry certification requirements.') .
-		rd_details('Do you provide certificates after training?', 'Yes. Participants receive a certificate on successful completion of each training programme.') .
-		rd_details('Can you organise on-site or customised training for companies?', 'Yes, we offer tailored corporate training programmes designed to meet the specific needs of organisations or projects.'), true));
+	$C['professional-training']);
 
 $pages['products'] = array('Products', 'Products | RD Engineering Solution', 'Water treatment equipment, testing instruments, drilling and water testing kits, spare parts and consumables.',
-	rd_section(
-		rd_p('Services', 'rd-eyebrow') . rd_h('Products', 1) . rd_img($img['products'], 'rd-media') .
-		rd_p('We supply engineering and laboratory products. Prices are provided on request.') .
-		rd_ul(array('Water treatment and sanitation products: filters, chlorine, latrine slabs, handwashing kits', 'Renewable energy solutions: solar pumps, solar lighting, efficient stoves', 'Affordable engineering tools and kits: drilling kits, water testing kits', 'Locally developed innovations for water, sanitation and energy', 'Distribution, maintenance and after-sales support')) .
-		rd_btns(array(array('Request a product quote', '/contact/')))) .
-	rd_section(
-		rd_h('Common questions', 2) .
-		rd_details('What types of products do you supply?', 'We supply engineering and laboratory products such as water treatment equipment, testing instruments, spare parts and consumables.') .
-		rd_details('Do you offer after-sales support or maintenance?', 'Yes. We provide technical support, maintenance and replacement services.') .
-		rd_details('How can I place an order or get a quote?', 'Contact us through our website, phone or email with your product needs, and our sales team will reply with pricing and availability.'), true));
+	$C['products']);
 
 $pages['about'] = array('About', 'About Us | RD Engineering Solution', 'RD Engineering Solution is a water, sanitation and energy engineering company based in Bonassama-Douala, Cameroon.',
 	$C['about']);
@@ -111,49 +75,13 @@ $pages['tenders'] = array('Tenders and Procurement', 'Tenders and Procurement | 
 	$C['tenders']);
 
 $pages['faq'] = array('FAQ', 'Frequently Asked Questions | RD Engineering Solution', 'Answers about engineering services, the water laboratory, training, products and contacting RD Engineering Solution.',
-	rd_section(
-		rd_h('Frequently asked questions', 1) .
-		rd_h('Engineering services', 2) .
-		rd_details('What types of engineering services does RD Engineering Solution provide?', 'Design, construction, installation, maintenance and consultancy across sectors such as water treatment, civil works and industrial systems.') .
-		rd_details('Can you handle both small and large-scale projects?', 'Yes. We manage projects of all sizes, from small community-based systems to large industrial or municipal projects.') .
-		rd_details('Do you offer customised engineering solutions?', 'Yes. We tailor our designs and implementation plans to client requirements and site conditions.') .
-		rd_h('Water laboratory', 2) .
-		rd_details('What services does your Water Laboratory offer?', 'Chemical, physical and microbiological analyses to help ensure water quality and safety for domestic, industrial and environmental applications.') .
-		rd_details('What parameters can you test?', 'pH, turbidity, total dissolved solids (TDS), hardness, nitrates, heavy metals, E. coli and other key indicators of water quality.') .
-		rd_details('Who can use your laboratory services?', 'Individuals, private companies, municipalities, NGOs and government agencies.') .
-		rd_details('How do I submit a water sample for testing?', 'Visit our laboratory or contact customer service for sampling guidelines and submission procedures. We also provide on-site sampling when needed.') .
-		rd_h('Professional training', 2) .
-		rd_details('What type of professional training do you provide?', 'Technical and professional training in engineering, laboratory analysis, project management, safety standards and equipment operation.') .
-		rd_details('Who can enrol in your training programmes?', 'Students, technicians, engineers and professionals seeking to upgrade their skills or meet certification requirements.') .
-		rd_details('Do you provide certificates after training?', 'Yes. Participants receive a certificate on successful completion of each programme.') .
-		rd_details('Can you organise on-site or customised training for companies?', 'Yes, we offer tailored corporate training programmes.') .
-		rd_h('Products', 2) .
-		rd_details('What types of products do you supply?', 'Engineering and laboratory products such as water treatment equipment, testing instruments, spare parts and consumables.') .
-		rd_details('Do you offer after-sales support or maintenance?', 'Yes. We provide technical support, maintenance and replacement services.') .
-		rd_details('How can I place an order or get a quote?', 'Contact us through our website, phone or email with your product needs, and our sales team will reply with pricing and availability.') .
-		rd_h('Contact and support', 2) .
-		rd_details('How can I contact RD Engineering Solution?', 'Use the contact form on this website, email or phone. Our team can help with enquiries, project discussions and service bookings.') .
-		rd_details('Where are you located?', 'Our head office is in Bonassama-Douala, Cameroon. We also serve clients nationwide and across the region.') .
-		rd_details('Do you provide consultation before a project starts?', 'Yes. We offer project consultation and feasibility studies to help clients choose the best technical and economic approach.') .
-		rd_details('What are your business hours?', 'Monday to Friday, 9:00 to 18:00, and Saturday by appointment.') .
-		$cta));
+	$C['faq']);
 
 $pages['contact'] = array('Contact', 'Contact and Quote Request | RD Engineering Solution', 'Contact RD Engineering Solution in Douala or request a quote for engineering, laboratory, training or products.',
 	$C['contact']);
 
 $pages['privacy'] = array('Privacy Policy', 'Privacy Policy | RD Engineering Solution', 'How RD Engineering Solution handles personal information collected through this website.',
-	rd_section(
-		rd_h('Privacy policy', 1) .
-		rd_placeholder('DRAFT. This is a plain-language starting point. Have it reviewed against the applicable Cameroonian data protection rules before publishing.') .
-		rd_h('What we collect', 2) .
-		rd_p('When you use the quote or contact form we receive the details you type: name, email, phone, organisation and your message.') .
-		rd_h('How we use it', 2) .
-		rd_p('We use these details only to reply to your request. We do not sell them.') .
-		rd_h('Who sees it', 2) .
-		rd_p('Our team receives the form by email. The website host stores the site and its backups.') .
-		rd_h('Your choices', 2) .
-		rd_p('Write to <a href="mailto:services@rdengineeringsol.com">services@rdengineeringsol.com</a> to ask what we hold about you or to have it deleted.')));
-
+	$C['privacy']);
 /* ---------------------------------------------------------------------------
  * Create or update pages
  * ------------------------------------------------------------------------- */

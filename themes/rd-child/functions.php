@@ -140,6 +140,23 @@ add_filter('nav_menu_item_title', function ($title, $item, $args, $depth) {
 	return '<span class="rd-sub__ico" aria-hidden="true">' . $icon . '</span><span class="rd-sub__txt"><span class="rd-sub__t">' . $title . '</span><span class="rd-sub__d">' . esc_html($item->description) . '</span></span>';
 }, 20, 4);
 
+/**
+ * Inner pages carry their own H1 inside .rd-page-hero — hide Kadence entry title
+ * so we do not show a duplicate "PRODUCTS" / "ABOUT" band above the shell.
+ */
+add_filter('kadence_page_title_elements', function ($elements) {
+	if (is_page() && !is_front_page()) {
+		return array();
+	}
+	return $elements;
+});
+add_filter('kadence_entry_header_show', function ($show) {
+	if (is_page() && !is_front_page()) {
+		return false;
+	}
+	return $show;
+});
+
 /** Mobile bar: call, WhatsApp, quote — icon + short label. */
 add_action('wp_footer', function () {
 	$phone    = apply_filters('rd_phone', '+237695981047');

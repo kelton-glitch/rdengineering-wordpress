@@ -137,7 +137,22 @@ function rd_pages_content($lang, array $img) {
 	$subjQuote = $x('Quote%20request', 'Demande%20de%20devis');
 	$tbs = $x('To be supplied', 'À fournir');
 	$tbc = $x('To be confirmed', 'À confirmer');
+	$sample = $x('Sample', 'Exemple');
 	$waNote = $x('WhatsApp availability on this number is to be confirmed.', 'La disponibilité de WhatsApp sur ce numéro reste à confirmer.');
+	$GLOBALS['rd_sample'] = $sample;
+	$GLOBALS['rd_work_with'] = $x('Work with us', 'Travaillons ensemble');
+	$GLOBALS['rd_todo'] = $x('To be completed:', 'À compléter :');
+	$GLOBALS['rd_caption'] = $x('Illustrative image', 'Image d’illustration');
+	$sampleNote = $x(
+		'Sample layout only — replace photos, project facts and credentials with real material when the owner supplies them.',
+		'Mise en page d’exemple uniquement — remplacer photos, faits de projet et pièces par du matériel réel dès que le propriétaire les fournit.'
+	);
+	$heroMedia = function ($id, $fallbackCap) use ($x) {
+		if ($id) {
+			return rd_img($id, 'rd-page-hero__media', $x('Illustrative image', 'Image d’illustration'), 'large', 'sizes="(max-width: 899px) 92vw, 38vw" loading="eager" decoding="async"');
+		}
+		return rd_media_slot($fallbackCap);
+	};
 	$mail = function ($addr, $label = '') {
 		return '<a href="mailto:' . $addr . '@rdengineeringsol.com">' . ($label ? $label : $addr . '@rdengineeringsol.com') . '</a>';
 	};
@@ -261,28 +276,130 @@ function rd_pages_content($lang, array $img) {
 	$out['home'] = $home;
 
 	/* ---------------------------------------------------------------- SERVICES */
-	$out['services'] = rd_section(
-		rd_head('', $x('Services', 'Services'), $x('Our services', 'Nos services'), $x('Four service lines. Tell us what you need and we will propose the right approach.', 'Quatre domaines d’activité. Dites-nous ce dont vous avez besoin et nous vous proposerons la bonne approche.'), 1) .
-		rd_cards($cardsPlain, 2)) .
-		rd_section(rd_h($x('Not sure where to start?', 'Vous ne savez pas par où commencer ?'), 2) . rd_p($x('Describe your project and we will reply with next steps. Every project is different.', 'Décrivez votre projet et nous vous répondrons avec les prochaines étapes. Chaque projet est différent.')) . $closeBtns, true);
+	$out['services'] = rd_page_hero(
+			$x('Services', 'Services'),
+			$x('Our services', 'Nos services'),
+			$x('Four service lines. Tell us what you need and we will propose the right approach.', 'Quatre domaines d’activité. Dites-nous ce dont vous avez besoin et nous vous proposerons la bonne approche.'),
+			$closeBtns
+		) .
+		rd_section(rd_cards($cardsPlain, 2) . rd_p($sampleNote, 'rd-note'), true) .
+		rd_page_close(
+			$x('Not sure where to start?', 'Vous ne savez pas par où commencer ?'),
+			$x('Describe your project and we will reply with next steps. Every project is different.', 'Décrivez votre projet et nous vous répondrons avec les prochaines étapes. Chaque projet est différent.'),
+			$closeBtns
+		);
+
+	/* ---------------------------------------------------------------- ENGINEERING (Ingerop-style scope + placeholders) */
+	$engBtns = rd_btns(array(
+		array($x('Request a quote', 'Demander un devis'), $U['contact']),
+		array($x('Call', 'Appeler') . ' ' . $phone, $tel, true, 'rd-desk-only'),
+		array('WhatsApp', $wa, true, 'rd-desk-only'),
+	)) . rd_p($waNote, 'rd-note');
+	$eng = rd_page_hero(
+		$x('Services · Engineering', 'Services · Ingénierie'),
+		$x('Engineering Services', 'Services d’ingénierie'),
+		$x('Design, construction, installation, maintenance and consultancy for water, sanitation and energy systems — from feasibility through handover.', 'Conception, construction, installation, maintenance et conseil pour des systèmes d’eau, d’assainissement et d’énergie — de la faisabilité jusqu’à la remise.'),
+		$engBtns,
+		$heroMedia(isset($img['engineering']) ? $img['engineering'] : 0, $x('Field / works photo to be supplied', 'Photo de chantier à fournir'))
+	);
+	$eng .= rd_section(
+		rd_head('01', $x('Who this is for', 'Pour qui'), $x('Buyers who need a clear engineering desk', 'Acheteurs qui ont besoin d’un bureau d’ingénierie clair'), $x('Municipalities, NGOs, donors, private companies and programme managers who must scope works in Cameroon and across the region.', 'Municipalités, ONG, bailleurs, entreprises et chefs de programme qui doivent cadrer des travaux au Cameroun et dans la région.')) .
+		rd_p($sampleNote, 'rd-note'));
+	$eng .= rd_section(
+		rd_head('02', $x('Scope of work', 'Périmètre'), $x('Services provided and technical skills', 'Services fournis et compétences techniques'), $x('Draft lists for layout review. Owner will adjust wording and depth.', 'Listes provisoires pour valider la mise en page. Le propriétaire ajustera le texte et le niveau de détail.')) .
+		rd_scope_grid(
+			$x('Services provided', 'Services fournis'),
+			array(
+				$x('Feasibility studies and site advice', 'Études de faisabilité et conseil sur site'),
+				$x('System design for water supply, sanitation and energy', 'Conception de systèmes d’eau, d’assainissement et d’énergie'),
+				$x('Borehole development and pump installation (sample wording)', 'Développement de forages et installation de pompes (libellé d’exemple)'),
+				$x('Construction supervision and handover', 'Supervision de construction et remise'),
+				$x('Climate resilience planning and ESIAs', 'Planification de la résilience climatique et EIES'),
+				$x('Maintenance planning and after-sales support', 'Plan de maintenance et assistance après-vente'),
+			),
+			$x('Technical skills', 'Compétences techniques'),
+			array(
+				$x('Hydraulics and pipe network design (sample)', 'Hydraulique et conception de réseaux (exemple)'),
+				$x('Civil works for water and sanitation structures (sample)', 'Génie civil pour ouvrages d’eau et d’assainissement (exemple)'),
+				$x('Electromechanical / solar pumping support (sample)', 'Support électromécanique / pompage solaire (exemple)'),
+				$x('Environmental and social screening inputs (sample)', 'Entrées de screening environnemental et social (exemple)'),
+				$x('As-built documentation and operator briefing (sample)', 'Dossiers de récolement et briefing opérateurs (exemple)'),
+			)
+		), true);
+	$eng .= rd_section(
+		rd_head('03', $x('Project sheets', 'Fiches projet'), $x('How references will look', 'À quoi ressembleront les références'), $x('Dummy sheets for visual layout. Replace with real location, scope and measured results.', 'Fiches fictives pour la mise en page. À remplacer par le lieu, le périmètre et les résultats mesurés.')) .
+		rd_group(
+			rd_group(
+				rd_p('<strong>' . $x('Sample 01 · Community borehole', 'Exemple 01 · Forage communautaire') . '</strong> ' . rd_chip($sample)) .
+				rd_p($x('Where', 'Lieu') . ': Bonabéri, Douala · ' . $x('Scope', 'Périmètre') . ': ' . $x('Drilling, pump, briefing', 'Forage, pompe, briefing') . ' · ' . $x('Result', 'Résultat') . ': ' . $tbs),
+				'rd-slot'
+			) .
+			rd_group(
+				rd_p('<strong>' . $x('Sample 02 · WASH block', 'Exemple 02 · Bloc WASH') . '</strong> ' . rd_chip($sample)) .
+				rd_p($x('Where', 'Lieu') . ': ' . $tbs . ' · ' . $x('Scope', 'Périmètre') . ': ' . $tbs . ' · ' . $x('Result', 'Résultat') . ': ' . $tbs),
+				'rd-slot'
+			) .
+			rd_group(
+				rd_p('<strong>' . $x('Sample 03 · Solar pump retrofit', 'Exemple 03 · Pompe solaire') . '</strong> ' . rd_chip($sample)) .
+				rd_p($x('Where', 'Lieu') . ': ' . $tbs . ' · ' . $x('Scope', 'Périmètre') . ': ' . $tbs . ' · ' . $x('Result', 'Résultat') . ': ' . $tbs),
+				'rd-slot'
+			),
+			'rd-slots'
+		) .
+		rd_media_slot($x('Project photography to be supplied', 'Photographies de projet à fournir')));
+	$eng .= rd_section(
+		rd_head('04', $x('Credentials', 'Pièces'), $x('What engineering can document today', 'Ce que l’ingénierie peut documenter aujourd’hui')) .
+		rd_file(array(
+			array($x('Team CVs and licences', 'CV et licences de l’équipe'), $tbs),
+			array($x('Sample method statements', 'Notes de méthode types'), $tbs),
+			array($x('Insurance certificates', 'Attestations d’assurance'), $tbs),
+			array($x('Past project references', 'Références de projets'), $tbs),
+		)) .
+		rd_p($mail('services'), 'rd-note'), true);
+	$eng .= rd_page_close(
+		$x('Plan an engineering scope', 'Cadrez un périmètre d’ingénierie'),
+		$x('Say what you need, where the site is, and who it is for. We reply from the engineering desk.', 'Indiquez le besoin, le site et le public. Nous répondons depuis le bureau d’ingénierie.'),
+		$engBtns,
+		rd_p($mail('services'), 'rd-note')
+	);
+	$out['engineering-services'] = $eng;
 
 	/* ---------------------------------------------------------------- WATER LABORATORY */
-	$labHero = rd_group(
-		rd_group(
-			rd_p($x('Services · Water Laboratory', 'Services · Laboratoire d’analyse de l’eau'), 'rd-eyebrow') .
-			rd_h($x('Water Laboratory', 'Laboratoire d’analyse de l’eau'), 1) .
-			rd_p($x('Chemical, physical and microbiological analysis, with on-site sampling available. For individuals, private companies, municipalities, NGOs and government agencies.', 'Analyses chimiques, physiques et microbiologiques, avec prélèvement sur site possible. Pour les particuliers, les entreprises privées, les municipalités, les ONG et les administrations.'), 'rd-lead') .
-			rd_btns(array(
-				array($x('Request a water test', 'Demander une analyse d’eau'), '#water-test'),
-				array($x('Call', 'Appeler') . ' ' . $phone, $tel, true, 'rd-desk-only'),
-				array('WhatsApp', $wa, true, 'rd-desk-only'),
-			)) . rd_p($waNote, 'rd-note'), 'rd-lab__text') .
-		rd_img($img['laboratory'], 'rd-lab__img', $x('Illustrative image', 'Image d’illustration'), 'large', 'sizes="(max-width: 899px) 92vw, 40vw" fetchpriority="high" loading="eager" decoding="async"'),
-		'rd-lab__grid');
-	$lab = rd_group(rd_group($labHero, 'rd-container'), 'rd-section rd-lab', true);
+	$labBtns = rd_btns(array(
+		array($x('Request a water test', 'Demander une analyse d’eau'), '#water-test'),
+		array($x('Call', 'Appeler') . ' ' . $phone, $tel, true, 'rd-desk-only'),
+		array('WhatsApp', $wa, true, 'rd-desk-only'),
+	)) . rd_p($waNote, 'rd-note');
+	$lab = rd_page_hero(
+		$x('Services · Water Laboratory', 'Services · Laboratoire d’analyse de l’eau'),
+		$x('Water Laboratory', 'Laboratoire d’analyse de l’eau'),
+		$x('Chemical, physical and microbiological analysis, with on-site sampling available. For individuals, private companies, municipalities, NGOs and government agencies.', 'Analyses chimiques, physiques et microbiologiques, avec prélèvement sur site possible. Pour les particuliers, les entreprises privées, les municipalités, les ONG et les administrations.'),
+		$labBtns,
+		$heroMedia(isset($img['laboratory']) ? $img['laboratory'] : 0, $x('Laboratory bench photo to be supplied', 'Photo de paillasse à fournir'))
+	);
+	$lab .= rd_section(
+		rd_head('01', $x('Scope of testing', 'Périmètre d’analyse'), $x('Services provided and methods', 'Services fournis et méthodes'), $x('Parameter list is confirmed. Methods and limits stay as gaps until documented.', 'La liste de paramètres est confirmée. Méthodes et limites restent en écart tant qu’elles ne sont pas documentées.')) .
+		rd_scope_grid(
+			$x('Services provided', 'Services fournis'),
+			array(
+				$x('Chemical analysis (pH, hardness, nitrates, heavy metals)', 'Analyses chimiques (pH, dureté, nitrates, métaux lourds)'),
+				$x('Physical analysis (turbidity, TDS)', 'Analyses physiques (turbidité, TDS)'),
+				$x('Microbiological analysis (E. coli)', 'Analyses microbiologiques (E. coli)'),
+				$x('On-site sampling on request', 'Prélèvement sur site sur demande'),
+				$x('Written results for your file (format to be confirmed)', 'Résultats écrits pour votre dossier (format à confirmer)'),
+			),
+			$x('Methods and skills', 'Méthodes et compétences'),
+			array(
+				$x('Sampling handling guidance (on request)', 'Consignes de prélèvement (sur demande)'),
+				$x('Standard methods used', 'Normes et méthodes utilisées') . ' — ' . rd_chip($tbs),
+				$x('Reporting limits per parameter', 'Limites de rapport par paramètre') . ' — ' . rd_chip($tbs),
+				$x('Turnaround times', 'Délais de rendu') . ' — ' . rd_chip($tbc),
+				$x('Accreditation status', 'Statut d’accréditation') . ' — ' . rd_chip($tbs),
+			)
+		));
 	$noteChip = $x('Methods and reporting limits for each parameter:', 'Méthodes et limites de rapport pour chaque paramètre :') . ' ' . rd_chip($tbs);
 	$lab .= rd_section(
-		rd_head('I', $x('What we test', 'Ce que nous analysons'), $x('Seven named parameters, three kinds of analysis', 'Sept paramètres nommés, trois types d’analyse'), $x('These are the parameters we list today. Need something that is not on this list? Ask.', 'Voici les paramètres que nous listons aujourd’hui. Vous avez besoin d’autre chose ? Demandez-nous.')) .
+		rd_head('02', $x('What we test', 'Ce que nous analysons'), $x('Seven named parameters, three kinds of analysis', 'Sept paramètres nommés, trois types d’analyse'), $x('These are the parameters we list today. Need something that is not on this list? Ask.', 'Voici les paramètres que nous listons aujourd’hui. Vous avez besoin d’autre chose ? Demandez-nous.')) .
 		rd_params(array(
 			array('pH', $x('Chemical', 'Chimique')),
 			array($x('Turbidity', 'Turbidité'), $x('Physical', 'Physique')),
@@ -296,7 +413,7 @@ function rd_pages_content($lang, array $img) {
 		return '<a href="mailto:waterlab@rdengineeringsol.com?subject=' . $subj . '">' . $label . '</a>';
 	};
 	$lab .= rd_section(
-		rd_head('II', $x('Status register', 'Registre des pièces'), $x('What the laboratory can document today', 'Ce que le laboratoire peut documenter aujourd’hui'), $x('Nothing below is claimed until it can be shown. Ask for any item by email.', 'Rien ci-dessous n’est affirmé tant que cela ne peut pas être montré. Demandez chaque pièce par e-mail.')) .
+		rd_head('03', $x('Status register', 'Registre des pièces'), $x('What the laboratory can document today', 'Ce que le laboratoire peut documenter aujourd’hui'), $x('Nothing below is claimed until it can be shown. Ask for any item by email.', 'Rien ci-dessous n’est affirmé tant que cela ne peut pas être montré. Demandez chaque pièce par e-mail.')) .
 		rd_file(array(
 			array($x('Laboratory accreditation', 'Accréditation du laboratoire'), $tbs, $ask('Request%3A%20accreditation', $askDocs)),
 			array($x('Standards and methods used', 'Normes et méthodes utilisées'), $tbs, $ask('Request%3A%20methods', $askDocs)),
@@ -306,7 +423,7 @@ function rd_pages_content($lang, array $img) {
 		)));
 	$lab .= rd_quote_band($x('We would rather leave a clear gap than fill it with claims we cannot document.', 'Nous préférons laisser un vide visible plutôt que le remplir avec des affirmations que nous ne pouvons pas documenter.'));
 	$lab .= rd_section(
-		rd_head('III', $x('How it works', 'Comment ça se passe'), $x('Four steps, from first message to results', 'Quatre étapes, du premier message aux résultats')) .
+		rd_head('04', $x('How it works', 'Comment ça se passe'), $x('Four steps, from first message to results', 'Quatre étapes, du premier message aux résultats')) .
 		rd_ol(array(
 			'<strong>' . $x('Tell us about your project', 'Parlez-nous de votre projet') . '</strong><span>' . $x('What water, where, and what it is for.', 'Quelle eau, où, et pour quel usage.') . '</span>',
 			'<strong>' . $x('We propose a testing plan', 'Nous proposons un plan d’analyses') . '</strong><span>' . $x('You receive a proposal for your project.', 'Vous recevez une proposition pour votre projet.') . '</span>',
@@ -314,7 +431,7 @@ function rd_pages_content($lang, array $img) {
 			'<strong>' . $x('Reports are delivered', 'Remise des rapports') . '</strong><span>' . $x('You receive your results.', 'Vous recevez vos résultats.') . '</span>',
 		), 'rd-steps'), true);
 	$lab .= rd_section(
-		rd_head('IV', $x('Submit a sample', 'Soumettre un échantillon'), $x('Before you write, have these ready', 'Avant de nous écrire, préparez ceci')) .
+		rd_head('05', $x('Submit a sample', 'Soumettre un échantillon'), $x('Before you write, have these ready', 'Avant de nous écrire, préparez ceci')) .
 		rd_ulc(array(
 			$x('Your name, organisation and a phone number.', 'Votre nom, votre organisation et un numéro de téléphone.'),
 			$x('Where the water comes from (borehole, well, tap, surface water, other).', 'D’où vient l’eau (forage, puits, robinet, eau de surface, autre).'),
@@ -328,43 +445,65 @@ function rd_pages_content($lang, array $img) {
 	$out['water-laboratory'] = $lab;
 
 	/* ---------------------------------------------------------------- ABOUT */
-	$out['about'] = rd_section(
-		rd_p($x('About', 'À propos'), 'rd-eyebrow') . rd_h($x('About RD Engineering Solution', 'À propos de RD Engineering Solution'), 1) . rd_img($img['team'], 'rd-media') .
-		rd_p($x('RD Engineering Solution works on water, sanitation and energy in Africa. From Bonassama-Douala, Cameroon, we combine engineering services, a water testing laboratory, professional training and a range of products.', 'RD Engineering Solution intervient dans l’eau, l’assainissement et l’énergie en Afrique. Depuis Bonassama-Douala, au Cameroun, nous réunissons des services d’ingénierie, un laboratoire d’analyse de l’eau, de la formation professionnelle et une gamme de produits.')) .
-		rd_h($x('What drives our work', 'Ce qui guide notre travail'), 2) .
-		rd_ul(array(
-			'<strong>' . $x('Research and development:', 'Recherche et développement :') . '</strong> ' . $x('developing affordable and accessible water treatment solutions.', 'mise au point de solutions de traitement de l’eau abordables et accessibles.'),
-			'<strong>' . $x('Training and awareness:', 'Formation et sensibilisation :') . '</strong> ' . $x('building community and institutional capacity on water safety.', 'renforcement des capacités des communautés et des institutions en matière de sécurité de l’eau.'),
-			'<strong>' . $x('Local relevance:', 'Pertinence locale :') . '</strong> ' . $x('engineering solutions tailored to local contexts.', 'solutions d’ingénierie adaptées aux contextes locaux.'),
-		))) .
+	$out['about'] = rd_page_hero(
+			$x('About', 'À propos'),
+			$x('About RD Engineering Solution', 'À propos de RD Engineering Solution'),
+			$x('Water, sanitation and energy from Bonassama-Douala — engineering, laboratory, training and products under one roof.', 'Eau, assainissement et énergie depuis Bonassama-Douala — ingénierie, laboratoire, formation et produits sous le même toit.'),
+			$closeBtns,
+			$heroMedia(isset($img['team']) ? $img['team'] : 0, $x('Team / office photo to be supplied', 'Photo d’équipe / bureau à fournir'))
+		) .
 		rd_section(
-			rd_head('', $x('Company record', 'Dossier de l’entreprise'), $x('What we cannot show yet', 'Ce que nous ne pouvons pas encore montrer')) .
+			rd_p($x('RD Engineering Solution works on water, sanitation and energy in Africa. From Bonassama-Douala, Cameroon, we combine engineering services, a water testing laboratory, professional training and a range of products.', 'RD Engineering Solution intervient dans l’eau, l’assainissement et l’énergie en Afrique. Depuis Bonassama-Douala, au Cameroun, nous réunissons des services d’ingénierie, un laboratoire d’analyse de l’eau, de la formation professionnelle et une gamme de produits.')) .
+			rd_h($x('What drives our work', 'Ce qui guide notre travail'), 2) .
+			rd_ul(array(
+				'<strong>' . $x('Research and development:', 'Recherche et développement :') . '</strong> ' . $x('developing affordable and accessible water treatment solutions.', 'mise au point de solutions de traitement de l’eau abordables et accessibles.'),
+				'<strong>' . $x('Training and awareness:', 'Formation et sensibilisation :') . '</strong> ' . $x('building community and institutional capacity on water safety.', 'renforcement des capacités des communautés et des institutions en matière de sécurité de l’eau.'),
+				'<strong>' . $x('Local relevance:', 'Pertinence locale :') . '</strong> ' . $x('engineering solutions tailored to local contexts.', 'solutions d’ingénierie adaptées aux contextes locaux.'),
+			)) .
+			rd_p($sampleNote, 'rd-note')) .
+		rd_section(
+			rd_head('01', $x('Company record', 'Dossier de l’entreprise'), $x('What we cannot show yet', 'Ce que nous ne pouvons pas encore montrer')) .
 			rd_file(array(
 				array($x('Team members: names, roles and qualifications', 'Équipe : noms, fonctions et qualifications'), $tbs),
 				array($x('Company registration and tax numbers', 'Numéros d’immatriculation et d’identifiant fiscal'), $tbs),
 				array($x('Partners and references', 'Partenaires et références'), $tbs),
 			)) .
-			rd_h($x('Projects', 'Projets'), 3) . $slots, true);
+			rd_h($x('Projects', 'Projets'), 3) . $slots, true) .
+		rd_page_close(
+			$x('Tell us about your project', 'Parlez-nous de votre projet'),
+			$x('NGOs, municipalities, companies and individuals are welcome.', 'ONG, municipalités, entreprises et particuliers sont les bienvenus.'),
+			$closeBtns,
+			$emails
+		);
 
 	/* ---------------------------------------------------------------- TENDERS */
-	$out['tenders'] = rd_section(
-		rd_p($x('For institutional buyers', 'Pour les acheteurs institutionnels'), 'rd-eyebrow') . rd_h($x('Tenders and procurement', 'Appels d’offres et marchés'), 1) .
-		rd_p($x('Information for NGOs, public bodies and companies that need to qualify a supplier.', 'Informations pour les ONG, les organismes publics et les entreprises qui doivent qualifier un fournisseur.')) .
-		rd_h($x('Company details', 'Informations sur l’entreprise'), 2) .
-		rd_ul(array(
-			'<strong>' . $x('Legal name:', 'Dénomination :') . '</strong> RD Engineering Solution',
-			'<strong>' . $x('Base:', 'Siège :') . '</strong> ' . $base,
-			'<strong>' . $x('Telephone:', 'Téléphone :') . '</strong> <a href="' . $tel . '">' . $phone . '</a>',
-			'<strong>' . $x('Hours:', 'Horaires :') . '</strong> ' . $hoursShort,
-		)) .
-		rd_h($x('Service categories', 'Catégories de services'), 2) .
-		rd_ul(array(
-			$x('Engineering and consultancy for water, sanitation and energy', 'Ingénierie et conseil pour l’eau, l’assainissement et l’énergie'),
-			$x('Water quality testing', 'Analyse de la qualité de l’eau'),
-			$x('Professional training', 'Formation professionnelle'),
-			$x('Supply of engineering and laboratory products', 'Fourniture de produits d’ingénierie et de laboratoire'),
-		))) .
-		rd_section(rd_head('', $x('Procurement readiness', 'Pour les équipes achats'), $x('Supplier file: status of each item', 'Dossier fournisseur : état de chaque pièce'), $x('None of these documents is published yet. Ask for any of them by email and it will be supplied when available.', 'Aucune de ces pièces n’est encore publiée. Demandez-les par e-mail : elles seront fournies dès qu’elles seront disponibles.')) . $fileBlock, true);
+	$out['tenders'] = rd_page_hero(
+			$x('For institutional buyers', 'Pour les acheteurs institutionnels'),
+			$x('Tenders and procurement', 'Appels d’offres et marchés'),
+			$x('Information for NGOs, public bodies and companies that need to qualify a supplier.', 'Informations pour les ONG, les organismes publics et les entreprises qui doivent qualifier un fournisseur.'),
+			rd_btns(array(
+				array($x('Ask for supplier documents', 'Demander les documents fournisseur'), 'mailto:services@rdengineeringsol.com?subject=' . $x('Supplier%20documents%20request', 'Demande%20de%20documents%20fournisseur')),
+				array($x('Request a quote', 'Demander un devis'), $U['contact'], true),
+			))
+		) .
+		rd_section(
+			rd_h($x('Company details', 'Informations sur l’entreprise'), 2) .
+			rd_ul(array(
+				'<strong>' . $x('Legal name:', 'Dénomination :') . '</strong> RD Engineering Solution',
+				'<strong>' . $x('Base:', 'Siège :') . '</strong> ' . $base,
+				'<strong>' . $x('Telephone:', 'Téléphone :') . '</strong> <a href="' . $tel . '">' . $phone . '</a>',
+				'<strong>' . $x('Hours:', 'Horaires :') . '</strong> ' . $hoursShort,
+			)) .
+			rd_h($x('Service categories', 'Catégories de services'), 2) .
+			rd_ul(array(
+				$x('Engineering and consultancy for water, sanitation and energy', 'Ingénierie et conseil pour l’eau, l’assainissement et l’énergie'),
+				$x('Water quality testing', 'Analyse de la qualité de l’eau'),
+				$x('Professional training', 'Formation professionnelle'),
+				$x('Supply of engineering and laboratory products', 'Fourniture de produits d’ingénierie et de laboratoire'),
+			))) .
+		rd_section(
+			rd_head('01', $x('Procurement readiness', 'Pour les équipes achats'), $x('Supplier file: status of each item', 'Dossier fournisseur : état de chaque pièce'), $x('None of these documents is published yet. Ask for any of them by email and it will be supplied when available.', 'Aucune de ces pièces n’est encore publiée. Demandez-les par e-mail : elles seront fournies dès qu’elles seront disponibles.')) .
+			$fileBlock, true);
 
 	/* ---------------------------------------------------------------- CONTACT */
 	$reach = rd_group(
@@ -378,12 +517,234 @@ function rd_pages_content($lang, array $img) {
 				'<strong>' . $x('Address:', 'Adresse :') . '</strong> ' . $base,
 				'<strong>' . $x('Hours:', 'Horaires :') . '</strong> ' . $hoursShort,
 			), 'rd-reach'), 'rd-aside');
-	$out['contact'] = rd_section(
-		rd_p($x('Contact', 'Contact'), 'rd-eyebrow') . rd_h($x('Contact us and request a quote', 'Contactez-nous et demandez un devis'), 1) .
-		rd_p($x('Tell us about your project and we will reply with next steps.', 'Parlez-nous de votre projet et nous vous répondrons avec les prochaines étapes.')) .
+	$out['contact'] = rd_page_hero(
+			$x('Contact', 'Contact'),
+			$x('Contact us and request a quote', 'Contactez-nous et demandez un devis'),
+			$x('Tell us about your project and we will reply with next steps.', 'Parlez-nous de votre projet et nous vous répondrons avec les prochaines étapes.'),
+			rd_btns(array(
+				array($x('Call', 'Appeler') . ' ' . $phone, $tel, true),
+				array('WhatsApp', $wa, true),
+			)) . rd_p($waNote, 'rd-note')
+		) .
+		rd_section(
+			rd_group(
+				rd_group(rd_form_block(rd_cf7_form($lang, 'quote'), $x('Quote request', 'Demande de devis')), 'rd-split__main') . $reach,
+				'rd-split'
+			));
+
+	/* ---------------------------------------------------------------- PROFESSIONAL TRAINING */
+	$trainBtns = rd_btns(array(
+		array($x('Request a quote', 'Demander un devis'), $U['contact']),
+		array($x('Call', 'Appeler') . ' ' . $phone, $tel, true, 'rd-desk-only'),
+		array('WhatsApp', $wa, true, 'rd-desk-only'),
+	)) . rd_p($waNote, 'rd-note');
+	$train = rd_page_hero(
+		$x('Services · Training', 'Services · Formation'),
+		$x('Professional Training', 'Formation professionnelle'),
+		$x('Technical courses with certificates — for technicians, engineers, NGOs, municipalities and companies. Corporate and on-site options.', 'Formations techniques avec certificat — pour techniciens, ingénieurs, ONG, municipalités et entreprises. Options entreprise et sur site.'),
+		$trainBtns,
+		$heroMedia(isset($img['training']) ? $img['training'] : 0, $x('Training session photo to be supplied', 'Photo de session de formation à fournir'))
+	);
+	$train .= rd_section(
+		rd_head('01', $x('Who this is for', 'Pour qui'), $x('People and teams who need practical skills', 'Personnes et équipes qui ont besoin de compétences pratiques'), $x('Students, technicians, engineers, NGO and municipal staff, and private companies upgrading field skills.', 'Étudiants, techniciens, ingénieurs, agents d’ONG et de municipalités, et entreprises renforçant les compétences terrain.')) .
+		rd_p($sampleNote, 'rd-note'));
+	$train .= rd_section(
+		rd_head('02', $x('Programmes', 'Programmes'), $x('What we offer and how we deliver', 'Ce que nous proposons et comment nous le livrons'), $x('Draft programme list for layout. Owner will confirm titles, duration and certificates.', 'Liste provisoire pour la mise en page. Le propriétaire confirmera titres, durée et certificats.')) .
+		rd_scope_grid(
+			$x('Programmes offered', 'Programmes proposés'),
+			array(
+				$x('Technical training in WASH engineering', 'Formation technique en ingénierie WASH'),
+				$x('Water testing and laboratory practice (sample)', 'Analyse de l’eau et pratique de laboratoire (exemple)'),
+				$x('Renewable energy / solar pumping (sample)', 'Énergie renouvelable / pompage solaire (exemple)'),
+				$x('Short courses for NGOs and municipalities', 'Formations courtes pour ONG et municipalités'),
+				$x('Community training on safe water and hygiene', 'Formation communautaire sur l’eau potable et l’hygiène'),
+				$x('Project management and monitoring workshops (sample)', 'Ateliers de gestion de projet et de suivi (exemple)'),
+			),
+			$x('Delivery and outcomes', 'Modalités et résultats'),
+			array(
+				$x('Certificate on successful completion', 'Certificat à l’issue de la formation'),
+				$x('Corporate / on-site training on request', 'Formation en entreprise / sur site sur demande'),
+				$x('Internship and mentorship (sample — to confirm)', 'Stage et mentorat (exemple — à confirmer)'),
+				$x('Course calendar and fees', 'Calendrier et tarifs') . ' — ' . rd_chip($tbs),
+				$x('Trainer CVs and outlines', 'CV des formateurs et plans de cours') . ' — ' . rd_chip($tbs),
+			)
+		), true);
+	$train .= rd_section(
+		rd_head('03', $x('Sample course sheets', 'Fiches cours types'), $x('How courses will be presented', 'Comment les cours seront présentés')) .
 		rd_group(
-			rd_group(rd_form_block(rd_cf7_form($lang, 'quote'), $x('Quote request', 'Demande de devis')), 'rd-split__main') . $reach,
-			'rd-split'));
+			rd_group(
+				rd_p('<strong>' . $x('Sample · Safe water sampling', 'Exemple · Prélèvement d’eau potable') . '</strong> ' . rd_chip($sample)) .
+				rd_p($x('Duration', 'Durée') . ': ' . $tbs . ' · ' . $x('Audience', 'Public') . ': ' . $tbs . ' · ' . $x('Outcome', 'Résultat') . ': ' . $x('Certificate', 'Certificat') . ' — ' . rd_chip($tbc)),
+				'rd-slot'
+			) .
+			rd_group(
+				rd_p('<strong>' . $x('Sample · Solar pump basics', 'Exemple · Bases pompe solaire') . '</strong> ' . rd_chip($sample)) .
+				rd_p($x('Duration', 'Durée') . ': ' . $tbs . ' · ' . $x('Audience', 'Public') . ': ' . $tbs . ' · ' . $x('Outcome', 'Résultat') . ': ' . $tbs),
+				'rd-slot'
+			) .
+			rd_group(
+				rd_p('<strong>' . $x('Sample · Lab practice day', 'Exemple · Journée pratique labo') . '</strong> ' . rd_chip($sample)) .
+				rd_p($x('Duration', 'Durée') . ': ' . $tbs . ' · ' . $x('Audience', 'Public') . ': ' . $tbs . ' · ' . $x('Outcome', 'Résultat') . ': ' . $tbs),
+				'rd-slot'
+			),
+			'rd-slots'
+		) .
+		rd_media_slot($x('Classroom / field training photo to be supplied', 'Photo de formation en salle / terrain à fournir')));
+	$train .= rd_section(
+		rd_head('04', $x('Common questions', 'Questions fréquentes'), $x('Quick answers', 'Réponses rapides')) .
+		rd_details($x('Who can enrol?', 'Qui peut s’inscrire ?'), $x('Students, technicians, engineers and professionals seeking to upgrade skills or meet certification needs.', 'Étudiants, techniciens, ingénieurs et professionnels souhaitant renforcer leurs compétences ou répondre à des exigences de certification.')) .
+		rd_details($x('Do you provide certificates?', 'Délivrez-vous des certificats ?'), $x('Yes. Participants receive a certificate on successful completion of each programme.', 'Oui. Les participants reçoivent un certificat après avoir terminé avec succès chaque programme.')) .
+		rd_details($x('Can you train on site?', 'Pouvez-vous former sur site ?'), $x('Yes. We offer tailored corporate and on-site programmes.', 'Oui. Nous proposons des programmes sur mesure en entreprise et sur site.')), true);
+	$train .= rd_page_close(
+		$x('Plan a training', 'Planifiez une formation'),
+		$x('Tell us the topic, audience and location. We reply from the training desk.', 'Indiquez le thème, le public et le lieu. Nous répondons depuis le bureau formation.'),
+		$trainBtns,
+		rd_p($mail('training'), 'rd-note')
+	);
+	$out['professional-training'] = $train;
+
+	/* ---------------------------------------------------------------- PRODUCTS */
+	$prodBtns = rd_btns(array(
+		array($x('Request a product quote', 'Demander un devis produit'), $U['contact']),
+		array($x('Call', 'Appeler') . ' ' . $phone, $tel, true, 'rd-desk-only'),
+		array('WhatsApp', $wa, true, 'rd-desk-only'),
+	)) . rd_p($waNote, 'rd-note');
+	$prod = rd_page_hero(
+		$x('Services · Products', 'Services · Produits'),
+		$x('Products', 'Produits'),
+		$x('Water treatment, sanitation and energy products — plus kits and after-sales. Prices on request.', 'Produits pour l’eau, l’assainissement et l’énergie — plus kits et SAV. Prix sur demande.'),
+		$prodBtns,
+		$heroMedia(isset($img['products']) ? $img['products'] : 0, $x('Product / catalogue photo to be supplied', 'Photo catalogue / produit à fournir'))
+	);
+	$prod .= rd_section(
+		rd_head('01', $x('Who this is for', 'Pour qui'), $x('Buyers who need supply with support', 'Acheteurs qui ont besoin de fourniture avec support'), $x('Projects, municipalities, NGOs and companies that need equipment, kits or consumables with clear after-sales.', 'Projets, municipalités, ONG et entreprises qui ont besoin d’équipements, kits ou consommables avec un SAV clair.')) .
+		rd_p($sampleNote, 'rd-note'));
+	$prod .= rd_section(
+		rd_head('02', $x('Catalogue outline', 'Esquisse du catalogue'), $x('Categories and support', 'Catégories et support'), $x('Sample category lists for layout. SKUs, prices and stock stay as gaps.', 'Listes de catégories pour la mise en page. Références, prix et stock restent en écart.')) .
+		rd_scope_grid(
+			$x('Product lines', 'Gammes de produits'),
+			array(
+				$x('Water treatment and sanitation: filters, chlorine, latrine slabs, handwashing kits', 'Traitement de l’eau et assainissement : filtres, chlore, dalles, kits de lavage des mains'),
+				$x('Renewable energy: solar pumps, solar lighting, efficient stoves', 'Énergie renouvelable : pompes solaires, éclairage solaire, foyers améliorés'),
+				$x('Engineering and field kits: drilling kits, water testing kits', 'Kits d’ingénierie et de terrain : kits de forage, kits d’analyse'),
+				$x('Spare parts and consumables (sample)', 'Pièces détachées et consommables (exemple)'),
+				$x('Locally developed innovations (sample — to confirm)', 'Innovations locales (exemple — à confirmer)'),
+			),
+			$x('Commercial terms', 'Conditions commerciales'),
+			array(
+				$x('Prices on request', 'Prix sur demande'),
+				$x('Distribution and delivery', 'Distribution et livraison') . ' — ' . rd_chip($tbs),
+				$x('Warranty terms', 'Conditions de garantie') . ' — ' . rd_chip($tbs),
+				$x('After-sales and maintenance', 'SAV et maintenance'),
+				$x('Stock list / lead times', 'Stock / délais') . ' — ' . rd_chip($tbs),
+			)
+		), true);
+	$prod .= rd_section(
+		rd_head('03', $x('Sample product cards', 'Fiches produit types'), $x('How items will appear', 'Comment les articles apparaîtront')) .
+		rd_group(
+			rd_group(
+				rd_p('<strong>' . $x('Sample · Household filter kit', 'Exemple · Kit filtre domestique') . '</strong> ' . rd_chip($sample)) .
+				rd_p($x('Use', 'Usage') . ': ' . $tbs . ' · ' . $x('Price', 'Prix') . ': ' . $tbc . ' · ' . $x('Photo', 'Photo') . ': ' . $tbs),
+				'rd-slot'
+			) .
+			rd_group(
+				rd_p('<strong>' . $x('Sample · Solar pump set', 'Exemple · Ensemble pompe solaire') . '</strong> ' . rd_chip($sample)) .
+				rd_p($x('Use', 'Usage') . ': ' . $tbs . ' · ' . $x('Price', 'Prix') . ': ' . $tbc . ' · ' . $x('Photo', 'Photo') . ': ' . $tbs),
+				'rd-slot'
+			) .
+			rd_group(
+				rd_p('<strong>' . $x('Sample · Field test kit', 'Exemple · Kit d’analyse terrain') . '</strong> ' . rd_chip($sample)) .
+				rd_p($x('Use', 'Usage') . ': ' . $tbs . ' · ' . $x('Price', 'Prix') . ': ' . $tbc . ' · ' . $x('Photo', 'Photo') . ': ' . $tbs),
+				'rd-slot'
+			) .
+			rd_group(
+				rd_p('<strong>' . $x('Sample · Chlorine dosing set', 'Exemple · Ensemble dosage chlore') . '</strong> ' . rd_chip($sample)) .
+				rd_p($x('Use', 'Usage') . ': ' . $tbs . ' · ' . $x('Price', 'Prix') . ': ' . $tbc . ' · ' . $x('Photo', 'Photo') . ': ' . $tbs),
+				'rd-slot'
+			) .
+			rd_group(
+				rd_p('<strong>' . $x('Sample · Handwashing station', 'Exemple · Station de lavage des mains') . '</strong> ' . rd_chip($sample)) .
+				rd_p($x('Use', 'Usage') . ': ' . $tbs . ' · ' . $x('Price', 'Prix') . ': ' . $tbc . ' · ' . $x('Photo', 'Photo') . ': ' . $tbs),
+				'rd-slot'
+			) .
+			rd_group(
+				rd_p('<strong>' . $x('Sample · Spare parts pack', 'Exemple · Pack pièces détachées') . '</strong> ' . rd_chip($sample)) .
+				rd_p($x('Use', 'Usage') . ': ' . $tbs . ' · ' . $x('Price', 'Prix') . ': ' . $tbc . ' · ' . $x('Photo', 'Photo') . ': ' . $tbs),
+				'rd-slot'
+			),
+			'rd-slots'
+		) .
+		rd_media_slot($x('Catalogue photography to be supplied', 'Photographies catalogue à fournir')));
+	$prod .= rd_section(
+		rd_head('04', $x('Common questions', 'Questions fréquentes'), $x('Quick answers', 'Réponses rapides')) .
+		rd_details($x('What do you supply?', 'Que fournissez-vous ?'), $x('Engineering and laboratory products such as water treatment equipment, testing instruments, spare parts and consumables.', 'Produits d’ingénierie et de laboratoire : équipements de traitement, instruments d’analyse, pièces et consommables.')) .
+		rd_details($x('After-sales support?', 'Service après-vente ?'), $x('Yes. Technical support, maintenance and replacement services.', 'Oui. Assistance technique, maintenance et remplacement.')) .
+		rd_details($x('How do I get a quote?', 'Comment obtenir un devis ?'), $x('Contact us with your product needs; we reply with pricing and availability.', 'Contactez-nous avec vos besoins ; nous répondons avec prix et disponibilité.')), true);
+	$prod .= rd_page_close(
+		$x('Request a product quote', 'Demandez un devis produit'),
+		$x('List the items or describe the need. We reply from the products desk.', 'Listez les articles ou décrivez le besoin. Nous répondons depuis le bureau produits.'),
+		$prodBtns,
+		rd_p($mail('products'), 'rd-note')
+	);
+	$out['products'] = $prod;
+
+	/* ---------------------------------------------------------------- FAQ */
+	$out['faq'] = rd_page_hero(
+			$x('Help', 'Aide'),
+			$x('Frequently asked questions', 'Foire aux questions'),
+			$x('Short answers about engineering, the laboratory, training, products and how to reach us.', 'Réponses courtes sur l’ingénierie, le laboratoire, la formation, les produits et comment nous joindre.'),
+			$closeBtns
+		) .
+		rd_section(
+			rd_head('01', $x('Engineering', 'Ingénierie'), $x('Works and design', 'Travaux et conception')) .
+			rd_details($x('What engineering services do you provide?', 'Quels services d’ingénierie proposez-vous ?'), $x('Design, construction, installation, maintenance and consultancy across water treatment, civil works and industrial systems.', 'Conception, construction, installation, maintenance et conseil pour le traitement de l’eau, le génie civil et les systèmes industriels.')) .
+			rd_details($x('Small and large projects?', 'Petits et grands projets ?'), $x('Yes. From community systems to industrial or municipal works.', 'Oui. Des systèmes communautaires aux ouvrages industriels ou municipaux.')) .
+			rd_details($x('Custom solutions?', 'Solutions sur mesure ?'), $x('Yes. Designs and plans are tailored to the site and client needs.', 'Oui. Conceptions et plans adaptés au site et aux besoins du client.'))) .
+		rd_section(
+			rd_head('02', $x('Water laboratory', 'Laboratoire d’eau'), $x('Testing and sampling', 'Analyses et prélèvements')) .
+			rd_details($x('What does the laboratory offer?', 'Que propose le laboratoire ?'), $x('Chemical, physical and microbiological analyses for domestic, industrial and environmental use.', 'Analyses chimiques, physiques et microbiologiques pour usages domestiques, industriels et environnementaux.')) .
+			rd_details($x('Which parameters?', 'Quels paramètres ?'), $x('pH, turbidity, TDS, hardness, nitrates, heavy metals, E. coli and other key indicators.', 'pH, turbidité, TDS, dureté, nitrates, métaux lourds, E. coli et autres indicateurs clés.')) .
+			rd_details($x('Who can use it?', 'Qui peut y faire appel ?'), $x('Individuals, companies, municipalities, NGOs and government agencies.', 'Particuliers, entreprises, municipalités, ONG et administrations.')) .
+			rd_details($x('How do I submit a sample?', 'Comment soumettre un échantillon ?'), $x('Visit the laboratory or ask for sampling guidelines; on-site sampling is available.', 'Venez au laboratoire ou demandez les consignes ; le prélèvement sur site est possible.')), true) .
+		rd_section(
+			rd_head('03', $x('Training and products', 'Formation et produits'), $x('Courses and supply', 'Cours et fourniture')) .
+			rd_details($x('What training do you provide?', 'Quelle formation proposez-vous ?'), $x('Technical and professional training in engineering, laboratory analysis, project management, safety and equipment operation.', 'Formation technique et professionnelle en ingénierie, analyse, gestion de projet, sécurité et utilisation d’équipements.')) .
+			rd_details($x('Certificates?', 'Certificats ?'), $x('Yes, on successful completion of each programme.', 'Oui, à l’issue réussie de chaque programme.')) .
+			rd_details($x('What products do you supply?', 'Quels produits fournissez-vous ?'), $x('Water treatment equipment, testing instruments, spare parts and consumables.', 'Équipements de traitement, instruments d’analyse, pièces et consommables.')) .
+			rd_details($x('After-sales?', 'SAV ?'), $x('Yes. Technical support, maintenance and replacement.', 'Oui. Assistance technique, maintenance et remplacement.'))) .
+		rd_section(
+			rd_head('04', $x('Contact', 'Contact'), $x('Reach the right desk', 'Joindre le bon bureau')) .
+			rd_details($x('How do I contact you?', 'Comment vous contacter ?'), $x('Use the contact form, email or phone for enquiries and bookings.', 'Formulaire de contact, e-mail ou téléphone pour les demandes et réservations.')) .
+			rd_details($x('Where are you based?', 'Où êtes-vous basés ?'), $x('Bonassama-Douala, Cameroon. We serve clients nationwide and across the region.', 'Bonassama-Douala, Cameroun. Nous servons des clients dans le pays et la région.')) .
+			rd_details($x('Business hours?', 'Horaires ?'), $hoursShort), true) .
+		rd_page_close(
+			$x('Still need help?', 'Besoin d’aide encore ?'),
+			$x('Send a clear request and we will route it to the right desk.', 'Envoyez une demande claire ; nous la dirigeons vers le bon bureau.'),
+			$closeBtns
+		);
+
+	/* ---------------------------------------------------------------- PRIVACY */
+	$out['privacy'] = rd_page_hero(
+			$x('Legal', 'Mentions'),
+			$x('Privacy policy', 'Politique de confidentialité'),
+			$x('How we handle personal information collected through this website.', 'Comment nous traitons les informations personnelles collectées via ce site.'),
+			rd_btns(array(
+				array($x('Contact us', 'Nous contacter'), $U['contact'], true),
+			))
+		) .
+		rd_section(
+			rd_placeholder($x(
+				'DRAFT. This is a plain-language starting point. Have it reviewed against the applicable Cameroonian data protection rules before publishing.',
+				'BROUILLON. Point de départ en langage clair. À faire revoir au regard des règles camerounaises applicables avant publication.'
+			)) .
+			rd_h($x('What we collect', 'Ce que nous collectons'), 2) .
+			rd_p($x('When you use the quote or contact form we receive the details you type: name, email, phone, organisation and your message.', 'Lorsque vous utilisez le formulaire de devis ou de contact, nous recevons les informations que vous saisissez : nom, e-mail, téléphone, organisation et message.')) .
+			rd_h($x('How we use it', 'Comment nous l’utilisons'), 2) .
+			rd_p($x('We use these details only to reply to your request. We do not sell them.', 'Nous utilisons ces informations uniquement pour répondre à votre demande. Nous ne les vendons pas.')) .
+			rd_h($x('Who sees it', 'Qui y a accès'), 2) .
+			rd_p($x('Our team receives the form by email. The website host stores the site and its backups.', 'Notre équipe reçoit le formulaire par e-mail. L’hébergeur conserve le site et ses sauvegardes.')) .
+			rd_h($x('Your choices', 'Vos choix'), 2) .
+			rd_p($x('Write to ', 'Écrivez à ') . $mail('services') . $x(' to ask what we hold about you or to have it deleted.', ' pour savoir ce que nous détenons ou demander la suppression.')));
 
 	return $out;
 }
