@@ -15,6 +15,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1] / "docs"
 BASE = "http://127.0.0.1:8090"
+# Public Pages URL — used so FormSubmit can redirect back after send
+PAGES_ORIGIN = "https://kelton-glitch.github.io/rdengineering-wordpress"
 
 # (local WP path, docs output relative to ROOT)
 PAGES = [
@@ -92,6 +94,117 @@ def normalize_wp_path(path: str) -> str:
             return path
         path += "/"
     return path
+
+
+def rewire_cf7_for_static(html: str, out_name: str) -> str:
+    """Turn Contact Form 7 markup into FormSubmit posts (static Pages has no WP).
+
+    Quote forms → services@; water-test forms (have name=source) → waterlab@.
+    First real submit to each inbox needs a one-time FormSubmit confirmation email.
+    """
+    if "wpcf7-form" not in html:
+        return html
+
+    is_water = 'name="source"' in html or "name='source'" in html
+    recipient = (
+        "waterlab@rdengineeringsol.com" if is_water else "services@rdengineeringsol.com"
+    )
+    subject = (
+        "[Water test] GitHub Pages form"
+        if is_water
+        else "[Website quote] GitHub Pages form"
+    )
+    if out_name == "index.html":
+        page_url = PAGES_ORIGIN + "/"
+    else:
+        page_url = (
+            PAGES_ORIGIN
+            + "/"
+            + str(Path(out_name).parent).replace("\\", "/").strip("/")
+            + "/"
+        )
+    next_url = page_url + "?sent=1"
+    fr = out_name.startswith("fr/")
+    thanks = (
+        "Merci — votre demande a été envoyée. Nous répondrons depuis la boîte du bureau."
+        if fr
+        else "Thank you — your request was sent. We will reply from the desk inbox."
+    )
+
+    def fix_form(match: re.Match[str]) -> str:
+        tag = match.group(0)
+        tag = re.sub(r'\saction="[^"]*"', "", tag)
+        tag = re.sub(r"\saction='[^']*'", "", tag)
+        tag = re.sub(r'\smethod="[^"]*"', "", tag)
+        tag = re.sub(r"\smethod='[^']*'", "", tag)
+        tag = re.sub(r"\snovalidate(=\"[^\"]*\")?", "", tag)
+        tag = re.sub(r'\sclass="([^"]*)"', r' class="\1 rd-static-form"', tag, count=1)
+        return tag.replace(
+            "<form",
+            f'<form action="https://formsubmit.co/{recipient}" method="POST"',
+            1,
+        )
+
+    html = re.sub(r"<form\b[^>]*class=\"[^\"]*wpcf7-form[^\"]*\"[^>]*>", fix_form, html)
+
+    # Drop CF7 hidden fields; inject FormSubmit helpers
+    html = re.sub(
+        r'<fieldset class="hidden-fields-container">.*?</fieldset>',
+        (
+            '<fieldset class="hidden-fields-container">'
+            f'<input type="hidden" name="_subject" value="{subject}" />'
+            f'<input type="hidden" name="_next" value="{next_url}" />'
+            '<input type="hidden" name="_template" value="table" />'
+            '<input type="hidden" name="_captcha" value="false" />'
+            '<input type="hidden" name="_honey" value="" />'
+            "</fieldset>"
+        ),
+        html,
+        flags=re.S,
+    )
+
+    # FormSubmit uses name="email" for Reply-To
+    html = html.replace('name="your-email"', 'name="email"')
+    html = html.replace("name='your-email'", "name='email'")
+
+    # Native required on consent (CF7 JS is removed)
+    html = re.sub(
+        r'(<input type="checkbox" name="consent"[^>]*?)(/?>)',
+        lambda m: m.group(1)
+        + (" required" if "required" not in m.group(1) else "")
+        + m.group(2),
+        html,
+    )
+
+    # Strip CF7 JS that would intercept submit on a static host
+    html = re.sub(
+        r'<script[^>]*(?:contact-form-7|swv)[^>]*>.*?</script>',
+        "",
+        html,
+        flags=re.I | re.S,
+    )
+    html = re.sub(
+        r'<script[^>]*id="contact-form-7-js-before"[^>]*>.*?</script>',
+        "",
+        html,
+        flags=re.I | re.S,
+    )
+    html = html.replace(" no-js", "")
+    html = html.replace("wpcf7-form init", "wpcf7-form")
+
+    # Tiny banner when redirected back with ?sent=1
+    notice = (
+        '<style>.rd-form-sent{background:#e8f5e9;border:1px solid #2e7d32;'
+        "color:#1b5e20;padding:0.85rem 1rem;margin:0 0 1rem;font-family:var(--rd-head,sans-serif);"
+        "text-transform:uppercase;letter-spacing:0.04em;font-size:0.95rem}</style>"
+        f'<div class="rd-form-sent" id="rd-form-sent" hidden role="status">{thanks}</div>'
+        "<script>(function(){if(/[?&]sent=1\\b/.test(location.search))"
+        "{var el=document.getElementById('rd-form-sent');if(el){el.hidden=false;}"
+        "}})();</script>"
+    )
+    html = html.replace('<div class="wpcf7"', notice + '<div class="wpcf7"', 1)
+
+    return html
 
 
 def main() -> None:
@@ -232,6 +345,8 @@ def main() -> None:
                 rf"\g<1>{fr_rel}\2",
                 html,
             )
+
+        html = rewire_cf7_for_static(html, out_name)
 
         html_dir.mkdir(parents=True, exist_ok=True)
         html_path.write_text(html, encoding="utf-8")
