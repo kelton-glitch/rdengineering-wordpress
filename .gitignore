@@ -2,6 +2,9 @@ wp-config.php
 /uploads/
 !docs/wp-content/uploads/
 cache/
+# Polylang ships a required integrations/cache/ package; do not ignore it.
+!plugins/polylang/src/integrations/cache/
+!plugins/polylang/src/integrations/cache/**
 *.tar.gz
 *.log
 .env
