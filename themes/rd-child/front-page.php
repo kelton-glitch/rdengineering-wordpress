@@ -112,21 +112,23 @@ get_header();
 				</g>
 			</svg>
 			<div class="rd-land__panel-inner">
-				<?php if ($fr) : ?>
-					<h1 class="rd-land__title">Bureau d’<span class="rd-word" style="--rd-i:1">études</span> et <span class="rd-word" style="--rd-i:2">travaux</span> — études <span class="rd-word" style="--rd-i:3">hydrauliques</span> et <span class="rd-word" style="--rd-i:4">énergétiques</span>, <span class="rd-word" style="--rd-i:5">conception</span> et <span class="rd-word" style="--rd-i:6">construction</span>.</h1>
-				<?php else : ?>
-					<h1 class="rd-land__title">Engineering and works office — <span class="rd-word" style="--rd-i:1">hydraulic</span> and <span class="rd-word" style="--rd-i:2">energy</span> studies, <span class="rd-word" style="--rd-i:3">design</span> and <span class="rd-word" style="--rd-i:4">construction</span>.</h1>
-				<?php endif; ?>
-				<p class="rd-land__sub"><?php echo $e('Water, sanitation and energy from Douala — design, lab, training and supply under one roof.', 'Eau, assainissement et énergie depuis Douala — conception, labo, formation et fourniture sous le même toit.'); ?></p>
-				<div class="rd-land__cta">
-					<a class="rd-btn rd-land__primary rd-btn--ico" href="<?php echo esc_url($quote); ?>">
-						<?php echo rd_icon('quote', array('size' => 20)); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
-						<span><?php echo $e('Request a quote', 'Demander un devis'); ?></span>
-					</a>
-					<a class="rd-btn rd-land__ghost rd-btn--ico" href="tel:<?php echo esc_attr($phone); ?>">
-						<?php echo rd_icon('phone', array('size' => 20)); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
-						<span><?php echo $e('Call an engineer', 'Appeler un ingénieur'); ?></span>
-					</a>
+				<div class="rd-land__copy">
+					<?php if ($fr) : ?>
+						<h1 class="rd-land__title">Bureau d’<span class="rd-word" style="--rd-i:1">études</span> et <span class="rd-word" style="--rd-i:2">travaux</span> — études <span class="rd-word" style="--rd-i:3">hydrauliques</span> et <span class="rd-word" style="--rd-i:4">énergétiques,</span> <span class="rd-word" style="--rd-i:5">conception</span> et <span class="rd-word" style="--rd-i:6">construction.</span></h1>
+					<?php else : ?>
+						<h1 class="rd-land__title">Engineering and works office — <span class="rd-word" style="--rd-i:1">hydraulic</span> and <span class="rd-word" style="--rd-i:2">energy</span> studies, <span class="rd-word" style="--rd-i:3">design</span> and <span class="rd-word" style="--rd-i:4">construction</span>.</h1>
+					<?php endif; ?>
+					<p class="rd-land__sub"><?php echo $e('Water, sanitation and energy from Douala — design, lab, training and supply under one roof.', 'Eau, assainissement et énergie depuis Douala — conception, labo, formation et fourniture sous le même toit.'); ?></p>
+					<div class="rd-land__cta">
+						<a class="rd-btn rd-land__primary rd-btn--ico" href="<?php echo esc_url($quote); ?>">
+							<?php echo rd_icon('quote', array('size' => 20)); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+							<span><?php echo $e('Request a quote', 'Demander un devis'); ?></span>
+						</a>
+						<a class="rd-btn rd-land__ghost rd-btn--ico" href="tel:<?php echo esc_attr($phone); ?>">
+							<?php echo rd_icon('phone', array('size' => 20)); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+							<span><?php echo $e('Call an engineer', 'Appeler un ingénieur'); ?></span>
+						</a>
+					</div>
 				</div>
 				<p class="rd-land__tagline"><?php echo $e('Engineering what flows.', 'Ingénierie qui coule.'); ?></p>
 			</div>
