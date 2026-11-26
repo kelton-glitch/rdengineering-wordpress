@@ -43,14 +43,46 @@ add_action('wp_head', function () {
 	}
 }, 2);
 
-/** Header logo from the brand folder: the full-colour horizontal lockup on the white header (guidelines p.8 and p.22). */
+/**
+ * Letterhead identity (option C): square mark + legal name + bureau line + phone.
+ * Drawn from the November 2026 technical-report sheet; the report title and job site stay off the web header.
+ */
+function rd_letterhead_mark() {
+	return '<span class="rd-mark" aria-hidden="true"><b>R&amp;D</b><span>ENGINEERING</span><span>SOLUTIONS</span></span>';
+}
+
+function rd_letterhead_copy() {
+	$fr = rd_is_fr();
+	return array(
+		'name'   => 'R&D Engineering Solutions SARL',
+		'bureau' => $fr
+			? 'Bureau d’études et travaux — études hydrauliques et énergétiques, conception et construction'
+			: 'Engineering and works office — hydraulic and energy studies, design and construction',
+		'place'  => 'Bonassama-Douala',
+	);
+}
+
+function rd_letterhead_html($home_url) {
+	$c = rd_letterhead_copy();
+	list($tel, $show) = rd_phone_parts();
+	$fr = rd_is_fr();
+	$label = $fr ? 'Appeler le ' . $show : 'Call ' . $show;
+	return '<a class="brand rd-letterhead" href="' . esc_url($home_url) . '" rel="home">'
+		. rd_letterhead_mark()
+		. '<span class="rd-id">'
+		. '<strong class="rd-id__name">' . esc_html($c['name']) . '</strong>'
+		. '<em class="rd-id__bureau">' . esc_html($c['bureau']) . '</em>'
+		. '<span class="rd-id__meta"><span class="rd-id__url">www.rdengineeringsol.com</span>'
+		. '<span class="rd-id__dot" aria-hidden="true"> · </span>'
+		. '<span class="rd-id__place">' . esc_html($c['place']) . '</span></span>'
+		. '</span></a>'
+		. '<a class="rd-letterhead__tel" href="tel:' . esc_attr($tel) . '" aria-label="' . esc_attr($label) . '">'
+		. rd_icon('phone', array('size' => 18, 'class' => 'rd-ico rd-ico--nav')) // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		. '<span class="rd-letterhead__num">' . esc_html($show) . '</span></a>';
+}
+
 add_filter('kadence_custom_logo', function ($html) {
-	$file = 'logo-color.png';
-	if (!file_exists(get_stylesheet_directory() . '/img/' . $file)) {
-		return $html;
-	}
-	$img = '<img class="custom-logo rd-logo" src="' . esc_url(get_stylesheet_directory_uri() . '/img/' . $file) . '" width="480" height="205" alt="' . esc_attr(get_bloginfo('name')) . '" decoding="async">';
-	return preg_replace('/<img[^>]*>/', $img, $html, 1);
+	return rd_letterhead_html(home_url('/'));
 });
 
 /** Skip link: first focusable element on every page. */
@@ -87,7 +119,8 @@ function rd_phone_parts() {
 
 add_filter('wp_nav_menu_items', function ($items, $args) {
 	$loc = isset($args->theme_location) ? $args->theme_location : '';
-	if ('primary' !== $loc && 'mobile' !== $loc) {
+	// Desktop phone lives in the letterhead identity row. Keep it only in the mobile drawer.
+	if ('mobile' !== $loc) {
 		return $items;
 	}
 	list($tel, $show) = rd_phone_parts();
@@ -96,11 +129,7 @@ add_filter('wp_nav_menu_items', function ($items, $args) {
 	$li    = '<li class="menu-item rd-nav-phone"><a href="tel:' . esc_attr($tel) . '" aria-label="' . esc_attr($label) . '">'
 		. rd_icon('phone', array('size' => 20, 'class' => 'rd-ico rd-ico--nav')) // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		. '<span class="rd-nav-phone__num">' . esc_html($show) . '</span></a></li>';
-	// Primary: before the quote button. Mobile: right after it. Fallback: at the end.
-	if ('primary' === $loc && preg_match('/<li[^>]*class="[^"]*\bmenu-cta\b/', $items, $m, PREG_OFFSET_CAPTURE)) {
-		return substr($items, 0, $m[0][1]) . $li . substr($items, $m[0][1]);
-	}
-	if ('mobile' === $loc && preg_match('/<li[^>]*class="[^"]*\bmenu-cta\b[^"]*"[^>]*>.*?<\/li>/s', $items, $m, PREG_OFFSET_CAPTURE)) {
+	if (preg_match('/<li[^>]*class="[^"]*\bmenu-cta\b[^"]*"[^>]*>.*?<\/li>/s', $items, $m, PREG_OFFSET_CAPTURE)) {
 		$end = $m[0][1] + strlen($m[0][0]);
 		return substr($items, 0, $end) . $li . substr($items, $end);
 	}
