@@ -4,7 +4,7 @@ Theme URI:    https://rdengineeringsol.com
 Description:  Design system for RD Engineering Solution on top of Kadence: Guidelines v2 tokens, Field Report UX, accessibility and performance rules.
 Author:       RD Engineering Solution
 Template:     kadence
-Version:      0.3.1
+Version:      0.3.2
 Text Domain:  rd-child
 */
 
@@ -520,6 +520,8 @@ h3 { font-size: clamp(1.6rem, 1.4rem + 0.8vw, 2rem); }
 .rd-land__panel-inner { position: relative; z-index: 1; max-width: 52rem; }
 .rd-land h1 { color: #fff; font-size: clamp(3.6rem, 1.4rem + 10vw, 7.5rem); line-height: 0.88; letter-spacing: 0; max-width: 9ch; margin: 0 0 1.15rem; }
 .rd-land__sub { color: #fff; font-size: clamp(1.05rem, 0.98rem + 0.35vw, 1.28rem); font-weight: 400; line-height: 1.55; max-width: 34rem; margin: 0 0 1.75rem; opacity: 0.92; }
+.rd-land__bureau { margin: 0 0 0.85rem; max-width: 42rem; color: #cfe0f5; font-size: clamp(0.95rem, 0.9rem + 0.2vw, 1.05rem); line-height: 1.45; font-weight: 500; }
+.rd-land__bureau strong { color: #fff; font-weight: 600; }
 .rd-land__cta { display: flex; flex-wrap: wrap; gap: 0.75rem; }
 .rd-land__cta .rd-btn { min-height: 56px; padding-inline: 1.75rem; }
 .rd-land__primary { background: #FFB81C; border-color: #FFB81C; color: #061B3A !important; }
@@ -930,162 +932,47 @@ h3 { font-size: clamp(1.6rem, 1.4rem + 0.8vw, 2rem); }
 @media (min-width: 700px) { .rd-show__cta { grid-template-columns: 1fr auto; padding: 1.75rem 2rem; } }
 
 /* ==========================================================================
-   Navbar C: blue bar is the navigation; letterhead identity sits under it.
-   Sticky keeps the blue bar; the identity row collapses on scroll (no JS).
+   Navbar: sticky bar, active marker, phone, EN/FR toggle, services panel, mobile drawer
+   Header markup comes from Kadence; menu extras come from functions.php. No JavaScript.
    ========================================================================== */
-html { scroll-padding-top: 4rem; }
-:root {
-	--rd-nav-h: 52px;
-	--rd-id-h: 92px;
-	--rd-chrome-h: calc(var(--rd-nav-h) + var(--rd-id-h));
-}
+html { scroll-padding-top: 5.5rem; }
 
-#masthead { position: relative; z-index: 90; min-height: var(--rd-chrome-h); }
-#masthead > #main-header, #masthead > #mobile-header {
-	position: fixed; top: 0; left: 0; right: 0;
-	background: #fff; box-shadow: 0 1px 0 var(--rd-line);
-}
+/* Sticky: #masthead keeps its 80px of page flow, the bar itself is fixed, so shrinking never shifts the page */
+#masthead { position: relative; z-index: 90; min-height: 80px; }
+#masthead > #main-header, #masthead > #mobile-header { position: fixed; top: 0; left: 0; right: 0; background: #fff; box-shadow: 0 1px 0 var(--rd-line); }
 body.admin-bar #masthead > #main-header, body.admin-bar #masthead > #mobile-header { top: 32px; }
 @media (max-width: 782px) { body.admin-bar #masthead > #main-header, body.admin-bar #masthead > #mobile-header { top: 46px; } }
+@supports (animation-timeline: scroll()) {
+	@media (prefers-reduced-motion: no-preference) {
+		#masthead > #main-header, #masthead > #mobile-header { animation: rd-bar-shadow linear both; animation-timeline: scroll(root block); animation-range: 0 120px; }
+		#masthead .site-main-header-inner-wrap { animation: rd-bar-shrink linear both; animation-timeline: scroll(root block); animation-range: 0 120px; }
+		@keyframes rd-bar-shadow { to { box-shadow: 0 8px 24px rgba(6, 27, 58, 0.14); } }
+		@keyframes rd-bar-shrink { to { min-height: 64px; } }
+	}
+}
 
-/* Desktop: stack nav (blue) above identity (white) */
+/* Active page: 3px Flow Blue bar under the link (same blue rule as the cards); hover previews it. :where() keeps the exclusions at zero specificity. */
 @media (min-width: 1025px) {
-	#masthead > #main-header { background: transparent; box-shadow: none; }
-	#masthead > #main-header .site-header-row-container-inner,
-	#masthead > #main-header .site-container { max-width: none; padding: 0; width: 100%; }
-	#masthead > #main-header .site-main-header-inner-wrap {
-		display: flex; flex-direction: column; align-items: stretch;
-		min-height: 0; gap: 0; padding: 0;
-	}
-	#masthead > #main-header .site-header-main-section-left,
-	#masthead > #main-header .site-header-main-section-right {
-		width: 100%; max-width: none; justify-content: stretch;
-	}
-	#masthead > #main-header .site-header-main-section-right { order: -1; }
-
-	/* Blue navigation bar */
-	#masthead > #main-header .site-header-main-section-right {
-		display: flex; align-items: center; justify-content: space-between;
-		min-height: var(--rd-nav-h); padding: 0 max(1.25rem, calc((100% - var(--rd-col)) / 2));
-		background: var(--rd-primary); color: #fff;
-	}
-	#masthead > #main-header .site-header-item-main-navigation { flex: 1 1 auto; width: 100%; }
-	#masthead > #main-header #site-navigation,
-	#masthead > #main-header .primary-menu-container,
-	#masthead > #main-header .primary-menu-container > ul.menu {
-		display: flex; align-items: center; width: 100%; margin: 0;
-	}
-	#masthead > #main-header .primary-menu-container > ul.menu { justify-content: flex-start; gap: 0; flex-wrap: nowrap; }
-	#masthead > #main-header .header-navigation .menu > li > a {
-		color: #fff; font-weight: 600; min-height: var(--rd-nav-h); padding: 0 0.85rem;
-	}
-	#masthead > #main-header .header-navigation .menu > li > a:hover,
-	#masthead > #main-header .header-navigation .menu > li.current-menu-item > a,
-	#masthead > #main-header .header-navigation .menu > li.current-menu-ancestor > a { color: #fff; }
-	#masthead > #main-header .header-navigation .menu > li.menu-cta { margin-left: auto; }
-	#masthead > #main-header .header-navigation .menu > li.menu-cta > a,
-	#masthead > #main-header .header-navigation .menu > li.menu-cta > a:hover {
-		background: var(--rd-energy); color: var(--rd-primary-dark) !important;
-		min-height: 40px; padding: 0 1.1rem; margin: 0 0.35rem 0 0.75rem;
-		font-family: var(--rd-head); font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase;
-	}
-	#masthead > #main-header .header-navigation .menu > li.lang-item { border-color: rgba(255, 255, 255, 0.7); }
-	#masthead > #main-header .header-navigation .menu > li.lang-item > a { color: #fff; min-height: 40px; }
-	#masthead > #main-header .header-navigation .menu > li.lang-item > a:hover { background: rgba(255, 255, 255, 0.14); color: #fff; }
-	#masthead > #main-header .header-navigation .menu > li.lang-item.current-lang > a,
-	#masthead > #main-header .header-navigation .menu > li.lang-item.current-lang > a:hover {
-		background: #fff; color: var(--rd-primary-dark);
-	}
-	#masthead > #main-header .header-navigation .menu > li.rd-nav-phone { display: none; }
-
-	/* Active page: Signal Gold rule on the blue bar */
 	#masthead .primary-menu-container > ul > li:where(.menu-item:not(.lang-item, .menu-cta, .rd-nav-phone)) > a { position: relative; }
 	#masthead .primary-menu-container > ul > li:where(.menu-item:not(.lang-item, .menu-cta, .rd-nav-phone)) > a::after {
-		content: ""; position: absolute; left: 0.6em; right: 0.6em; bottom: 0; height: 3px; background: var(--rd-energy);
+		content: ""; position: absolute; left: 0.6em; right: 0.6em; bottom: -2px; height: 3px; background: var(--rd-primary);
 		transform: scaleX(0); transform-origin: left center; transition: transform 0.18s ease;
 	}
 	#masthead .primary-menu-container > ul > li:where(.menu-item:not(.lang-item, .menu-cta, .rd-nav-phone)):hover > a::after,
 	#masthead .primary-menu-container > ul > li:where(.menu-item:not(.lang-item, .menu-cta, .rd-nav-phone)) > a:focus-visible::after,
 	#masthead .primary-menu-container > ul > li:where(.current-menu-item:not(.menu-cta, .lang-item)) > a::after,
 	#masthead .primary-menu-container > ul > li:where(.current-menu-ancestor) > a::after { transform: scaleX(1); }
-
-	/* White identity row from the letterhead */
-	#masthead > #main-header .site-header-main-section-left {
-		display: flex; align-items: center; justify-content: space-between; gap: 1rem;
-		min-height: var(--rd-id-h); padding: 0.85rem max(1.25rem, calc((100% - var(--rd-col)) / 2));
-		background: #fff; border-bottom: 1px solid var(--rd-line);
-		overflow: hidden;
-	}
-	#masthead > #main-header .site-header-main-section-left .site-header-item { flex: 1 1 auto; min-width: 0; }
-	#masthead > #main-header .site-branding {
-		display: flex; align-items: center; justify-content: space-between; gap: 1rem; width: 100%;
-	}
-	#masthead > #main-header .site-title-wrap { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 }
-
 @media (prefers-reduced-motion: reduce) { #masthead .primary-menu-container > ul > li > a::after { transition: none; } }
 
-/* Letterhead mark + copy */
-.rd-letterhead {
-	display: inline-flex; align-items: center; gap: 1rem; min-width: 0; color: inherit; text-decoration: none;
-}
-.rd-mark {
-	flex: none; width: 72px; height: 72px; padding: 7px 6px 6px;
-	display: flex; flex-direction: column; justify-content: center;
-	background: var(--rd-primary); color: #fff;
-	font-family: var(--rd-head); line-height: 0.88; letter-spacing: 0.02em;
-}
-.rd-mark b { font-weight: 400; font-size: 1.7rem; }
-.rd-mark span { font-size: 0.72rem; letter-spacing: 0.05em; }
-.rd-id { display: flex; flex-direction: column; gap: 0.15rem; min-width: 0; }
-.rd-id__name {
-	font-family: var(--rd-font); font-size: 1.15rem; font-weight: 600; line-height: 1.15;
-	letter-spacing: -0.02em; color: var(--rd-primary);
-}
-.rd-id__bureau {
-	font-style: normal; font-size: 0.84rem; line-height: 1.35; color: var(--rd-muted); max-width: 46ch;
-}
-.rd-id__meta { font-size: 0.84rem; line-height: 1.35; color: var(--rd-muted); }
-.rd-id__url { color: var(--rd-link); font-weight: 500; }
-.rd-letterhead__tel {
-	flex: none; display: inline-flex; align-items: center; gap: 0.45rem;
-	min-height: 44px; padding: 0 0.25rem; color: var(--rd-ink); font-weight: 600; text-decoration: none; white-space: nowrap;
-}
-.rd-letterhead__tel .rd-ico { color: var(--rd-primary); }
-.rd-letterhead__tel:hover, .rd-letterhead__tel:focus-visible { color: var(--rd-primary); }
-
-/* Sticky collapse: keep the blue bar, fold the identity away */
-@supports (animation-timeline: scroll()) {
-	@media (prefers-reduced-motion: no-preference) and (min-width: 1025px) {
-		#masthead > #main-header .site-header-main-section-right {
-			animation: rd-nav-shadow linear both;
-			animation-timeline: scroll(root block);
-			animation-range: 0 140px;
-		}
-		#masthead > #main-header .site-header-main-section-left {
-			animation: rd-id-collapse linear both;
-			animation-timeline: scroll(root block);
-			animation-range: 0 140px;
-		}
-		@keyframes rd-nav-shadow { to { box-shadow: 0 8px 24px rgba(6, 27, 58, 0.18); } }
-		@keyframes rd-id-collapse {
-			to {
-				min-height: 0; height: 0; padding-top: 0; padding-bottom: 0;
-				border-bottom-width: 0; opacity: 0; pointer-events: none;
-			}
-		}
-	}
-}
-
-/* Phone in the drawer only */
-#mobile-drawer .mobile-navigation .menu > li.rd-nav-phone > a {
-	display: inline-flex; flex-direction: row; align-items: center; justify-content: flex-start;
-	gap: 0.5rem; min-width: 44px; min-height: 44px; font-weight: 600; white-space: nowrap;
-}
+/* Phone: icon always, number from 1200px */
+#masthead .header-navigation .menu > li.rd-nav-phone > a, #mobile-drawer .mobile-navigation .menu > li.rd-nav-phone > a { display: inline-flex; flex-direction: row; align-items: center; justify-content: center; gap: 0.5rem; min-width: 44px; min-height: 44px; font-weight: 600; white-space: nowrap; }
 .rd-nav-phone .rd-ico { display: block; }
 .rd-nav-phone .rd-ico--nav { color: var(--rd-primary); flex: none; }
+.header-navigation .rd-nav-phone__num { display: none; }
+@media (min-width: 1200px) { .header-navigation .rd-nav-phone__num { display: inline; } }
 
-/* EN / FR toggle */
+/* EN / FR toggle: two joined 44px boxes, current language filled Deep Current */
 .rd-lang__code { font-family: var(--rd-head); font-size: 1.05rem; font-weight: 400; letter-spacing: 0.08em; line-height: 1; }
 .header-navigation .menu > li.lang-item > a { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; padding: 0 0.5rem; color: var(--rd-ink); }
 .header-navigation .menu > li.lang-item { border: 1px solid var(--rd-ink); }
@@ -1093,65 +980,6 @@ body.admin-bar #masthead > #main-header, body.admin-bar #masthead > #mobile-head
 .header-navigation .menu > li:not(.lang-item) + li.lang-item { margin-inline-start: 0.9rem; }
 .header-navigation .menu > li.lang-item > a:hover { background: var(--rd-mist); color: var(--rd-ink); }
 .header-navigation .menu > li.lang-item.current-lang > a, .header-navigation .menu > li.lang-item.current-lang > a:hover { background: var(--rd-primary-dark); color: #fff; }
-
-/* Mobile chrome: blue bar + compact letterhead */
-@media (max-width: 1024px) {
-	:root { --rd-nav-h: 48px; --rd-id-h: 76px; }
-	#masthead { min-height: var(--rd-chrome-h); }
-	#masthead > #mobile-header { background: transparent; box-shadow: none; }
-	#masthead > #mobile-header .site-header-row-container-inner,
-	#masthead > #mobile-header .site-container { max-width: none; padding: 0; width: 100%; }
-	#masthead > #mobile-header .site-main-header-inner-wrap {
-		display: flex; flex-direction: column; align-items: stretch; min-height: 0; padding: 0; gap: 0;
-	}
-	#masthead > #mobile-header .site-header-main-section-left,
-	#masthead > #mobile-header .site-header-main-section-right { width: 100%; }
-	#masthead > #mobile-header .site-header-main-section-right {
-		order: -1; display: flex; align-items: center; justify-content: flex-end;
-		min-height: var(--rd-nav-h); padding: 0 0.75rem 0 1rem;
-		background: var(--rd-primary); color: #fff;
-	}
-	#masthead > #mobile-header .site-header-main-section-right::before {
-		content: "R&D Engineering Solutions";
-		margin-right: auto; font-family: var(--rd-head); font-size: 1.05rem;
-		letter-spacing: 0.04em; text-transform: uppercase; color: #fff; white-space: nowrap;
-		overflow: hidden; text-overflow: ellipsis; max-width: calc(100% - 7rem);
-	}
-	#mobile-toggle.menu-toggle-open {
-		border-color: #fff; background: transparent; color: #fff;
-	}
-	#mobile-toggle.menu-toggle-open:hover, #mobile-toggle.menu-toggle-open:focus-visible {
-		background: #fff; color: var(--rd-primary); border-color: #fff;
-	}
-	#masthead > #mobile-header .site-header-main-section-left {
-		display: flex; align-items: center; min-height: var(--rd-id-h);
-		padding: 0.65rem 1rem; background: #fff; border-bottom: 1px solid var(--rd-line);
-		overflow: hidden;
-	}
-	#masthead > #mobile-header .site-branding { width: 100%; }
-	#masthead > #mobile-header .site-title-wrap { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
-	#masthead > #mobile-header .rd-mark { width: 56px; height: 56px; }
-	#masthead > #mobile-header .rd-mark b { font-size: 1.35rem; }
-	#masthead > #mobile-header .rd-mark span { font-size: 0.58rem; }
-	#masthead > #mobile-header .rd-id__name { font-size: 0.95rem; }
-	#masthead > #mobile-header .rd-id__bureau { font-size: 0.75rem; max-width: none; }
-	#masthead > #mobile-header .rd-id__meta { display: none; }
-	#masthead > #mobile-header .rd-letterhead__tel { display: none; }
-	@supports (animation-timeline: scroll()) {
-		@media (prefers-reduced-motion: no-preference) {
-			#masthead > #mobile-header .site-header-main-section-right {
-				animation: rd-nav-shadow linear both;
-				animation-timeline: scroll(root block);
-				animation-range: 0 120px;
-			}
-			#masthead > #mobile-header .site-header-main-section-left {
-				animation: rd-id-collapse linear both;
-				animation-timeline: scroll(root block);
-				animation-range: 0 120px;
-			}
-		}
-	}
-}
 
 /* Services panel: desk icon + one-line description, Flow Blue top rule, no radius */
 @media (min-width: 1025px) {

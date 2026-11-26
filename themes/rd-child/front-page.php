@@ -113,6 +113,7 @@ get_header();
 			</svg>
 			<div class="rd-land__panel-inner">
 				<h1><?php echo $e('Engineering what flows.', 'Ingénierie qui coule.'); ?></h1>
+				<p class="rd-land__bureau"><?php echo $e('Engineering and works office — hydraulic and energy studies, design and construction.', 'Bureau d’études et travaux — études hydrauliques et énergétiques, conception et construction.'); ?></p>
 				<p class="rd-land__sub"><?php echo $e('Water, sanitation and energy from Douala — design, lab, training and supply under one roof.', 'Eau, assainissement et énergie depuis Douala — conception, labo, formation et fourniture sous le même toit.'); ?></p>
 				<div class="rd-land__cta">
 					<a class="rd-btn rd-land__primary rd-btn--ico" href="<?php echo esc_url($quote); ?>">
