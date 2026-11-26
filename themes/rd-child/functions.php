@@ -58,6 +58,39 @@ add_action('wp_body_open', function () {
 	echo '<a class="rd-skip-link" href="#main">' . esc_html(rd_is_fr() ? 'Aller au contenu' : 'Skip to content') . '</a>';
 });
 
+/**
+ * First visit lands on French. Polylang's pll_language cookie keeps the choice after EN/FR is used.
+ * English home stays reachable once that cookie is already "en" (language switcher).
+ * When redirecting, force pll_language=fr so Polylang's earlier Set-Cookie:en on / does not cancel French-first.
+ */
+add_action('template_redirect', function () {
+	if (is_admin() || wp_doing_ajax() || !function_exists('pll_home_url') || !is_front_page()) {
+		return;
+	}
+	if (function_exists('pll_current_language') && 'fr' === pll_current_language()) {
+		return;
+	}
+	$chosen = isset($_COOKIE['pll_language']) ? sanitize_text_field(wp_unslash($_COOKIE['pll_language'])) : '';
+	if ('en' === $chosen) {
+		return;
+	}
+	if (isset($_GET['lang']) && 'en' === $_GET['lang']) {
+		return;
+	}
+	if (!headers_sent()) {
+		setcookie('pll_language', 'fr', array(
+			'expires'  => time() + YEAR_IN_SECONDS,
+			'path'     => COOKIEPATH ? COOKIEPATH : '/',
+			'domain'   => COOKIE_DOMAIN,
+			'secure'   => is_ssl(),
+			'httponly' => false,
+			'samesite' => 'Lax',
+		));
+	}
+	wp_safe_redirect(pll_home_url('fr'), 302);
+	exit;
+}, 5);
+
 /** Remove WordPress emoji scripts and styles (an extra request and inline script per page). */
 remove_action('wp_head', 'print_emoji_detection_script', 7);
 remove_action('wp_print_styles', 'print_emoji_styles');

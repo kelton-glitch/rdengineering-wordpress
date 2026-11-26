@@ -23,10 +23,10 @@ if (!function_exists('PLL') || !PLL() || !isset(PLL()->model)) {
 
 $langs = PLL()->model->languages;
 
-/* 1) Languages: English is the default and keeps its current URLs; French lives under /fr/ */
+/* 1) Languages: French is preferred for first visits; English stays at the unprefixed URLs for now. */
 $wanted = array(
-	'en' => array('English', 'en_US', 0, 'gb'),
-	'fr' => array('Français', 'fr_FR', 1, 'fr'),
+	'en' => array('English', 'en_US', 1, 'gb'),
+	'fr' => array('Français', 'fr_FR', 0, 'fr'),
 );
 foreach ($wanted as $slug => $a) {
 	if ($langs->get($slug)) {
@@ -37,13 +37,16 @@ foreach ($wanted as $slug => $a) {
 	echo "language $slug: " . (is_wp_error($r) ? $r->get_error_message() : 'added') . "\n";
 }
 
-/* 2) Settings (written directly: Polylang's settings API is not loaded in WP-CLI) */
+/* 2) Settings (written directly: Polylang's settings API is not loaded in WP-CLI).
+ * Keep English as Polylang default so existing unprefixed URLs stay English.
+ * First-visit French is handled in the child theme (template_redirect → /fr/).
+ */
 $o = get_option('polylang');
 $o['default_lang'] = 'en';
 $o['force_lang']   = 1;   // language from the URL directory: /fr/
 $o['hide_default'] = 1;   // English has no /en/ prefix
 $o['rewrite']      = 1;   // no index.php in URLs
-$o['browser']      = 0;   // do not redirect by browser language
+$o['browser']      = 0;   // do not redirect by browser language (theme sends first visit to FR)
 $o['redirect_lang'] = 1;  // French home is /fr/ instead of /fr/accueil/
 update_option('polylang', $o);
 echo "settings saved\n";

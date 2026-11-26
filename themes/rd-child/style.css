@@ -4,7 +4,7 @@ Theme URI:    https://rdengineeringsol.com
 Description:  Design system for RD Engineering Solution on top of Kadence: Guidelines v2 tokens, Field Report UX, accessibility and performance rules.
 Author:       RD Engineering Solution
 Template:     kadence
-Version:      0.3.2
+Version:      0.3.3
 Text Domain:  rd-child
 */
 
@@ -517,12 +517,25 @@ h3 { font-size: clamp(1.6rem, 1.4rem + 0.8vw, 2rem); }
 .rd-land { background: #fff; }
 .rd-land__hero { display: grid; grid-template-columns: 1fr; background: var(--rd-primary-dark); color: #fff; }
 .rd-land__panel { position: relative; overflow: hidden; padding: 3rem 1rem 3.5rem; background: var(--rd-primary-dark); }
-.rd-land__panel-inner { position: relative; z-index: 1; max-width: 52rem; }
-.rd-land h1 { color: #fff; font-size: clamp(3.6rem, 1.4rem + 10vw, 7.5rem); line-height: 0.88; letter-spacing: 0; max-width: 9ch; margin: 0 0 1.15rem; }
+.rd-land__panel-inner { position: relative; z-index: 1; max-width: 52rem; display: flex; flex-direction: column; }
+.rd-land h1,
+.rd-land__title {
+	color: #fff; font-family: var(--rd-head); text-transform: uppercase;
+	font-size: clamp(1.65rem, 1.15rem + 2.2vw, 2.85rem); line-height: 1.08; letter-spacing: 0.01em;
+	max-width: 28ch; margin: 0 0 1.15rem; font-weight: 700;
+}
+.rd-land__title .rd-word {
+	display: inline-block; color: #fff; position: relative;
+	background-image: linear-gradient(var(--rd-energy), var(--rd-energy));
+	background-size: 0% 0.12em; background-position: 0 100%; background-repeat: no-repeat;
+}
 .rd-land__sub { color: #fff; font-size: clamp(1.05rem, 0.98rem + 0.35vw, 1.28rem); font-weight: 400; line-height: 1.55; max-width: 34rem; margin: 0 0 1.75rem; opacity: 0.92; }
-.rd-land__bureau { margin: 0 0 0.85rem; max-width: 42rem; color: #cfe0f5; font-size: clamp(0.95rem, 0.9rem + 0.2vw, 1.05rem); line-height: 1.45; font-weight: 500; }
-.rd-land__bureau strong { color: #fff; font-weight: 600; }
 .rd-land__cta { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+.rd-land__tagline {
+	margin: 2rem 0 0; padding-top: 1.25rem; border-top: 1px solid rgba(255, 255, 255, 0.22);
+	font-family: var(--rd-head); text-transform: uppercase; letter-spacing: 0.06em;
+	font-size: clamp(1.35rem, 1.1rem + 1.2vw, 2rem); line-height: 1; color: var(--rd-accent);
+}
 .rd-land__cta .rd-btn { min-height: 56px; padding-inline: 1.75rem; }
 .rd-land__primary { background: #FFB81C; border-color: #FFB81C; color: #061B3A !important; }
 .rd-land__primary:hover { background: #fff; border-color: #fff; color: #061B3A; }
@@ -711,9 +724,19 @@ h3 { font-size: clamp(1.6rem, 1.4rem + 0.8vw, 2rem); }
 /* Motion: quiet fades + intentional water drift on hero flow lines. Off under reduced motion. */
 @media (prefers-reduced-motion: no-preference) {
 	.rd-land__flow { animation: rd-flow-drift 32s linear infinite; }
-	.rd-land h1 { animation: rd-fade-up 0.55s cubic-bezier(0.22, 0.7, 0.2, 1) both; }
+	.rd-land h1, .rd-land__title { animation: rd-fade-up 0.55s cubic-bezier(0.22, 0.7, 0.2, 1) both; }
+	.rd-land__title .rd-word {
+		animation: rd-word-in 0.7s cubic-bezier(0.22, 0.7, 0.2, 1) both;
+		animation-delay: calc(0.14s + (var(--rd-i, 1) * 0.09s));
+	}
 	.rd-land__sub { animation: rd-fade-up 0.5s 0.1s ease-out both; }
 	.rd-land__cta { animation: rd-fade-up 0.5s 0.2s ease-out both; }
+	.rd-land__tagline { animation: rd-fade-up 0.5s 0.28s ease-out both; }
+	@keyframes rd-word-in {
+		from { opacity: 0; transform: translateY(0.35em); filter: blur(4px); background-size: 0% 0.12em; }
+		60% { opacity: 1; transform: none; filter: none; background-size: 0% 0.12em; }
+		to { opacity: 1; transform: none; filter: none; background-size: 100% 0.12em; }
+	}
 	.rd-reveal { animation: rd-fade-up 0.5s ease-out both; }
 	.rd-land__dock a { animation: rd-fade-up 0.45s ease-out both; animation-delay: calc(var(--rd-stagger, 0) * 60ms); }
 	.rd-timeline li { animation: rd-fade-up 0.4s ease-out both; animation-delay: calc(var(--rd-stagger, 0) * 50ms); }
